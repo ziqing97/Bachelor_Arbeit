@@ -1,0 +1,69 @@
+%% Header mit Deklarationen
+\input{extras/header}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\begin{document}
+
+% Römische Nummerierung für Sonderseiten, wie Verzeichnisse und Anhang
+\selectlanguage{english}
+\pagenumbering{Roman}
+\pagestyle{plain}
+
+%% Titelblatt
+\includepdf[pages=1]{titelseite}
+\cleardoublepage
+
+%% Eidesstattliche Erklärung
+\input{extras/eidesstattliche}
+\cleardoublepage
+
+%% Abstract
+\begin{abstract}
+\input{extras/abstract}
+\end{abstract}
+\cleardoublepage
+
+%% Verzeichnisse
+% Inhalt Kopf-/Fußzeile
+\pagestyle{scrheadings}
+\clearscrheadfoot            % Standardkram wegwerfen
+\ohead[\pagemark]{\pagemark} % oben außen Seitenzahl 
+\input{extras/content}
+
+% Merke mir die römische Seitenzahl in 'roemisch' und setzte Nummeriernung 
+% auf arabisch für die eigentlichen Kapitel
+\cleardoublepage %\newpage
+\newcounter{roemisch}
+\setcounter{roemisch}{\value{page}}
+\pagenumbering{arabic}
+
+\ifiscorrect\linespread{1.5}\selectfont% Zeilenabstand: 1 1/2 (für bessere Korrektur)
+\else\fi
+
+%% Die einzelnen Kapitel
+% Kopfzeile: links Kapitel, rechts Sektion
+\clearscrheadfoot            % Standardkram wegwerfen
+\ohead[\pagemark]{\pagemark} % oben außen Seitenzahl 
+\ihead{\headmark}            % oben innen automatischer Abschnittsname
+%\automark[]{section}
+\input{kapitel/kapitel1}
+\input{kapitel/kapitel2}
+\input{kapitel/kapitel3}
+\input{kapitel/kapitel4}
+
+\ifiscorrect\linespread{1.0}\selectfont% Zeilenabstand wieder auf 1 zurück
+\else\fi
+
+% Setze Numerierung wieder auf römisch zurück und setzte von oben fort
+% Wert ist demnach der von 'roemisch'
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{\value{roemisch}}
+
+%% Literaturverzeichnis
+\bibliography{literatur/bib}
+
+%% Appendix, falls vorhanden
+\appendix
+\input{extras/anhang}
+
+\end{document}

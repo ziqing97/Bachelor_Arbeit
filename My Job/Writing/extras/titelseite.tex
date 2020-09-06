@@ -1,0 +1,62 @@
+% Die Titelseite
+
+%% Header mit Deklarationen
+\input{extras/titleheader}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{minipage}[c][\textheight][t]{\textwidth}
+  \centering
+  \begin{minipage}[c]{2cm}%
+    \includegraphics[height=2cm]{logo_gi}%
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{8cm}
+    \centering
+    \vspace*{2mm}
+    \LARGE Universität Stuttgart\\[3mm]
+    \Large Geodätisches Institut
+  \end{minipage}
+  \hfill
+    \begin{minipage}[c]{2cm}%
+    \includegraphics[height=2cm]{logo_uni-stuttgart}%
+  \end{minipage}\\[5mm]
+  \rule{\textwidth}{0.5pt}\\[10mm]
+
+%  \vspace*{2cm} % kein Bild: diese Zeile "einkommentieren" ...
+  \vspace*{1cm} % ... und diese "auskommentieren ..."
+  {\huge {Titel der Studien- oder Diplomarbeit\\[2.5mm]
+    evtl. eine zweite Zeile}}\\[10mm]
+  \vspace*{1cm} % ... und diese "auskommentieren" ...
+
+%  \vspace*{4cm} % kein Bild: diese Zeile "einkommentieren" ...
+  \includegraphics[height=6cm]{logo_gi}\\[10mm] % ... und diese "auskommentieren"
+
+  \vfill
+
+  \Large Studienarbeit im Studiengang\\[2mm]
+  \textbf{Geodäsie und Geoinformatik}\\[2mm]
+  an der Universität Stuttgart\\[10mm]
+  Vorname V. Name\\[10mm]
+  Stuttgart, Monat 20xx\\[5mm]
+  \rule{\textwidth}{0.5pt}\\[5mm]
+  \begin{minipage}{\textwidth}%
+  \hfill
+  \begin{minipage}[t]{0.1\textwidth}%
+  \large\textbf{Betreuer:}%
+  \end{minipage}
+  \quad
+  \begin{minipage}[t][3.0cm]{0.6\textwidth}%
+    \large Prof. Dr.-Ing. Nico Sneeuw\\
+    Universität Stuttgart\\[3mm]
+    Dr.-Ing. Heinz Obermann\\
+    Technische Universität Unterdorf%\\[3mm]
+%    PD Dr.-Ing. Kunz Heinzelmann\\
+%    Polytechnicum Oberstett
+  \end{minipage}
+  \hfill
+  \end{minipage}
+\end{minipage}
+\end{document}
+
