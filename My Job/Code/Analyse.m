@@ -125,20 +125,20 @@ mean_dS2 = mean(dS(tp2(1):tp2(2)));
 % segline1 = S1.*(1:180)' + S2;
 % figure
 
-[TF1,S1,S2] = ischange(JPL.dS1,'linear','MaxNumChanges',5);
-segline1 = S1.*(1:180)' + S2;
-figure
-hold on 
-plot(JPL.t1,JPL.dS1)
-plot(JPL.t1,segline1)   
-legend('Data','Linear Regime')
-datetick("x")
-
-[TF2,S3,S4] = ischange(JPL.dS1,'mean','MaxNumChanges',3);
-segline2 = S3;
-figure
-hold on 
-plot(JPL.t1,JPL.dS1)
-plot(JPL.t1,segline2)   
-legend('Data','mean')
-datetick("x")
+% [TF1,S1,S2] = ischange(JPL.dS1,'linear','MaxNumChanges',5);
+% segline1 = S1.*(1:180)' + S2;
+% figure
+% hold on 
+% plot(JPL.t1,JPL.dS1)
+% plot(JPL.t1,segline1)   
+% legend('Data','Linear Regime')
+% datetick("x")
+% 
+% [TF2,S3,S4] = ischange(JPL.dS1,'mean','MaxNumChanges',3);
+% segline2 = S3;
+% figure
+% hold on 
+% plot(JPL.t1,JPL.dS1)
+% plot(JPL.t1,segline2)   
+% legend('Data','mean')
+% datetick("x")
