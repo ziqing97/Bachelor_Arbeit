@@ -7,16 +7,16 @@ addpath(genpath('E:\Studium\6-BA\ZhiqingBSc\'))
 global ET R Pre 
 
 % load Data
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGCSR.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGJPL.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGITSG.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGGFZ.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGUCCSR.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGUCJPL.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGUCITSG.mat')
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\AGGUCGFZ.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGCSR.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGJPL.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGITSG.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGGFZ.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGUCCSR.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGUCJPL.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGUCITSG.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\AGGUCGFZ.mat')
 
-load('E:\Studium\6-BA\My Job\Data_Analyse\Hydro\Pre_Datasets_Ob.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro\Pre_Datasets_Ob.mat')
 Agg_Pre = Pre_Datasets(1).Pre;
 
 % load('E:\Studium\6-BA\ZhiqingBSc\DATA\R.mat')
