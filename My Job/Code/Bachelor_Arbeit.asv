@@ -214,7 +214,7 @@ ET(4,:) = ET_ERA5_OB_ts(:,2)';
 ET(5,:) = ET_GLDAS_NOAH_OB(:,2)';
 ET(6,:) = ET_FLDAS_OB_ts(:,2)';
 
-% Sum
+% 
 len = 6;
 st = zeros(len,204);
 for i = 1:12
@@ -233,15 +233,12 @@ for i = 1:204
     ET_all(i) = (A' * P * A) \ A' * P * y;
 end
 
-% plot
+%
 figure
 hold on
 plot(date_ET,ET_all);
 datetick("x")
 title("evatranspiration")
-
-%% Runoff
-
 %% Mean Value before and after
 % TWSA
 TWSA_Before = mean(dSdt(1:id));
@@ -249,11 +246,12 @@ TWSA_After = nanmean(dSdt(id:end));
 % Pre
 change_time = CSR.dS(id,1);
 t_Pre = datenum(Pre_Datasets(1).Pre(:,1),Pre_Datasets(1).Pre(:,2),15);
-id_Pre = find(date_Pre == change_time);
+id_Pre = find(t_Pre == change_time);
 Pre_Before = mean(Pre_all(1:id_Pre));
-Pre_After = mean(Pre_all(id_Pre:end));
+Pre_After = mean(Pre_all(id:end));
 % ET 
 change_time = CSR.dS(id,1);
-id_ET= find(date_ET == change_time);
-ET_Before = mean(ET_all(1:id_ET));
-ET_After = mean(ET_all(id_ET:end));
+t_ET = datenum(Pre_Datasets(1).Pre(:,1),Pre_Datasets(1).Pre(:,2),15);
+id_Pre = find(t_Pre == change_time);
+Pre_Before = mean(Pre_all(1:id_Pre));
+Pre_After = mean(Pre_all(id:end));
