@@ -113,21 +113,24 @@ end
 figure
 plot(CSR.dS(:,1),dSdt)
 datetick("x")
+title("dS/dt")
 
 %% Try to Find the Changing Point
 % direct try, not working
-figure
-[TF,S] = ischange(dSdt,'mean','MaxNumChanges',1);
-plot(dSdt)
-hold on
-stairs(S)
+% figure
+% [TF,S] = ischange(dSdt,'mean','MaxNumChanges',2);
+% plot(dSdt)
+% title("without movmean")
+% hold on
+% stairs(S)
 
 % try another way, good job
 mean_dSdt = movmean(dSdt,12);
 mean_dSdt = mean_dSdt(7:end-6);
 figure
-[TF,S] = ischange(mean_dSdt,'mean','MaxNumChanges',1);
+[TF,S] = ischange(mean_dSdt,'mean','MaxNumChanges',2);
 plot(mean_dSdt)
+title("with movmean")
 hold on
 stairs(S)
 
@@ -241,19 +244,69 @@ datetick("x")
 title("evatranspiration")
 
 %% Runoff
+LISFLOOD_R_OB = double(LISFLOOD_R_OB);
+% limit
+R_Baseline = R_insitu_OB(R_insitu_OB(:,1)>=2001 & R_insitu_OB(:,1)<=2010,4);
+limit = 0.1 * mean(R_Baseline,'omitnan');
 
+error = {};
+error{1,1} = "Data Center";
+error{2,1} = "ERA5";
+error{3,1} = "HTESSEL";
+error{4,1} = "LISFLOOD";
+error{5,1} = "ORCHIDEE";
+error{6,1} = "PCRGLOBWB";
+error{7,1} = "GLDAS CLSM";
+error{8,1} = "GLDAS NOAH";
+error{9,1} = "GLDAS VIC";
+error{10,1} = "SURFEX TRIP";
+error{11,1} = "W3RA";
+error{12,1} = "WaterGAP3";
+error{1,2} = "error";
+error{1,3} = "error - median(error)";
+[error{2,2},error{2,3}] = Runoff_Processing(R_insitu_OB,ERA5_R_OB);
+[error{3,2},error{3,3}] = Runoff_Processing(R_insitu_OB,HTESSEL_R_OB);
+[error{4,2},error{4,3}] = Runoff_Processing(R_insitu_OB,LISFLOOD_R_OB);
+[error{5,2},error{5,3}] = Runoff_Processing(R_insitu_OB,ORCHIDEE_R_OB);
+[error{6,2},error{6,3}] = Runoff_Processing(R_insitu_OB,PCRGLOBWB_R_OB);
+[error{7,2},error{7,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_CLSM_OB);
+[error{8,2},error{8,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_NOAH_OB);
+[error{9,2},error{9,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_VIC_OB);
+[error{10,2},error{10,3}] = Runoff_Processing(R_insitu_OB,SURFEX_TRIP_R_OB);
+[error{11,2},error{11,3}] = Runoff_Processing(R_insitu_OB,W3RA_R_OB);
+[error{12,2},error{12,3}] = Runoff_Processing(R_insitu_OB,WaterGAP3_R_OB);
+
+% do some plot
+figure
+hold on 
+for i = 1:11
+subplot(3,4,i)
+hold on
+cdfplot(error{i+1,2})
+cdfplot(error{i+1,3})
+plot([limit,limit],[0,1])
+plot([0,4],[0.9,0.9])
+xlim([0 4])
+title(error{i+1,1})
+end
+sgtitle('Error CDF')
 %% Mean Value before and after
 % TWSA
-TWSA_Before = mean(dSdt(1:id));
-TWSA_After = nanmean(dSdt(id:end));
+TWSA_1 = mean(dSdt(1:id(1)),'omitnan');
+TWSA_2 = mean(dSdt(id(1):id(2)),'omitnan');
+TWSA_3 = mean(dSdt(id(2):end),'omitnan');
 % Pre
-change_time = CSR.dS(id,1);
-t_Pre = datenum(Pre_Datasets(1).Pre(:,1),Pre_Datasets(1).Pre(:,2),15);
-id_Pre = find(date_Pre == change_time);
-Pre_Before = mean(Pre_all(1:id_Pre));
-Pre_After = mean(Pre_all(id_Pre:end));
+change_time = datenum(change_point);
+id_Pre = [0;0];
+id_Pre(1) = find(date_Pre == change_time(1));
+id_Pre(2) = find(date_Pre == change_time(2));
+Pre_1 = mean(Pre_all(1:id_Pre(1)));
+Pre_2 = mean(Pre_all(id_Pre(1):id_Pre(2)));
+Pre_3 = mean(Pre_all(id_Pre(2):end));
 % ET 
-change_time = CSR.dS(id,1);
-id_ET= find(date_ET == change_time);
-ET_Before = mean(ET_all(1:id_ET));
-ET_After = mean(ET_all(id_ET:end));
+id_ET = [0;0];
+id_ET(1) = find(date_ET == change_time(1));
+id_ET(2) = find(date_ET == change_time(2));
+ET_1 = mean(ET_all(1:id_ET(1)));
+ET_2 = mean(ET_all(id_ET(1):id_ET(2)));
+ET_3 = mean(ET_all(id_ET(2):end));
