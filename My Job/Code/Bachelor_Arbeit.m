@@ -287,6 +287,7 @@ cdfplot(error{i+1,3})
 plot([limit,limit],[0,1])
 plot([0,4],[0.9,0.9])
 xlim([0 4])
+legend("e","e-mid")
 title(error{i+1,1})
 end
 sgtitle('Error CDF')
