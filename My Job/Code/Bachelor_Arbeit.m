@@ -291,6 +291,27 @@ legend("e","e-mid")
 title(error{i+1,1})
 end
 sgtitle('Error CDF')
+figure
+hold on
+for i = 1:11
+cdfplot(error{i+1,3})
+xlim([0 4])
+title(error{i+1,1})
+end
+plot([limit,limit],[0,1])
+plot([0,4],[0.9,0.9])
+datasets{1,1} = "ERA5";
+datasets{2,1} = "HTESSEL";
+datasets{3,1} = "LISFLOOD";
+datasets{4,1} = "ORCHIDEE";
+datasets{5,1} = "PCRGLOBWB";
+datasets{6,1} = "GLDAS CLSM";
+datasets{7,1} = "GLDAS NOAH";
+datasets{8,1} = "GLDAS VIC";
+datasets{9,1} = "SURFEX TRIP";
+datasets{10,1} = "W3RA";
+datasets{11,1} = "WaterGAP3";
+legend(datasets)
 %% Mean Value before and after
 % TWSA
 TWSA_1 = mean(dSdt(1:id(1)),'omitnan');
