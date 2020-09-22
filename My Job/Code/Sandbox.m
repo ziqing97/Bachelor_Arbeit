@@ -68,3 +68,6 @@ xlim([0 4])
 title(error{i+1,1})
 end
 sgtitle('Error CDF')
+
+e_era5_1 = error{2,2};
+e_era5_2 = error{2,3};

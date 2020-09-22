@@ -2,50 +2,63 @@ This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: arbeit.aux
 The style file: agsm.bst
-Illegal, another \bibstyle command---line 6 of file arbeit.aux
+Illegal, another \bibstyle command---line 24 of file arbeit.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
+White space in argument---line 30 of file arbeit.aux
+ : \citation{Wahr
+ :                et al.,1998}
+I'm skipping whatever remains of this command
+Illegal, another \bibstyle command---line 70 of file arbeit.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
+I found no cite keys---while reading file arbeit.aux
 Database file #1: literatur/bib.bib
-You've used 1 entry,
+I was expecting a `,' or a `}'---line 9 of file literatur/bib.bib
+ : @article{Wahr 
+ :               et al., 1998,
+I'm skipping whatever remains of this entry
+You've used 0 entries,
             2909 wiz_defined-function locations,
-            647 strings with 4860 characters,
-and the built_in function-call counts, 2501 in all, are:
-= -- 388
-> -- 24
+            638 strings with 4741 characters,
+and the built_in function-call counts, 32 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 171
-- -- 7
-* -- 202
-:= -- 542
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 14
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 16
-empty$ -- 35
-format.name$ -- 9
-if$ -- 439
++ -- 0
+- -- 0
+* -- 0
+:= -- 18
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 6
-num.names$ -- 10
-pop$ -- 3
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 0
 quote$ -- 0
-skip$ -- 14
+skip$ -- 1
 stack$ -- 0
-substring$ -- 538
-swap$ -- 3
-text.length$ -- 14
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 0
 warning$ -- 0
-while$ -- 22
+while$ -- 0
 width$ -- 0
-write$ -- 14
-(There was 1 error message)
+write$ -- 2
+(There were 5 error messages)

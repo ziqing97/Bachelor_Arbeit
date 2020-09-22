@@ -1,0 +1,27 @@
+----------19/09/20_20:33----------
+
+Error was overridden: 
+
+Unable to open both \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry Bundle\Shapefiles\GlobalLakesReservoirs\global_lakes_reservoirs_21ext.shp and \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry Bundle\Shapefiles\GlobalLakesReservoirs\global_lakes_reservoirs_21ext.SHP.
+Error in D:\MATLAB\toolbox\map\mapformats\private\openShapeFiles.m, line: 67
+Error in D:\MATLAB\toolbox\map\mapformats\private\openShapeFiles.m, line: 18
+Error in D:\MATLAB\toolbox\map\mapformats\shaperead.m, line: 210
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 99
+----------19/09/20_20:41----------
+
+Error was overridden: 
+
+Cannot CD to \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry data\Sentinel-3A (Directory access failure).
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\crt_S3A.m, line: 5
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Crop_Computer.m, line: 100
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Altprocess.m, line: 508
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 141
+----------21/09/20_14:23----------
+
+Error was overridden: 
+
+Cannot CD to \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry data\Sentinel-3A (Directory access failure).
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\crt_S3A.m, line: 5
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Crop_Computer.m, line: 100
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Altprocess.m, line: 508
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 141

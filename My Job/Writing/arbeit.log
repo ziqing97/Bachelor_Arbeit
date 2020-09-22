@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  15 SEP 2020 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  22 SEP 2020 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,108 +838,130 @@ Class scrreprt Warning: \float@addtolists detected!
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
-<bilder/water-cycle-natural.jpg, id=120, 2163.08125pt x 1505.625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+<bilder/water-cycle-natural.jpg, id=115, 2163.08125pt x 1505.625pt>
 File: bilder/water-cycle-natural.jpg Graphic file (type jpg)
 <use bilder/water-cycle-natural.jpg>
-Package pdftex.def Info: bilder/water-cycle-natural.jpg  used on input line 11.
+Package pdftex.def Info: bilder/water-cycle-natural.jpg  used on input line 22.
 
 (pdftex.def)             Requested size: 318.66951pt x 221.79059pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 23.
+<bilder/TWSA.png, id=116, 872.25874pt x 482.80376pt>
+File: bilder/TWSA.png Graphic file (type png)
+<use bilder/TWSA.png>
+Package pdftex.def Info: bilder/TWSA.png  used on input line 33.
+(pdftex.def)             Requested size: 273.14926pt x 151.18521pt.
+<bilder/Obbasin.png, id=118, 421.575pt x 316.18124pt>
+File: bilder/Obbasin.png Graphic file (type png)
+<use bilder/Obbasin.png>
+Package pdftex.def Info: bilder/Obbasin.png  used on input line 39.
+(pdftex.def)             Requested size: 273.14926pt x 204.86406pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 27--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 27--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--43
 
  []
 
 [1
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+] [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \section
+             {Objective} <./bilder/water-cycle-natural.jpg>])
+(./kapitel/kapitel2.tex [3pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Study Area}pdfTeX warning (ext4): destination with the same identi
+fier (name{figure.1.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Study Area} <./bilder/TWSA.png> <./bilder/Obbasin.png (PNG copy)>]
+[4]
+chapter 2.
+<bilder/river-basins-Ob-drainage-networks-Yenisey.jpg, id=145, 713.064pt x 534.
+798pt>
+File: bilder/river-basins-Ob-drainage-networks-Yenisey.jpg Graphic file (type j
+pg)
+<use bilder/river-basins-Ob-drainage-networks-Yenisey.jpg>
+Package pdftex.def Info: bilder/river-basins-Ob-drainage-networks-Yenisey.jpg  
+used on input line 6.
+(pdftex.def)             Requested size: 318.66951pt x 239.00848pt.
+) (./kapitel/kapitel3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+[5
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.15 \section
-             {Observation from Satellite Gravimetry} <./bilder/water-cycle-natu
-ral.jpg>]
-<bilder/TWSA.png, id=130, 872.25874pt x 482.80376pt>
-File: bilder/TWSA.png Graphic file (type png)
-<use bilder/TWSA.png>
-Package pdftex.def Info: bilder/TWSA.png  used on input line 21.
-(pdftex.def)             Requested size: 273.14926pt x 151.18521pt.
-<bilder/Obbasin.png, id=132, 421.575pt x 316.18124pt>
-File: bilder/Obbasin.png Graphic file (type png)
-<use bilder/Obbasin.png>
-Package pdftex.def Info: bilder/Obbasin.png  used on input line 27.
-(pdftex.def)             Requested size: 273.14926pt x 204.86406pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
-
- []
-
-LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 3
-5.
-(f:/texlive/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.36 	\item I
-             n chapter 3, the theoretical basis, the data source and the ana...
- <./bilder/TWSA.png>]) (./kapitel/kapitel2.tex [3pdfTeX warning (ext4): destina
-tion with the same identifier (name{figure.1.3}) has been already used, duplica
-te ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
 l.1 \chapter
-            {Zweites Kapitel} <./bilder/Obbasin.png (PNG copy)>] [4
-
-
-]
-chapter 2.
-) (./kapitel/kapitel3.tex [5pdfTeX warning (ext4): destination with the same id
-entifier (name{table.2.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1 \chapter
-            {Drittes Kapitel}] [6
-
-
-]
+            {Drittes Kapitel} <./bilder/river-basins-Ob-drainage-networks-Yenis
+ey.jpg>] [6]
 chapter 3.
-) (./kapitel/kapitel4.tex [7] [8
+) (./kapitel/kapitel4.tex [7
+
+
+] [8
 
 
 ]
 chapter 4.
-) [9] (./arbeit.bbl) (./extras/anhang.tex [13
+LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 6
+.
+(f:/texlive/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+) [9]
+(./arbeit.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) (./extras/anhang.tex [13
 
 
 ] [14
@@ -948,34 +970,35 @@ chapter 4.
 ]
 chapter A.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
  [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./arbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `arbeit.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 13987 strings out of 492162
- 224139 string characters out of 6125271
- 453050 words of memory out of 5000000
- 17987 multiletter control sequences out of 15000+600000
- 22515 words of font info for 52 fonts, out of 8000000 for 9000
+ 13991 strings out of 492162
+ 224395 string characters out of 6125271
+ 456050 words of memory out of 5000000
+ 17984 multiletter control sequences out of 15000+600000
+ 25115 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,18n,84p,10123b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
 {f:/texlive/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<f:/texlive/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/te
-xlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><f:/texlive/texlive/2
-019/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><f:/texlive/texlive/2019/te
-xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><f:/texlive/texlive/2019/texmf-dis
-t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on arbeit.pdf (24 pages, 2111845 bytes).
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><f:/texlive/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/texl
+ive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><f:/texlive/texlive/201
+9/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><f:/texlive/texlive/2019/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb><f:/texlive/texlive/2019/texmf-dist/
+fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on arbeit.pdf (24 pages, 2339520 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
