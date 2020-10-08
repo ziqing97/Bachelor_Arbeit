@@ -1,3 +1,30 @@
-\begin{thebibliography}{xx}
+\begin{thebibliography}{1}
+
+\bibitem{allen1998crop}
+Richard~G Allen, Luis~S Pereira, Dirk Raes, Martin Smith, et~al.
+\newblock Crop evapotranspiration-guidelines for computing crop water
+  requirements-fao irrigation and drainage paper 56.
+\newblock {\em Fao, Rome}, 300(9):D05109, 1998.
+
+\bibitem{Obriver}
+Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
+\newblock Ob river.
+
+\bibitem{gracecomponent}
+NASA.
+\newblock Grace mission.
+
+\bibitem{revenga1998watersheds}
+C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
+  Abramovitz.
+\newblock {\em Watersheds of the World: Ecological Value and Vulnerability}.
+\newblock World Resources Institute report. World Resources Institute, 1998.
+
+\bibitem{wahr1998time}
+John Wahr, Mery Molenaar, and Frank Bryan.
+\newblock Time variability of the earth's gravity field: Hydrological and
+  oceanic effects and their possible detection using grace.
+\newblock {\em Journal of Geophysical Research: Solid Earth},
+  103(B12):30205--30229, 1998.
 
 \end{thebibliography}

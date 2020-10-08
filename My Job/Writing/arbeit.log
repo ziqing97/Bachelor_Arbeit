@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  22 SEP 2020 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  8 OCT 2020 02:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,11 +562,22 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(f:/texlive/texlive/2019/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
 (f:/texlive/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
 \bibhang=\skip69
 \bibsep=\skip70
 LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \citenum on input line 708.
 \c@NAT@ctr=\count134
 )
 Package scrkbase Info: You've told me to redefine the font selection of the
@@ -575,8 +586,7 @@ Package scrkbase Info: You've told me to redefine the font selection of the
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `pagehead' that is an alias of element
 (scrkbase)             `pageheadfoot' on input line 56.
-
-(f:/texlive/texlive/2019/texmf-dist/tex/latex/koma-script/scrpage2.sty
+ (f:/texlive/texlive/2019/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2020/01/24 v3.29 KOMA-Script package (page head and foot)
 
 
@@ -843,7 +853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-<bilder/water-cycle-natural.jpg, id=115, 2163.08125pt x 1505.625pt>
+<bilder/water-cycle-natural.jpg, id=125, 2163.08125pt x 1505.625pt>
 File: bilder/water-cycle-natural.jpg Graphic file (type jpg)
 <use bilder/water-cycle-natural.jpg>
 Package pdftex.def Info: bilder/water-cycle-natural.jpg  used on input line 22.
@@ -851,85 +861,128 @@ Package pdftex.def Info: bilder/water-cycle-natural.jpg  used on input line 22.
 (pdftex.def)             Requested size: 318.66951pt x 221.79059pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 23.
-<bilder/TWSA.png, id=116, 872.25874pt x 482.80376pt>
-File: bilder/TWSA.png Graphic file (type png)
-<use bilder/TWSA.png>
-Package pdftex.def Info: bilder/TWSA.png  used on input line 33.
-(pdftex.def)             Requested size: 273.14926pt x 151.18521pt.
-<bilder/Obbasin.png, id=118, 421.575pt x 316.18124pt>
-File: bilder/Obbasin.png Graphic file (type png)
-<use bilder/Obbasin.png>
-Package pdftex.def Info: bilder/Obbasin.png  used on input line 39.
-(pdftex.def)             Requested size: 273.14926pt x 204.86406pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--43
-
- []
-
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
 [1
 
 
-] [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
-1}) has been already used, duplicate ignored
+]
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
+
+ []
+
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.45 \section
-             {Objective} <./bilder/water-cycle-natural.jpg>])
-(./kapitel/kapitel2.tex [3pdfTeX warning (ext4): destination with the same iden
-tifier (name{figure.1.2}) has been already used, duplicate ignored
+l.34 \section
+             {Observation from Satellite} <./bilder/water-cycle-natural.jpg>]
+<bilder/GRACE_Component.jpg, id=144, 675.52374pt x 404.51125pt>
+File: bilder/GRACE_Component.jpg Graphic file (type jpg)
+<use bilder/GRACE_Component.jpg>
+Package pdftex.def Info: bilder/GRACE_Component.jpg  used on input line 41.
+(pdftex.def)             Requested size: 318.66951pt x 190.82396pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 4
+6.
+(f:/texlive/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+ [3]
+<bilder/TWSA.png, id=151, 872.25874pt x 482.80376pt>
+File: bilder/TWSA.png Graphic file (type png)
+<use bilder/TWSA.png>
+Package pdftex.def Info: bilder/TWSA.png  used on input line 58.
+(pdftex.def)             Requested size: 273.14926pt x 151.18521pt.
+<bilder/Obbasin.png, id=153, 421.575pt x 316.18124pt>
+File: bilder/Obbasin.png Graphic file (type png)
+<use bilder/Obbasin.png>
+Package pdftex.def Info: bilder/Obbasin.png  used on input line 64.
+(pdftex.def)             Requested size: 273.14926pt x 204.86406pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.70 \section
+             {Objective} <./bilder/GRACE_Component.jpg>])
+(./kapitel/kapitel2.tex
+Underfull \vbox (badness 5985) has occurred while \output is active []
+
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
             {Study Area}pdfTeX warning (ext4): destination with the same identi
-fier (name{figure.1.3}) has been already used, duplicate ignored
+fier (name{figure.1.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
             {Study Area} <./bilder/TWSA.png> <./bilder/Obbasin.png (PNG copy)>]
-[4]
+[6]
 chapter 2.
-<bilder/river-basins-Ob-drainage-networks-Yenisey.jpg, id=145, 713.064pt x 534.
+<bilder/river-basins-Ob-drainage-networks-Yenisey.jpg, id=172, 713.064pt x 534.
 798pt>
 File: bilder/river-basins-Ob-drainage-networks-Yenisey.jpg Graphic file (type j
 pg)
 <use bilder/river-basins-Ob-drainage-networks-Yenisey.jpg>
 Package pdftex.def Info: bilder/river-basins-Ob-drainage-networks-Yenisey.jpg  
-used on input line 6.
+used on input line 5.
 (pdftex.def)             Requested size: 318.66951pt x 239.00848pt.
-) (./kapitel/kapitel3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--1
+Underfull \hbox (badness 10000) in paragraph at lines 2--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--1
+Underfull \hbox (badness 10000) in paragraph at lines 2--9
 
  []
 
-[5
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+ [7
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
@@ -937,31 +990,30 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 \chapter
-            {Drittes Kapitel} <./bilder/river-basins-Ob-drainage-networks-Yenis
-ey.jpg>] [6]
-chapter 3.
-) (./kapitel/kapitel4.tex [7
-
-
-] [8
-
-
+l.13 \section
+             {Climate} <./bilder/river-basins-Ob-drainage-networks-Yenisey.jpg>
 ]
-chapter 4.
-LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 6
-.
-(f:/texlive/texlive/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
-) [9]
-(./arbeit.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
+ []
 
-) (./extras/anhang.tex [13
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 20--22
+\T1/ppl/m/n/10.95 Fur-bearing mam-mals of the Ob val-ley in-clude Eu-ro-pean an
+d Siberian mole, Siberian
+ []
+
+) [9] (./arbeit.bbl) (./extras/anhang.tex [13
 
 
 ] [14
@@ -970,22 +1022,22 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 ]
 chapter A.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
  [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./arbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `arbeit.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 13991 strings out of 492162
- 224395 string characters out of 6125271
- 456050 words of memory out of 5000000
- 17984 multiletter control sequences out of 15000+600000
- 25115 words of font info for 60 fonts, out of 8000000 for 9000
+ 14113 strings out of 492162
+ 226513 string characters out of 6125271
+ 456087 words of memory out of 5000000
+ 18100 multiletter control sequences out of 15000+600000
+ 26564 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,18n,84p,10123b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
 {f:/texlive/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<f:/texlive/t
@@ -995,10 +1047,10 @@ ive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><f:/texlive/texlive/201
 9/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><f:/texlive/texlive/2019/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb><f:/texlive/texlive/2019/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on arbeit.pdf (24 pages, 2339520 bytes).
+Output written on arbeit.pdf (24 pages, 2468943 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

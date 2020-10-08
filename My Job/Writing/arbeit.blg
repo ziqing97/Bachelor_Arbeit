@@ -1,64 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: arbeit.aux
-The style file: agsm.bst
-Illegal, another \bibstyle command---line 24 of file arbeit.aux
- : \bibstyle
- :          {plain}
-I'm skipping whatever remains of this command
-White space in argument---line 30 of file arbeit.aux
- : \citation{Wahr
- :                et al.,1998}
-I'm skipping whatever remains of this command
-Illegal, another \bibstyle command---line 70 of file arbeit.aux
- : \bibstyle
- :          {plain}
-I'm skipping whatever remains of this command
-I found no cite keys---while reading file arbeit.aux
+The style file: plain.bst
 Database file #1: literatur/bib.bib
-I was expecting a `,' or a `}'---line 9 of file literatur/bib.bib
- : @article{Wahr 
- :               et al., 1998,
+Illegal end of database file---line 107 of file literatur/bib.bib
+ : }
+ :  
 I'm skipping whatever remains of this entry
-You've used 0 entries,
-            2909 wiz_defined-function locations,
-            638 strings with 4741 characters,
-and the built_in function-call counts, 32 in all, are:
-= -- 0
-> -- 0
+Warning--empty journal in Obriver
+Warning--empty year in Obriver
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            526 strings with 4848 characters,
+and the built_in function-call counts, 1569 in all, are:
+= -- 142
+> -- 88
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 18
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 35
+- -- 30
+* -- 115
+:= -- 277
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 5
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+cite$ -- 7
+duplicate$ -- 51
+empty$ -- 119
+format.name$ -- 30
+if$ -- 313
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 26
+num.names$ -- 10
+pop$ -- 35
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 24
 quote$ -- 0
-skip$ -- 1
+skip$ -- 37
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 80
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 5 error messages)
+type$ -- 18
+warning$ -- 2
+while$ -- 13
+width$ -- 6
+write$ -- 49
+(There was 1 error message)
