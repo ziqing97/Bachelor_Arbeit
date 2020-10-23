@@ -1,11 +1,99 @@
-\chapter{Viertes Kapitel}
-\section{Eine Sektion}
-
-Hier mal eine Auflistung von Elementen
-\begin{itemize}
- \item erstes Element
- \item zweites Element
- \item noch ein Element
-\end{itemize}
-
-Und Schluss mit der Vorlage ...
+\chapter{Method}
+\section{Estimating hydrological component combining different datasets}
+As mentioned before, the hydrological process can be written as:
+\begin{equation}
+Pre - ET - R = \frac{dS}{dt}
+\end{equation}
+where
+\begin{table}[htbp]
+	\begin{tabular}{ll}
+		$Pre$   & Precipitation    \\ 
+		$ET$    & Evatranspiration \\ \
+		$R$     & Surface Runoff \\ 
+		$dS / dt$ & total water storage change \\ 
+	\end{tabular}
+\end{table}
+For each component in this equation, there are several time series available. For more reliable results, it is necessary to combine them as one time series.\\\\
+The Grace and Grace-Fo provides the EWHA ($S$) with uncertainty ($\sigma_s$), we need to be aware of that these time series are not totally consistent. There are (1) a one-year gap between the GRACE and GRACE-FO and (2) several small gaps. This one-year gap would be ignored since we are interested in the long term trend and these small gaps are dealt using interpolation. In Matlab, this can be done using function \textit{griddedInterpolant}, for the interpolation method, we choose "spline" for EWHA and "linear" for uncertainty. After this, we have 4 consistent EWHA time series $\bm{S_1}$, $\bm{S_2}$, $\bm{S_3}$, $\bm{S_4}$. Since we are only interested in the changing trend $dS / dt$ and the time series are discrete, for each of them we have
+\begin{align}
+\frac{dS(t)}{dt} = &\frac{(dS(t+\Delta t) - dS(t)) + (dS(t) - dS(t-\Delta t))}{2 \Delta t}\\
+= & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
+\end{align}
+where $\Delta t$ is one month. \\\\
+We are also able to get the uncertainty using Propagation
+\begin{align}
+\sigma_{dS}(t) = \frac{1}{2} \sqrt{\sigma_{dS}^2(t + \Delta t) + \sigma_{dS}^2(t - \Delta t)}
+\end{align}
+\subsection{Adjustment using Gauss-Markov model}
+Gauss-Markov model is known as the adjustment with observation equations. The model is as follows
+\begin{equation}
+\bm{y} = \bm{A}\bm{x} + \bm{e}
+\end{equation}
+where $y$ is a vector of observations, $A$ is the design matrix, $x$ is a vector of unknowns and $e$ is a vector of measurement errors. Define the \textit{Lagrangian} or \textit{cost function};
+\begin{equation}
+\mathcal{L}_{a}(x) = \frac{1}{2} \bm{e}^T \bm{e}
+\end{equation} 
+Then, the adjusted observations can be estimated by using least square criterion, the best $x$ can be found with the minimum cost function. The equations can be solved as following:
+\begin{align}
+&\hat{\bm{x}} = (\bm{A}^T\bm{A})^{-1}\bm{A}^T\bm{y}\\
+&\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{A})^{-1}\bm{A}^T\bm{y}\\
+&\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{A})^{-1}\bm{A}^T]\bm{y}
+\end{align}
+In many cases, the observations are not equal weighted, which means they have different quality. To solve this problem,  we use a matrix $\bm{P}$ to describe the weight. The cost function is formed as:
+\begin{equation}
+\mathcal{L}_{a}(x) = \frac{1}{2} \bm{e}^T \bm{P}\bm{e}
+\end{equation}
+the weighted least squares estimations are:
+\begin{align}
+&\hat{\bm{x}} = (\bm{A}^T \bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
+&\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
+&\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}]\bm{y}
+\end{align}
+\subsection{Getting one time series using Gauss-Markov model}
+For each month, their are 4 TWSA change $\frac{dS_1(t)}{dt}$, $\frac{dS_2(t)}{dt}$, $\frac{dS_3(t)}{dt}$, $\frac{dS_4(t)}{dt}$ along with their uncertainty $\sigma_{dS_1}$, $\sigma_{dS_2}$, $\sigma_{dS_3}$, $\sigma_{dS_4}$, which are calculated by (3.21) and (3.22). We use the uncertainty to build the weight matrix $\bm{P}$, then we have:
+\begin{align}
+\bm{y} &= \begin{pmatrix}
+\frac{dS_1(t)}{dt}\\
+\frac{dS_2(t)}{dt}\\
+\frac{dS_3(t)}{dt}\\
+\frac{dS_4(t)}{dt}
+\end{pmatrix} \\
+\bm{P} &= \begin{pmatrix}
+\frac{1}{\sigma(t)_{dS_1}^2} & 0 & 0 & 0 \\
+0 & \frac{1}{\sigma(t)_{dS_2}^2} & 0 & 0 \\
+0 & 0 & \frac{1}{\sigma(t)_{dS_3}^2} & 0 \\
+0 & 0 & 0 & \frac{1}{\sigma(t)_{dS_4}^2}
+\end{pmatrix}\\
+\bm{A} &= \begin{pmatrix}
+1\\
+1\\
+1\\
+1
+\end{pmatrix}
+\end{align}
+By inserting (3.32), (3.33) and (3.34) into (3.29) we are able to get one $dS/dt$ for one month
+\begin{equation}
+\underset{1 \times 1}{\hat{\bm{x}}} = (\underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{A}})^{-1} \underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{y}}
+\end{equation}
+where $\hat{\bm{x}}$ is the TWSA change for one month.\\\\
+By repeating (3.35), we are able to get one whole time series for $dS / dt$
+\subsection{Uncertainty calculation}
+The method used in 3.2.1.2 also works for precipitation, evatranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
+We assume that the precipitation and evatranspiration are stable during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evatranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
+\begin{gather}
+\sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
+\end{gather}
+where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evatranspiration in other eleven months. 
+\section{Estimating runoff using quantile function}
+It was mentioned in (3.1.4) that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyse. \\\\
+In probability theory and statistics ,the cumulative distribution function (CDF) of a real-valued random variable $X$, or just distribution function of $X$, evaluated at $x$, is the probability that $X$ will take a value less than or equal to $x$. Quantiles are cut points dividing the range of a probability distribution into continuous intervals with equal probabilities, or dividing the observations in a sample in the same way. The quantile function, associated with a probability distribution of a random variable, specifies the value of the random variable such that th probability of teh variable being less than or equal to that value equals the given probability. It is also called the percent-point function or invers cumulative distribution function. \\\\
+First of all, we calculate the difference between the model and the in-situ data:
+\begin{equation}
+d(t) = R(t)_{insitu} - R(t)_{model}
+\end{equation}
+To make it easier to compare and to eliminate the negative number:
+\begin{equation}
+e(t) = \sqrt{\frac{d(t)}{l}}
+\end{equation}
+where $e$ is the error for the model and $l$ is the length of the time series (here: $l = $ 32 years $\times$ 12 months $= 384$)\\\\
+By presenting the CDF of $e$, the quality of the model can be estimate. By setting the appropriate quantile we are able to choose better time series for further analyse. 

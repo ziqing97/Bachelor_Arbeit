@@ -3,51 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: arbeit.aux
 The style file: plain.bst
 Database file #1: literatur/bib.bib
-Illegal end of database file---line 107 of file literatur/bib.bib
- : }
- :  
-I'm skipping whatever remains of this entry
 Warning--empty journal in Obriver
 Warning--empty year in Obriver
-You've used 5 entries,
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            526 strings with 4848 characters,
-and the built_in function-call counts, 1569 in all, are:
-= -- 142
-> -- 88
-< -- 0
-+ -- 35
-- -- 30
-* -- 115
-:= -- 277
-add.period$ -- 14
-call.type$ -- 5
-change.case$ -- 28
+            580 strings with 6801 characters,
+and the built_in function-call counts, 5180 in all, are:
+= -- 479
+> -- 342
+< -- 1
++ -- 139
+- -- 122
+* -- 444
+:= -- 898
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 51
-empty$ -- 119
-format.name$ -- 30
-if$ -- 313
+cite$ -- 15
+duplicate$ -- 142
+empty$ -- 342
+format.name$ -- 122
+if$ -- 1014
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 26
-num.names$ -- 10
-pop$ -- 35
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 67
+num.names$ -- 26
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 84
 quote$ -- 0
-skip$ -- 37
+skip$ -- 92
 stack$ -- 0
-substring$ -- 80
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 317
+swap$ -- 14
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 50
 warning$ -- 2
-while$ -- 13
-width$ -- 6
-write$ -- 49
-(There was 1 error message)
+while$ -- 43
+width$ -- 15
+write$ -- 139
+(There were 2 warnings)

@@ -1,10 +1,38 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{allen1998crop}
 Richard~G Allen, Luis~S Pereira, Dirk Raes, Martin Smith, et~al.
 \newblock Crop evapotranspiration-guidelines for computing crop water
   requirements-fao irrigation and drainage paper 56.
 \newblock {\em Fao, Rome}, 300(9):D05109, 1998.
+
+\bibitem{chen2002global}
+Mingyue Chen, Pingping Xie, John~E Janowiak, and Phillip~A Arkin.
+\newblock Global land precipitation: A 50-yr monthly analysis based on gauge
+  observations.
+\newblock {\em Journal of Hydrometeorology}, 3(3):249--266, 2002.
+
+\bibitem{han1995viscoelastic}
+Dazhong Han and John Wahr.
+\newblock The viscoelastic relaxation of a realistically stratified earth, and
+  a further analysis of postglacial rebound.
+\newblock {\em Geophysical Journal International}, 120(2):287--311, 1995.
+
+\bibitem{hersbach2020era5}
+Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, Andr{\'a}s
+  Hor{\'a}nyi, Joaqu{\'\i}n Mu{\~n}oz-Sabater, Julien Nicolas, Carole Peubey,
+  Raluca Radu, Dinand Schepers, et~al.
+\newblock The era5 global reanalysis.
+\newblock {\em Quarterly Journal of the Royal Meteorological Society},
+  146(730):1999--2049, 2020.
+
+\bibitem{kalnay1996ncep}
+Eugenia Kalnay, Masao Kanamitsu, Robert Kistler, William Collins, Dennis
+  Deaven, Lev Gandin, Mark Iredell, Suranjana Saha, Glenn White, John Woollen,
+  et~al.
+\newblock The ncep/ncar 40-year reanalysis project.
+\newblock {\em Bulletin of the American meteorological Society},
+  77(3):437--472, 1996.
 
 \bibitem{Obriver}
 Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
@@ -13,6 +41,7 @@ Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
 \bibitem{gracecomponent}
 NASA.
 \newblock Grace mission.
+\newblock \url{https://www.nasa.gov/mission_pages/Grace/spacecraft/index.html}.
 
 \bibitem{revenga1998watersheds}
 C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
@@ -20,11 +49,37 @@ C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
 \newblock {\em Watersheds of the World: Ecological Value and Vulnerability}.
 \newblock World Resources Institute report. World Resources Institute, 1998.
 
+\bibitem{save2016high}
+Himanshu Save, Srinivas Bettadpur, and Byron~D Tapley.
+\newblock High-resolution csr grace rl05 mascons.
+\newblock {\em Journal of Geophysical Research: Solid Earth},
+  121(10):7547--7569, 2016.
+
 \bibitem{wahr1998time}
 John Wahr, Mery Molenaar, and Frank Bryan.
 \newblock Time variability of the earth's gravity field: Hydrological and
   oceanic effects and their possible detection using grace.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
   103(B12):30205--30229, 1998.
+
+\bibitem{watkins2015improved}
+Michael~M Watkins, David~N Wiese, Dah-Ning Yuan, Carmen Boening, and Felix~W
+  Landerer.
+\newblock Improved methods for observing earth's time variable mass
+  distribution with grace using spherical cap mascons.
+\newblock {\em Journal of Geophysical Research: Solid Earth},
+  120(4):2648--2671, 2015.
+
+\bibitem{xie2010cpc}
+Pingping Xie, M~Chen, and W~Shi.
+\newblock Cpc unified gauge-based analysis of global daily precipitation.
+\newblock In {\em Preprints, 24th Conf. on Hydrology, Atlanta, GA, Amer.
+  Meteor. Soc}, volume~2, 2010.
+
+\bibitem{xie2007gauge}
+Pingping Xie, Mingyue Chen, Song Yang, Akiyo Yatagai, Tadahiro Hayasaka,
+  Yoshihiro Fukushima, and Changming Liu.
+\newblock A gauge-based analysis of daily precipitation over east asia.
+\newblock {\em Journal of Hydrometeorology}, 8(3):607--626, 2007.
 
 \end{thebibliography}

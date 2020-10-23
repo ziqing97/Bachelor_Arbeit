@@ -294,7 +294,7 @@ sgtitle('Error CDF')
 figure
 hold on
 for i = 1:11
-cdfplot(error{i+1,3})
+cdfplot(error{i+1,2})
 xlim([0 4])
 title(error{i+1,1})
 end
