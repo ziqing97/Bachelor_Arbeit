@@ -94,9 +94,7 @@ plot(CSR.mascon(:,1),CSR.mascon(:,2)/100);
 datetick("x")
 title('TWSA of OB Basin')
 legend('SH Unrecovered','Recovered','mascon')
-pbaspect([3 1 1])
-xlabel("time")
-ylabel("TWSA (mm)")
+set(gcf,'Position',[500 500 500 220]);
 
 %% Calculating the dS with Uncertainty
 % for each Data Center
@@ -115,10 +113,9 @@ for i = 1:len
     uc_dSdt(i) = 1/4 * sqrt(CSR.dS_unc(i,2)^2+GFZ.dS_unc(i,2)^2+ITSG.dS_unc(i,2)^2+JPL.dS_unc(i,2)^2);
 end
 figure
-plot(CSR.dS(:,1),dSdt*1000,'linewidth',1.5)
+plot(CSR.dS(:,1),dSdt)
 datetick("x")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
+title("dS/dt")
 pbaspect([3 1 1])
 
 %% Try to Find the Changing Point
@@ -362,75 +359,27 @@ uc_ET_3 = caluc(uc_et_all(id_ET(2):end));
 
 %
 figure
-plot(CSR.TWSA(:,1),CSR.TWSA(:,2)*1000,'linewidth',1.5);
+hold on
+subplot(2,2,1)
+plot(CSR.dS(:,1),CSR.dS(:,2));
 pbaspect([3 1 1])
 datetick("x")
 title("CSR")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\CSR_TWSA.png')
 
-figure
-plot(GFZ.TWSA(:,1),GFZ.TWSA(:,2)*1000,'linewidth',1.5);
+subplot(2,2,2)
+plot(GFZ.dS(:,1),GFZ.dS(:,2));
 pbaspect([3 1 1])
 datetick("x")
 title("GFZ")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\GFZ_TWSA.png')
 
-figure
-plot(ITSG.TWSA(:,1),ITSG.TWSA(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("ITSG")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\ITSG_TWSA.png')
-
-figure
-plot(JPL.TWSA(:,1),JPL.TWSA(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("JPL")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\JPL_TWSA.png')
-
-
-
-figure
-plot(CSR.dS(:,1),CSR.dS(:,2)*1000,'linewidth',1.5);
+subplot(2,2,3)
+plot(ITSG.dS(:,1),CSR.dS(:,2));
 pbaspect([3 1 1])
 datetick("x")
 title("CSR")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\CSR_dSdt.png')
 
-figure
-plot(GFZ.dS(:,1),GFZ.dS(:,2)*1000,'linewidth',1.5);
+subplot(2,2,4)
+plot(CSR.dS(:,1),CSR.dS(:,2));
 pbaspect([3 1 1])
 datetick("x")
-title("GFZ")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\GFZ_dSdt.png')
-
-figure
-plot(ITSG.dS(:,1),ITSG.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("ITSG")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\ITSG_dSdt.png')
-
-figure
-plot(JPL.dS(:,1),JPL.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("JPL")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\JPL_dSdt.png')
+title("CSR")
