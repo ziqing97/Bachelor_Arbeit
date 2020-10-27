@@ -94,6 +94,7 @@ plot(CSR.mascon(:,1),CSR.mascon(:,2)/100);
 datetick("x")
 title('TWSA of OB Basin')
 legend('SH Unrecovered','Recovered','mascon')
+set(gcf,'Position',[500 500 500 220]);
 
 %% Calculating the dS with Uncertainty
 % for each Data Center
@@ -109,11 +110,13 @@ for i = 1:len
     y = [CSR.dS(i,2);GFZ.dS(i,2);ITSG.dS(i,2);JPL.dS(i,2)];
     P = diag([1/CSR.dS_unc(i,2)^2,1/GFZ.dS_unc(i,2)^2,1/ITSG.dS_unc(i,2)^2,1/JPL.dS_unc(i,2)^2]);
     dSdt(i) = (A' * P * A) \ A' * P * y;
+    uc_dSdt(i) = 1/4 * sqrt(CSR.dS_unc(i,2)^2+GFZ.dS_unc(i,2)^2+ITSG.dS_unc(i,2)^2+JPL.dS_unc(i,2)^2);
 end
 figure
 plot(CSR.dS(:,1),dSdt)
 datetick("x")
 title("dS/dt")
+set(gcf,'Position',[500 500 500 220]);
 
 %% Try to Find the Changing Point
 % direct try, not working
@@ -133,6 +136,7 @@ plot(mean_dSdt)
 title("with movmean")
 hold on
 stairs(S)
+set(gcf,'Position',[500 500 500 220]);
 
 id = find(TF == 1);
 id = id + 6;
@@ -156,11 +160,13 @@ for i = 1:12
     end
 end
 Pre_all = zeros(216,1);
+uc_pre_all = zeros(216,1);
 for i = 1:216
     A = ones(len,1);
     y = Pre(:,i);
     P = diag(1./st(:,i).^2);
     Pre_all(i) = (A' * P * A) \ A' * P * y;
+    uc_pre_all(i) = sqrt(sum(st(:,i).^2))/len;
 end
 figure
 hold on
@@ -229,11 +235,13 @@ for i = 1:12
 end
 ET_all = zeros(204,1);
 
+uc_et_all = zeros(204,1);
 for i = 1:204
     A = ones(len,1);
     y = ET(:,i);
     P = diag(1./st(:,i).^2);
     ET_all(i) = (A' * P * A) \ A' * P * y;
+    uc_et_all(i) = sqrt(sum(st(:,i).^2))/len;
 end
 
 % plot
@@ -313,18 +321,31 @@ datasets{10,1} = "W3RA";
 datasets{11,1} = "WaterGAP3";
 legend(datasets)
 %% Mean Value before and after
+change_time = datenum(change_point);
+change_time(1) = datenum(2012,12,15);
+change_time(2) = datenum(2014,12,15);
+
 % TWSA
+
+id(1) = find(CSR.dS_t == change_time(1));
+id(2) = find(CSR.dS_t == change_time(2));
 TWSA_1 = mean(dSdt(1:id(1)),'omitnan');
 TWSA_2 = mean(dSdt(id(1):id(2)),'omitnan');
 TWSA_3 = mean(dSdt(id(2):end),'omitnan');
+uc_TWSA_1 = caluc(uc_dSdt(1:id(1)));
+uc_TWSA_2 = caluc(uc_dSdt(id(1):id(2)));
+uc_TWSA_3 = caluc(uc_dSdt(id(2):end));
 % Pre
-change_time = datenum(change_point);
+
 id_Pre = [0;0];
 id_Pre(1) = find(date_Pre == change_time(1));
 id_Pre(2) = find(date_Pre == change_time(2));
 Pre_1 = mean(Pre_all(1:id_Pre(1)));
 Pre_2 = mean(Pre_all(id_Pre(1):id_Pre(2)));
 Pre_3 = mean(Pre_all(id_Pre(2):end));
+uc_Pre_1 = caluc(uc_pre_all(1:id_Pre(1)));
+uc_Pre_2 = caluc(uc_pre_all(id_Pre(1):id_Pre(2)));
+uc_Pre_3 = caluc(uc_pre_all(id_Pre(2):end));
 % ET 
 id_ET = [0;0];
 id_ET(1) = find(date_ET == change_time(1));
@@ -332,3 +353,7 @@ id_ET(2) = find(date_ET == change_time(2));
 ET_1 = mean(ET_all(1:id_ET(1)));
 ET_2 = mean(ET_all(id_ET(1):id_ET(2)));
 ET_3 = mean(ET_all(id_ET(2):end));
+uc_ET_1 = caluc(uc_et_all(1:id_ET(1)));
+uc_ET_2 = caluc(uc_et_all(id_ET(1):id_ET(2)));
+uc_ET_3 = caluc(uc_et_all(id_ET(2):end));
+close all
