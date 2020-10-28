@@ -24,7 +24,7 @@ We are also able to get the uncertainty using Propagation
 \begin{align}
 \sigma_{dS}(t) = \frac{1}{2} \sqrt{\sigma_{dS}^2(t + \Delta t) + \sigma_{dS}^2(t - \Delta t)}
 \end{align}
-\subsection{Adjustment using Gauss-Markov model}
+\subsection{Adjustment using Gauss-Markov model}\label{sec:Gaussmarkov}
 Gauss-Markov model is known as the adjustment with observation equations. The model is as follows
 \begin{equation}
 \bm{y} = \bm{A}\bm{x} + \bm{e}
@@ -84,7 +84,7 @@ We assume that the precipitation and evatranspiration are stable during 2002 to 
 \sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
 \end{gather}
 where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evatranspiration in other eleven months. 
-\section{Estimating runoff using quantile function}
+\section{Estimating the reliability of runoff datasets}
 It was mentioned in (3.1.4) that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyse. \\\\
 In probability theory and statistics ,the cumulative distribution function (CDF) of a real-valued random variable $X$, or just distribution function of $X$, evaluated at $x$, is the probability that $X$ will take a value less than or equal to $x$. Quantiles are cut points dividing the range of a probability distribution into continuous intervals with equal probabilities, or dividing the observations in a sample in the same way. The quantile function, associated with a probability distribution of a random variable, specifies the value of the random variable such that th probability of teh variable being less than or equal to that value equals the given probability. It is also called the percent-point function or invers cumulative distribution function. \\\\
 First of all, we calculate the difference between the model and the in-situ data:
@@ -97,3 +97,12 @@ e(t) = \sqrt{\frac{d(t)}{l}}
 \end{equation}
 where $e$ is the error for the model and $l$ is the length of the time series (here: $l = $ 32 years $\times$ 12 months $= 384$)\\\\
 By presenting the CDF of $e$, the quality of the model can be estimate. By setting the appropriate quantile we are able to choose better time series for further analyse. 
+\section{Estimating the runoff using quantile function and water level height}
+Within previous altimetry based studies, the river discharge at the selected gauges is typically determined from an empirical functional relation between water level estimated by satellite altimetry and measured discharges. This relation, referred to as a rating curve, is specific to each gauging station and location of altimetry. However, this technique has many limitations. First, first, this technique is limited by the availability of in situ discharge measurements simultaneous with altimetry data. Second, the location of the altimetry foot- print can also limit the usage of the technique.\\\\
+Fortunately, \cite{tourian2013quantile} provides a methods, which can represent a direct connection between the quantile functions at the corresponding probability and the relationship between runoff and water level. \\\\
+first, we get the quantile functions for altimetric water level,$Q_R(p)$ and discharge from in situ measurement, $Q_W(p)$:
+\begin{gather*}
+	Q_R(p) = \inf(X_R \in R: p\leq F(X_R)) \\
+	Q_W(p) = \inf(X_W \in R: p\leq F(X_W)) \\
+\end{gather*}
+where $X_R$ and $X_W$ refer to the discharge and water level values and $F$ represents the CDF. The quantile function specifies, for a given probability $0 < p < 1$, the maximum value that $X_R$ or $X_W$ can attain with that probability.\\\\

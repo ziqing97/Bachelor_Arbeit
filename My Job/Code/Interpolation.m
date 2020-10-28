@@ -1,4 +1,4 @@
-function [series_inter] = Interpolation(series,type)
+function [series_inter,t] = Interpolation(series,type)
     % get the whole time period
     t1 = datenum(2002,4,15);
     t2 = datenum(2020,5,15);

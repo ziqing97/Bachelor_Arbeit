@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: literatur/bib.bib
 Warning--empty journal in Obriver
 Warning--empty year in Obriver
-You've used 13 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            580 strings with 6801 characters,
-and the built_in function-call counts, 5180 in all, are:
-= -- 479
-> -- 342
+            588 strings with 6993 characters,
+and the built_in function-call counts, 5564 in all, are:
+= -- 518
+> -- 360
 < -- 1
-+ -- 139
-- -- 122
-* -- 444
-:= -- 898
-add.period$ -- 39
-call.type$ -- 13
-change.case$ -- 96
++ -- 147
+- -- 128
+* -- 477
+:= -- 961
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 102
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 142
-empty$ -- 342
-format.name$ -- 122
-if$ -- 1014
+cite$ -- 16
+duplicate$ -- 153
+empty$ -- 371
+format.name$ -- 128
+if$ -- 1091
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 13
-newline$ -- 67
-num.names$ -- 26
-pop$ -- 95
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 72
+num.names$ -- 28
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 89
 quote$ -- 0
-skip$ -- 92
+skip$ -- 99
 stack$ -- 0
-substring$ -- 317
-swap$ -- 14
+substring$ -- 354
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
+type$ -- 54
 warning$ -- 2
-while$ -- 43
-width$ -- 15
-write$ -- 139
+while$ -- 47
+width$ -- 16
+write$ -- 150
 (There were 2 warnings)

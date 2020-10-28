@@ -4,6 +4,8 @@ clear all
 
 % path of the data
 addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
+addpath(genpath('E:\Studium\altmany-export_fig-d7671fe'))
+
 %% Loading the Data
 load("EWH_CSR_OB.mat")
 load("EWH_GFZ_OB.mat")
@@ -45,6 +47,29 @@ load("W3RA_R_OB.mat")
 load("WaterGAP3_R_OB.mat")
 
 load("R_insitu_OB.mat")
+
+load("WaterLevel_Ob.mat")
+load("Discharge_OB.mat")
+
+count = 1;
+tall = zeros(218,2);
+for j = 4:12
+    tall(count,1) = 2002;
+    tall(count,2) = j;
+    count = count+1;
+end
+for i = 2003:2019
+    for j = 1:12
+        tall(count,1) = i;
+        tall(count,2) = j;
+        count = count+1;
+    end
+end
+ for j = 1:5
+    tall(count,1) = 2020;
+    tall(count,2) = j;
+    count = count+1;
+ end
 
 %% Interpolation
 CSR_OB = Interpolation(EWH_CSR_OB,"TWSA");
@@ -107,19 +132,46 @@ JPL = cal_dSdt(JPL);
 % Summary with Uncertainty
 [len,~] = size(CSR.dS);
 dSdt = zeros(len,1);
+
+TWSA = zeros(218,1);
+uc_twsa = zeros(218,1);
+[len,~] = size(CSR.dS);
 for i = 1:len
     A = [1;1;1;1];
-    y = [CSR.dS(i,2);GFZ.dS(i,2);ITSG.dS(i,2);JPL.dS(i,2)];
-    P = diag([1/CSR.dS_unc(i,2)^2,1/GFZ.dS_unc(i,2)^2,1/ITSG.dS_unc(i,2)^2,1/JPL.dS_unc(i,2)^2]);
-    dSdt(i) = (A' * P * A) \ A' * P * y;
-    uc_dSdt(i) = 1/4 * sqrt(CSR.dS_unc(i,2)^2+GFZ.dS_unc(i,2)^2+ITSG.dS_unc(i,2)^2+JPL.dS_unc(i,2)^2);
+    y = [CSR.TWSA(i,2);GFZ.TWSA(i,2);ITSG.TWSA(i,2);JPL.TWSA(i,2)];
+    P = diag([1/CSR.Uncertainty(i,2)^2,1/GFZ.Uncertainty(i,2)^2,1/ITSG.Uncertainty(i,2)^2,1/JPL.Uncertainty(i,2)^2]);
+    TWSA(i) = (A' * P * A) \ A' * P * y;
+    uc_twsa(i) = 1/4 * sqrt(CSR.Uncertainty(i,2)^2+GFZ.Uncertainty(i,2)^2+ITSG.Uncertainty(i,2)^2+JPL.Uncertainty(i,2)^2);
 end
+TWSA = TWSA * 1000;
+uc_twsa = uc_twsa * 1000;
+TWSA_all = zeros(218,5);
+TWSA_all(:,1:2) = tall;
+TWSA_all(:,3) = JPL_OB(:,1);
+TWSA_all(:,4) = TWSA;
+TWSA_all(:,5) = uc_twsa;
 figure
-plot(CSR.dS(:,1),dSdt*1000,'linewidth',1.5)
-datetick("x")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-pbaspect([3 1 1])
+a = plt_withunc(TWSA_all);
+
+dSdt = zeros(216,5);
+dSdt(:,1) = TWSA_all(2:end-1,1);
+dSdt(:,2) = TWSA_all(2:end-1,2);
+dSdt(:,3) = TWSA_all(2:end-1,3);
+for i = 1 : 216
+        dSdt(i,4) = (TWSA_all(i+2,4) - TWSA_all(i,4)) / 2;
+end
+for i = 1 : 216
+    dSdt(i,5) = sqrt(TWSA_all(i+2,5)^2 + TWSA_all(i,5)^2)/2;
+end
+dSdt = dSdt(9:212,:);
+figure
+a = plt_withunc(dSdt);
+
+% plot(CSR.TWSA(:,1),TWSA*1000,'linewidth',1.5)
+% datetick("x")
+% xlabel("Time")
+% ylabel("dS/dt (mm/month)")
+% pbaspect([3 1 1])
 
 %% Try to Find the Changing Point
 % direct try, not working
@@ -360,77 +412,57 @@ uc_ET_1 = caluc(uc_et_all(1:id_ET(1)));
 uc_ET_2 = caluc(uc_et_all(id_ET(1):id_ET(2)));
 uc_ET_3 = caluc(uc_et_all(id_ET(2):end));
 
+
+% Runoff
+id_R = [0;0];
+date_R = datenum(Discharge(:,1),Discharge(:,2),15);
+id_R(1) = find(date_R == change_time(1));
+id_R(2) = find(date_R == change_time(2));
+R_1 = mean(Discharge(7:id_R(1)));
+R_2 = mean(Discharge(id_ET(1):id_R(2)));
+R_3 = mean(Discharge(id_R(2):end));
+
 %
 figure
+hold on
+
 plot(CSR.TWSA(:,1),CSR.TWSA(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("CSR")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\CSR_TWSA.png')
-
-figure
 plot(GFZ.TWSA(:,1),GFZ.TWSA(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("GFZ")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\GFZ_TWSA.png')
-
-figure
 plot(ITSG.TWSA(:,1),ITSG.TWSA(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("ITSG")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\ITSG_TWSA.png')
-
-figure
 plot(JPL.TWSA(:,1),JPL.TWSA(:,2)*1000,'linewidth',1.5);
+
 pbaspect([3 1 1])
 datetick("x")
-title("JPL")
+legend("CSR","GFZ","ITSG","JPL")
 xlabel("Time")
 ylabel("equivalent water height (mm)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\JPL_TWSA.png')
 
-
-
-figure
-plot(CSR.dS(:,1),CSR.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("CSR")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\CSR_dSdt.png')
-
-figure
-plot(GFZ.dS(:,1),GFZ.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("GFZ")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\GFZ_dSdt.png')
-
-figure
-plot(ITSG.dS(:,1),ITSG.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("ITSG")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\ITSG_dSdt.png')
-
-figure
-plot(JPL.dS(:,1),JPL.dS(:,2)*1000,'linewidth',1.5);
-pbaspect([3 1 1])
-datetick("x")
-title("JPL")
-xlabel("Time")
-ylabel("dS/dt (mm/month)")
-saveas(gcf,'E:\Studium\6-BA\Bachelor_Arbeit\My Job\Writing\bilder\JPL_dSdt.png')
+% figure
+% hold on 
+% plot(CSR.dS(:,1),CSR.dS(:,2)*1000,'linewidth',1.5);
+% pbaspect([3 1 1])
+% datetick("x")
+% title("CSR")
+% xlabel("Time")
+% ylabel("dS/dt (mm/month)")
+% 
+% plot(GFZ.dS(:,1),GFZ.dS(:,2)*1000,'linewidth',1.5);
+% pbaspect([3 1 1])
+% datetick("x")
+% title("GFZ")
+% xlabel("Time")
+% ylabel("dS/dt (mm/month)")
+% 
+% plot(ITSG.dS(:,1),ITSG.dS(:,2)*1000,'linewidth',1.5);
+% pbaspect([3 1 1])
+% datetick("x")
+% title("ITSG")
+% xlabel("Time")
+% ylabel("dS/dt (mm/month)")
+% 
+% plot(JPL.dS(:,1),JPL.dS(:,2)*1000,'linewidth',1.5);
+% pbaspect([3 1 1])
+% datetick("x")
+% title("JPL")
+% xlabel("Time")
+% ylabel("dS/dt (mm/month)")
