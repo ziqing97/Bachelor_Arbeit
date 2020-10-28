@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.25)  28 OCT 2020 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.25)  28 OCT 2020 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,14 +1112,42 @@ ed
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.236 \clearpage
-                pdfTeX warning (ext4): destination with the same identifier (na
-me{figure.3.2}) has been already used, duplicate ignored
+l.236  \paragraph
+                 {Envisat}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.236 \clearpage
-                 <./bilder/salekhard.jpg>] [20]) (./kapitel/kapitel4.tex
+l.236  \paragraph
+                 {Envisat} <./bilder/salekhard.jpg>]
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 237.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 237.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 237.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 237.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 237.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 237.
+
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no Ø in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no Ø in font pplr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
+
+ []
+
+[20]) (./kapitel/kapitel4.tex
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--18
@@ -1179,22 +1207,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
-[24]) (./kapitel/kapitel5.tex
-Underfull \hbox (badness 10000) in paragraph at lines 107--1
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--1
-
- []
-
-[25] [26
+) (./kapitel/kapitel5.tex [25] [26
 
 
 ]
 chapter 5.
-<bilder/TWSAall.png, id=416, 944.7797pt x 331.99031pt>
+<bilder/TWSAall.png, id=420, 944.7797pt x 331.99031pt>
 File: bilder/TWSAall.png Graphic file (type png)
 <use bilder/TWSAall.png>
 Package pdftex.def Info: bilder/TWSAall.png  used on input line 7.
@@ -1267,8 +1290,8 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 14573 strings out of 481228
- 232885 string characters out of 5921397
+ 14577 strings out of 481228
+ 232933 string characters out of 5921397
  635594 words of memory out of 5000000
  29323 multiletter control sequences out of 15000+600000
  573288 words of font info for 117 fonts, out of 8000000 for 9000
@@ -1285,10 +1308,10 @@ mf-dist/fonts/type1/urw/palatino/uplb8a.pfb><d:/texlive/2019/texmf-dist/fonts/t
 ype1/urw/palatino/uplbi8a.pfb><d:/texlive/2019/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb><d:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on arbeit.pdf (43 pages, 3628279 bytes).
+Output written on arbeit.pdf (43 pages, 3631841 bytes).
 PDF statistics:
- 633 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 162 named destinations out of 1000 (max. 500000)
+ 638 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 166 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

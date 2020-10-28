@@ -1,0 +1,31 @@
+----------19/09/20_20:32----------
+
+Error was overridden: 
+
+Unable to open both \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry Bundle\Shapefiles\GlobalLakesReservoirs\global_lakes_reservoirs_4ext.shp and \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry Bundle\Shapefiles\GlobalLakesReservoirs\global_lakes_reservoirs_4ext.SHP.
+Error in D:\MATLAB\toolbox\map\mapformats\private\openShapeFiles.m, line: 67
+Error in D:\MATLAB\toolbox\map\mapformats\private\openShapeFiles.m, line: 18
+Error in D:\MATLAB\toolbox\map\mapformats\shaperead.m, line: 210
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 99
+----------19/09/20_20:39----------
+
+Error was overridden: 
+
+Cannot CD to \\gis-cifs.tik.uni-stuttgart.de\GIS\Altimetry data\Envisat\gdr_V3\cycle_006 (Directory access failure).
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\crt_En_1301.m, line: 50
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Crop_Computer.m, line: 55
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Altprocess.m, line: 176
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 128
+----------21/09/20_14:22----------
+
+Error was overridden: 
+
+Cannot CD to E:\Studium\6-BA\Data_Preparation\GlobalLakesReservoirscycle_006 (Name is nonexistent or not a directory).
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\crt_En_1301.m, line: 50
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Crop_Computer.m, line: 55
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Altprocess.m, line: 176
+Error in E:\Studium\6-BA\AltBundle-master\AltBundle-master\AltBun.V2\Run.m, line: 128
+----------24/09/20_10:41----------
+
+
+--------------Success!--------------

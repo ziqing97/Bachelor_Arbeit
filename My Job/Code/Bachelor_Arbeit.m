@@ -183,7 +183,7 @@ a = plt_withunc(dSdt);
 % stairs(S)
 
 % try another way, good job
-mean_dSdt = movmean(dSdt,12);
+mean_dSdt = movmean(dSdt(:,4),12);
 mean_dSdt = mean_dSdt(7:end-6);
 figure
 [TF,S] = ischange(mean_dSdt,'mean','MaxNumChanges',2);
@@ -195,7 +195,7 @@ pbaspect([3 1 1])
 
 id = find(TF == 1);
 id = id + 6;
-change_point = datetime(CSR.dS(id,1),'ConvertFrom','datenum');
+change_point = datetime(dSdt(id,3),'ConvertFrom','datenum');
 
 %% Dealing with the Precipitation 
 date = Pre_Datasets(1).Pre;
@@ -378,18 +378,18 @@ legend(datasets)
 %% Mean Value before and after
 change_time = datenum(change_point);
 change_time(1) = datenum(2012,12,15);
-change_time(2) = datenum(2014,12,15);
+change_time(2) = datenum(2015,12,15);
 
 % TWSA
 
-id(1) = find(CSR.dS_t == change_time(1));
-id(2) = find(CSR.dS_t == change_time(2));
-TWSA_1 = mean(dSdt(1:id(1)),'omitnan');
-TWSA_2 = mean(dSdt(id(1):id(2)),'omitnan');
-TWSA_3 = mean(dSdt(id(2):end),'omitnan');
-uc_TWSA_1 = caluc(uc_dSdt(1:id(1)));
-uc_TWSA_2 = caluc(uc_dSdt(id(1):id(2)));
-uc_TWSA_3 = caluc(uc_dSdt(id(2):end));
+id(1) = find(dSdt(:,3) == change_time(1));
+id(2) = find(dSdt(:,3) == change_time(2));
+TWSA_1 = mean(dSdt(1:id(1),4),'omitnan');
+TWSA_2 = mean(dSdt(id(1):id(2),4),'omitnan');
+TWSA_3 = mean(dSdt(id(2):end,4),'omitnan');
+uc_TWSA_1 = caluc(dSdt(1:id(1),5));
+uc_TWSA_2 = caluc(dSdt(id(1):id(2),5));
+uc_TWSA_3 = caluc(dSdt(id(2):end,5));
 % Pre
 
 id_Pre = [0;0];
@@ -421,6 +421,10 @@ id_R(2) = find(date_R == change_time(2));
 R_1 = mean(Discharge(7:id_R(1)));
 R_2 = mean(Discharge(id_ET(1):id_R(2)));
 R_3 = mean(Discharge(id_R(2):end));
+
+figure
+cdfplot(TS(:,3))
+pbaspect([1 1 1])
 
 %
 figure

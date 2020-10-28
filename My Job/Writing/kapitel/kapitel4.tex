@@ -103,6 +103,12 @@ Fortunately, \cite{tourian2013quantile} provides a methods, which can represent 
 first, we get the quantile functions for altimetric water level,$Q_R(p)$ and discharge from in situ measurement, $Q_W(p)$:
 \begin{gather*}
 	Q_R(p) = \inf(X_R \in R: p\leq F(X_R)) \\
-	Q_W(p) = \inf(X_W \in R: p\leq F(X_W)) \\
+	Q_W(p) = \inf(X_W \in R: p\leq F(X_W)) 
 \end{gather*}
-where $X_R$ and $X_W$ refer to the discharge and water level values and $F$ represents the CDF. The quantile function specifies, for a given probability $0 < p < 1$, the maximum value that $X_R$ or $X_W$ can attain with that probability.\\\\
+where $X_R$ and $X_W$ refer to the runoff and water level values and $F$ represents the CDF. The quantile function specifies, for a given probability $0 < p < 1$, the maximum value that $X_R$ or $X_W$ can attain with that probability.\\\\
+By achieving the function $T$ between the quantile functions, we can get the function between the runoff and water level since $T$ is a non decreasing function. 
+\begin{equation}
+	Q_R = T(Q_W) \Longrightarrow X_R = T(X_W)
+\end{equation}
+In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve
+is achieved by fitting a quadratic curve over the obtained statistical relationship.
