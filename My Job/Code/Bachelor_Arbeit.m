@@ -111,17 +111,18 @@ JPL.TWSA = JPL_OB;
 JPL.Uncertainty = JPL_Uncertainty;
 JPL.Recovered = JPL_Recovered;
 %% Plot for CSR
-figure
-plot(CSR.TWSA(:,1),CSR.TWSA(:,2));
-hold on 
-plot(CSR.Recovered(:,1), CSR.Recovered(:,2));
-plot(CSR.mascon(:,1),CSR.mascon(:,2)/100);
-datetick("x")
-title('TWSA of OB Basin')
-legend('SH Unrecovered','Recovered','mascon')
-pbaspect([3 1 1])
-xlabel("time")
-ylabel("TWSA (mm)")
+% figure
+% plot(CSR.TWSA(:,1),CSR.TWSA(:,2));
+% hold on 
+% plot(CSR.Recovered(:,1), CSR.Recovered(:,2));
+% plot(CSR.mascon(:,1),CSR.mascon(:,2)/100);
+% datetick("x")
+% title('TWSA of OB Basin')
+% legend('SH Unrecovered','Recovered','mascon')
+% pbaspect([3 1 1])
+% xlabel("time")
+% set(gca,'fontsize',16)
+% ylabel("TWSA (mm)")
 
 %% Calculating the dS with Uncertainty
 % for each Data Center
@@ -172,15 +173,15 @@ set(patch2, 'FaceAlpha', 0.5);
 h = plot(TWSA_all(:,3), TWSA_all(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
 datetick
-ylim([-150,150])
+ylim([-150,180])
 xlim([TWSA_all(1,3)-365,TWSA_all(end,3)+365])
 set(ax,'xtick',datenum(TWSA_all(1,1):1:TWSA_all(end,1),7,1))
 set(ax,'xticklabel',TWSA_all(1,1):1:TWSA_all(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
-ylabel('Equivalent Water Height','fontsize',12)
-legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',12)
+set(gca,'fontsize',16)
+ylabel('Equivalent Water Height','fontsize',20)
+legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',20)
 
 dSdt = zeros(216,5);
 dSdt(:,1) = TWSA_all(2:end-1,1);
@@ -215,15 +216,15 @@ set(patch2, 'FaceAlpha', 0.5);
 h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
 datetick
-ylim([-50,50])
+ylim([-50,70])
 xlim([dSdt(1,3)-365,dSdt(end,3)+365])
 set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
-ylabel('dS/dt [mm/month]','fontsize',12)
-legend([patch1 h],{'Uncertainty','dS/dt'},'Orientation','horizontal','fontsize',12)
+set(gca,'fontsize',16)
+ylabel('dS/dt [mm/month]','fontsize',20)
+legend([patch1 h],{'Uncertainty','dS/dt'},'Orientation','horizontal','fontsize',20)
 
 % plot(CSR.TWSA(:,1),TWSA*1000,'linewidth',1.5)
 % datetick("x")
@@ -256,7 +257,7 @@ set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
+set(gca,'fontsize',16)
 ylabel('movmean of dS/dt [mm/month]','fontsize',18)
 ylim([-6,8])
 xlim([dSdt(1,3)-365,dSdt(end,3)+365])
@@ -415,31 +416,6 @@ error{1,3} = "error - median(error)";
 [error{10,2},error{10,3}] = Runoff_Processing(R_insitu_OB,SURFEX_TRIP_R_OB);
 [error{11,2},error{11,3}] = Runoff_Processing(R_insitu_OB,W3RA_R_OB);
 [error{12,2},error{12,3}] = Runoff_Processing(R_insitu_OB,WaterGAP3_R_OB);
-
-% do some plot
-figure
-hold on 
-for i = 1:11
-subplot(3,4,i)
-hold on
-cdfplot(error{i+1,2})
-cdfplot(error{i+1,3})
-plot([limit,limit],[0,1])
-plot([0,4],[0.9,0.9])
-xlim([0 4])
-legend("e","e-mid")
-title(error{i+1,1})
-end
-sgtitle('Error CDF')
-figure
-hold on
-for i = 1:11
-cdfplot(error{i+1,2})
-xlim([0 4])
-title(error{i+1,1})
-end
-plot([limit,limit],[0,1])
-plot([0,4],[0.9,0.9])
 datasets{1,1} = "ERA5";
 datasets{2,1} = "HTESSEL";
 datasets{3,1} = "LISFLOOD";
@@ -451,7 +427,61 @@ datasets{8,1} = "GLDAS VIC";
 datasets{9,1} = "SURFEX TRIP";
 datasets{10,1} = "W3RA";
 datasets{11,1} = "WaterGAP3";
+
+figure
+hold on 
+plot(datenum(HTESSEL_R_OB(253:end,1),HTESSEL_R_OB(253:end,2),15),HTESSEL_R_OB(253:end,3))
+plot(datenum(LISFLOOD_R_OB(253:end,1),LISFLOOD_R_OB(253:end,2),15),LISFLOOD_R_OB(253:end,3))
+plot(datenum(ORCHIDEE_R_OB(253:end,1),ORCHIDEE_R_OB(253:end,2),15),ORCHIDEE_R_OB(253:end,3))
+plot(datenum(PCRGLOBWB_R_OB(253:end,1),PCRGLOBWB_R_OB(253:end,2),15),PCRGLOBWB_R_OB(253:end,3))
+plot(datenum(R_GLDAS_CLSM_OB(:,1),R_GLDAS_CLSM_OB(:,2),15),R_GLDAS_CLSM_OB(:,3))
+plot(datenum(R_GLDAS_NOAH_OB(:,1),R_GLDAS_NOAH_OB(:,2),15),R_GLDAS_NOAH_OB(:,3))
+plot(datenum(R_GLDAS_VIC_OB(:,1),R_GLDAS_VIC_OB(:,2),15),R_GLDAS_VIC_OB(:,3))
+plot(datenum(SURFEX_TRIP_R_OB(253:end,1),SURFEX_TRIP_R_OB(253:end,2),15),SURFEX_TRIP_R_OB(253:end,3))
+plot(datenum(W3RA_R_OB(253:end,1),W3RA_R_OB(253:end,2),15),W3RA_R_OB(253:end,3))
+plot(datenum(WaterGAP3_R_OB(253:end,1),WaterGAP3_R_OB(253:end,2),15),WaterGAP3_R_OB(253:end,3))
+plot(datenum(ERA5_R_OB(253:end,1),ERA5_R_OB(253:end,2),15),ERA5_R_OB(253:end,3))
+ax = gca;
+set(gcf,'color','w')
+set(gca,'fontsize',16)
+ylim([-10,200])
+set(gca,'fontsize',16)
+set(ax,'xtick',datenum(ERA5_R_OB(253,1):1:ERA5_R_OB(end,1),7,1))
+set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
+ylabel('Runoff [mm/month]','fontsize',20)
+legend(datasets,'fontsize',14)
+pbaspect([3 1 1])
+datetick
+
+% do some plot
+% figure
+% hold on 
+% for i = 1:11
+% subplot(3,4,i)
+% hold on
+% cdfplot(error{i+1,2})
+% cdfplot(error{i+1,3})
+% plot([limit,limit],[0,1])
+% plot([0,4],[0.9,0.9])
+% xlim([0 4])
+% legend("e","e-mid")
+% title(error{i+1,1})
+% end
+% sgtitle('Error CDF')
+figure
+hold on
+for i = 1:11
+cdfplot(error{i+1,2})
+xlim([0 4])
+end
+plot([limit,limit],[0,1],'color',[0 0 0]./255,'Linewidth',2)
+plot([0,4],[0.9,0.9],'color',[0 0 0]./255,'Linewidth',2)
 legend(datasets)
+set(gcf,'color','w')
+set(gca,'fontsize',16)
+pbaspect([1 1 1])
+xlabel('RMSE (mm/month)')
+ylabel('F(RMSE)')
 %% Mean Value before and after
 change_time = zeros(1,4);
 change_time(1) = datenum(2003,10,15);
@@ -487,22 +517,23 @@ set(patch2, 'edgecolor', 'none');
 set(patch2, 'FaceAlpha', 0.5);
 h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
-
 set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),1,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
+set(gca,'fontsize',16)
 ylabel('dS/dt [mm/month]','fontsize',20)
 plot(dSdt(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(dSdt(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(dSdt(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(dSdt(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-ylim([-50,50])
-xlim([dSdt(1,3)-365,dSdt(end,3)+365*5])
+ylim([-50,60])
 datetick
 
 % Pre
+Precipitation = [date_Pre,Pre_all,uc_pre_all];
+Precipitation = Precipitation(13:end,:);
+Precipitation = [dSdt(:,1:2),Precipitation];
 figure
 hold on
 Pre_legend ={'','','','','','','','',''};
@@ -512,10 +543,13 @@ for i = 1:9
 end
 pbaspect([3 1 1])
 datetick
-ylabel('Precipitation mm/month')
-legend(Pre_legend)
+ylabel('Precipitation mm/month','fontsize',16)
+legend(Pre_legend,'Orientation','horizontal','fontsize',14)
+ax = gca;
 set(ax,'xtick',datenum(Precipitation(1,1):1:Precipitation(end,1),1,1))
 set(ax,'xticklabel',Precipitation(1,1):1:Precipitation(end,1))
+set(gcf,'color','w')
+set(gca,'fontsize',16)
 
 figure
 Precipitation = [date_Pre,Pre_all,uc_pre_all];
@@ -541,13 +575,12 @@ set(patch, 'edgecolor', 'none');
 set(patch, 'FaceAlpha', 0.5);
 h = plot(Precipitation(:,3), Precipitation(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
-
 set(ax,'xtick',datenum(Precipitation(1,1):1:Precipitation(end,1),1,1))
 set(ax,'xticklabel',Precipitation(1,1):1:Precipitation(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
-ylabel('dS/dt [mm/month]','fontsize',20)
+set(gca,'fontsize',16)
+ylabel('Precipitation [mm/month]','fontsize',16)
 plot(Precipitation(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(Precipitation(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(Precipitation(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
@@ -560,16 +593,21 @@ Evatranspiration = [date_ET,ET_all,uc_et_all];
 Evatranspiration = [dSdt(:,1:2),Evatranspiration];
 figure
 hold on
-ET_legend ={'SSEBOP','GLDAS_CLSM','GLDAS_VIC','ERA5','GLDAS_NOAH','FLDAS'};
+ET_legend ={'SSEBOP','GLDAS-CLSM','GLDAS-VIC','ERA5','GLDAS-NOAH','FLDAS'};
 for i = 1:6
     plot(date_ET(1:end),ET(i,1:end));
 end
 pbaspect([3 1 1])
 datetick
-ylabel('ET (mm/month)')
-legend(ET_legend)
+ylabel('Evatranspiration (mm/month)')
+legend(ET_legend,'Orientation','horizontal','fontsize',14)
+ax = gca;
 set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
 set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
+set(gcf,'color','w')
+set(gca,'fontsize',16)
+ylim([-10,160])
+
 
 
 figure
@@ -593,7 +631,6 @@ set(patch, 'edgecolor', 'none');
 set(patch, 'FaceAlpha', 0.5);
 h = plot(Evatranspiration(:,3), Evatranspiration(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
-
 set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
 set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
 set(gca,'YGrid','on')
@@ -604,17 +641,62 @@ plot(Evatranspiration(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./25
 plot(Evatranspiration(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(Evatranspiration(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 plot(Evatranspiration(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-ylim([-10,120])
+ylim([-10,140])
 
 
 % Runoff
-id_R = [0;0];
+count = 1;
+for i = 2003:2010
+    for j = 1:12
+        t(count) = datenum(i,j,15);
+        count = count+1;
+    end
+end
+for i = 2011:2013
+    for j = 1:12
+        t(count) = NaN;
+        count = count+1;
+    end
+end
+for i = 2014:2019
+    for j = 1:12
+        t(count) = datenum(i,j,15);
+        count = count+1;
+    end
+end
 date_R = datenum(Discharge(:,1),Discharge(:,2),15);
-id_R(1) = find(date_R == change_time(1));
-id_R(2) = find(date_R == change_time(2));
-R_1 = mean(Discharge(7:id_R(1)));
-R_2 = mean(Discharge(id_ET(1):id_R(2)));
-R_3 = mean(Discharge(id_R(2):end));
+F = griddedInterpolant(date_R,Discharge(:,3),"spline");
+Runoff = zeros(204,2);
+Runoff(:,1) = t;
+Runoff(:,2) = F(t);
+
+
+id = [0,0,0,0];
+id(1) = find(Evatranspiration(:,3) == change_time(1));
+id(2) = find(Evatranspiration(:,3) == change_time(2));
+id(3) = find(Evatranspiration(:,3) == change_time(3));
+id(4) = find(Evatranspiration(:,3) == change_time(4));
+R_1 = mean(Runoff(id(1):id(2)-1,2),'omitnan');
+R_2 = mean(Runoff(id(2)+1:id(3),2),'omitnan');
+R_3 = mean(Runoff(id(3)+1:id(4),2),'omitnan');
+
+figure
+h = plot(Evatranspiration(:,3),Runoff(:,2),'color', [0 0 53]./255, 'LineWidth', 2);
+hold on
+ax = gca;
+set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
+set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
+set(gca,'YGrid','on')
+set(gcf,'color','w')
+set(gca,'fontsize',14)
+ylabel('Runoff [mm/month]','fontsize',20)
+plot(Evatranspiration(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Evatranspiration(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Evatranspiration(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Evatranspiration(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+pbaspect([3 1 1])
+ylim([0,50])
+datetick
 
 figure
 cdfplot(TS(:,3))
@@ -623,15 +705,30 @@ pbaspect([1 1 1])
 %
 figure
 hold on
-
 plot(CSR.TWSA(:,1),CSR.TWSA(:,2)*1000,'linewidth',1.5);
 plot(GFZ.TWSA(:,1),GFZ.TWSA(:,2)*1000,'linewidth',1.5);
 plot(ITSG.TWSA(:,1),ITSG.TWSA(:,2)*1000,'linewidth',1.5);
 plot(JPL.TWSA(:,1),JPL.TWSA(:,2)*1000,'linewidth',1.5);
-
 pbaspect([3 1 1])
 datetick("x")
-legend("CSR","GFZ","ITSG","JPL")
-xlabel("Time")
-ylabel("equivalent water height (mm)")
+legend("CSR","GFZ","ITSG","JPL",'Orientation','horizontal','fontsize',15)
+set(gcf,'color','w')
+ylabel("equivalent water height (mm)",'fontsize',20)
+set(gca,'YGrid','on')
+set(gca,'fontsize',16)
+ylim([-150,220])
 
+
+% RMSE 2002 - 2010
+insitu = R_Baseline(25:end);
+satellite = Runoff(1:96,2);
+RMSE = sqrt(sum((insitu - satellite).^2) / length(insitu));
+
+
+
+ewh1 = TWSA_all(19:126,4);
+ewh2 = TWSA_all(127:162,4);
+ewh3 = TWSA_all(163:183,4);
+ewh4 = TWSA_all(195:210,4);
+
+aa = sqrt(0.52^2 + 0.61^2 + 0.46^2)/3

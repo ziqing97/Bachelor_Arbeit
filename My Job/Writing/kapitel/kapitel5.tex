@@ -64,7 +64,6 @@ Since we have already divide the whole period into 3 phases, we are interested w
 	\caption{precipitation with uncertainties between 2003 and 2020 and the mean value in 3 periods} 
 	\label{fig:allpre}
 \end{figure}
-\clearpage
 % all precipitation in one 
 \section{Evatranspiration}
 Just as precipitation, we present the evatranspiration temparally ans spatially and cut the timeseries in to 3 small periods.
@@ -80,10 +79,23 @@ Just as precipitation, we present the evatranspiration temparally ans spatially 
 	\caption{evatranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods} 
 	\label{fig:etall}
 \end{figure}
-
+\clearpage
 \section{Runoff}
 \subsection{Runoff from global datasets}
-Like precipitation and evatranspiration, we have many models to present the runoff, we can also show them in a way we did for precipitation and evatranspiration. However, as mentioned in \ref{sec:runoff}, we have in-situ data till 2010, we then can calculate the root-mean-square-error for the models we have. \ref{tab:rmse}.\\\\
+Like precipitation and evatranspiration, we have many models to present the runoff, we can also show them in a way we did for precipitation and evatranspiration. However, as mentioned in \ref{sec:runoff}, we have in-situ data till 2010, we then can calculate the root-mean-square-error for the models we have. \ref{tab:rmse}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{runoffcenter} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\caption{Runoff datasets} 
+	\label{fig:rcenter}
+\end{figure}
+\\
 Then, by analyzing them using the CDF, we found that most of them are not ideal, so, we need to find a better way to present the runoff.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{rcdf} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\caption{CDF of RMSEs} 
+	\label{fig:rcdf}
+\end{figure}\\
 \subsection{Estimating runoff using quantile function and satellite altimetry}
  As mentioned in \ref{sec:runoff}, we can use the satellite to determine the water level height in Ob basin \ref{fig:waterlevelheight}, and we also have the in-situ data\ref{fig:insitu}, using the methods in, this 

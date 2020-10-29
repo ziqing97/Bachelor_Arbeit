@@ -2,12 +2,12 @@ clc
 close all;
 clear all
 
-addpath(genpath('E:\Studium\6-BA\My Job\Data_Analyse\Basin'))
+addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse'))
 addpath(genpath('E:\Studium\6-BA\My Job\Data_Analyse\Hydro'))
-addpath(genpath('E:\Studium\6-BA\Data_Preparation\basin')) 
+addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Basin\basin')) 
 addpath(genpath('E:\Studium\6-BA\EWHBundle-master\EWHBundle-master')) 
 addpath(genpath('E:\Studium\6-BA\shbundle-master\shbundle-master')) 
-load('E:\Studium\6-BA\My Job\Data_Analyse\Basin\masks.mat')
+load('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Basin\masks.mat')
 
 Shape = shaperead('basin', 'UseGeoCoords', true);
 

@@ -1,5 +1,6 @@
 \babel@toc {english}{}
-\babel@toc {english}{}
+\babel@toc {german}{}
+\babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Horologic Cycle}}{2}{figure.1.1}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces GRACE Component}}{4}{figure.1.2}%
@@ -21,4 +22,6 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces precipitation with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{30}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Evatranspiration datasets}}{31}{figure.5.8}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces evatranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{31}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Runoff datasets}}{32}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces CDF of RMSEs}}{33}{figure.5.11}%
 \addvspace {10\p@ }
