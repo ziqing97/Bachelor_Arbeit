@@ -6,10 +6,10 @@ for y=2002:2020
 end
 ts_min = TS(:,4) - TS(:,5);
 ts_max = TS(:,4) + TS(:,5);
-patch1 = fill([TS(:,3)',fliplr(TS(:,3)')],[ts_max',fliplr(ts_min')],[96 96 96]/255);
+patch1 = fill([TS(:,3)' fliplr(TS(:,3)')], [ts_min' fliplr(ts_max')],[96 96 96]./255);
 hold on
 ax = gca;
-% set(patch1, 'edgecolor', 'none');
+set(patch1, 'edgecolor', 'none');
 set(patch1, 'FaceAlpha', 0.5);
 h = plot(TS(:,3), TS(:,4), 'color', [0 0 53]./255, ...
         'LineWidth', 2);
