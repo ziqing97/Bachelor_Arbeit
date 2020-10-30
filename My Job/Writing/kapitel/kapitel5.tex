@@ -82,20 +82,57 @@ Just as precipitation, we present the evatranspiration temparally ans spatially 
 \clearpage
 \section{Runoff}
 \subsection{Runoff from global datasets}
-Like precipitation and evatranspiration, we have many models to present the runoff, we can also show them in a way we did for precipitation and evatranspiration. However, as mentioned in \ref{sec:runoff}, we have in-situ data till 2010, we then can calculate the root-mean-square-error for the models we have. \ref{tab:rmse}.
+Like precipitation and evatranspiration, we have runoff data estimated from several models and meanwhile we have in-situ data till end of 2010. We can plot them in a way we did for precipitation and evatranspiration. From the \ref{fig:rcenter} we can assume that there are large differences between these models and in-situ. By calculating RMSE for these models \ref{tab:rmse} this assumption can be confirmed. The smallest RMSE for those daatsets are bigger than $8.18 \frac{mm}{month}$, which is far from what we needed.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{runoffcenter} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\caption{Runoff datasets} 
 	\label{fig:rcenter}
 \end{figure}
-\\
-Then, by analyzing them using the CDF, we found that most of them are not ideal, so, we need to find a better way to present the runoff.
+\begin{table}[htbp]\label{tab:rmse} \centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Datacenter  & RMSE (mm/month) \\ \hline
+		ERA5        & 8.18  \\ \hline
+		HTESSEL     & 10.40 \\ \hline
+		LISFLOOD    & 11.92 \\ \hline
+		ORCHIDEE    & 10.24 \\ \hline
+		PCRGLOBWB   & 9.48  \\ \hline
+		GLDAS CLSM  & 13.68 \\ \hline
+		GLDAS NOAH  & 17.01 \\ \hline
+		GLDAS VIC   & 25.95 \\ \hline
+		SURFEX-TRIP & 22.05 \\ \hline
+		W3RA        & 16.47 \\ \hline
+		WaterGAP3   & 11.03 \\ \hline
+	\end{tabular}
+	\caption{RMSE for runoff datacenters}
+\end{table}\\
+Then, if we take the CDF of the difference from those models and in-situ data and set 10\% of mean in-situ runoff as quantile \ref{fig:rcdf} , it is shown that none of these datasets has achieved probability of 90\%
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{rcdf} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{CDF of RMSEs} 
+	\includegraphics[width=0.6\textwidth]{rcdf} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\caption{CDF of differences} 
 	\label{fig:rcdf}
 \end{figure}\\
 \subsection{Estimating runoff using quantile function and satellite altimetry}
- As mentioned in \ref{sec:runoff}, we can use the satellite to determine the water level height in Ob basin \ref{fig:waterlevelheight}, and we also have the in-situ data\ref{fig:insitu}, using the methods in, this 
+ As mentioned in \ref{sec:runoff}, we can use the satellite to determine the water level height in Ob river basin, and we also have the in-situ data, using the methods in \ref{sec:waterlevel}, the runoff can be estimated. We have chosen several virtual station for each satellite mission. After denying the virtual stations in bad locations we get 2 water level timeseries from Envisat, 2 from Saral and 2 from Sentinel. In order to get the most accurate runoff, we choose the water level timeseries from the virtual stations, which are closer to Salekhard, where the in-situ runoff are measured. \\\\
+ In \ref{fig:waterlevel} the location of those virtual stations and the water level timeseries are represented. we finally choose the blue line from Envisat, the blue line from Saral and timeseries from Sentinel-3A to generate discharge.
+ \begin{figure}[htbp]
+ 	\centering
+ 	\begin{minipage}[t]{0.7\textwidth}
+ 		\centering
+ 		\includegraphics[width=0.8\textwidth]{Envisat_Ob} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+ 	\end{minipage}
+ 	\begin{minipage}[t]{0.7\textwidth}
+ 		\centering
+ 		\includegraphics[width=0.8\textwidth]{Saral_Ob} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+ 	\end{minipage}
+ \begin{minipage}[t]{0.7\textwidth}
+ 	\centering
+ 	\includegraphics[width=0.8\textwidth]{Sentinels_Ob} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+ \end{minipage}
+ \caption{water level time series and the location of virtual station}
+ \label{fig:waterlevel}
+ \end{figure}
+\\
+Now we have in-situ runoff data from 2001 to 2010 and water level:

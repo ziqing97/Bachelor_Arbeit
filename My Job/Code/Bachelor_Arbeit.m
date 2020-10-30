@@ -404,18 +404,18 @@ error{10,1} = "SURFEX TRIP";
 error{11,1} = "W3RA";
 error{12,1} = "WaterGAP3";
 error{1,2} = "error";
-error{1,3} = "error - median(error)";
-[error{2,2},error{2,3}] = Runoff_Processing(R_insitu_OB,ERA5_R_OB);
-[error{3,2},error{3,3}] = Runoff_Processing(R_insitu_OB,HTESSEL_R_OB);
-[error{4,2},error{4,3}] = Runoff_Processing(R_insitu_OB,LISFLOOD_R_OB);
-[error{5,2},error{5,3}] = Runoff_Processing(R_insitu_OB,ORCHIDEE_R_OB);
-[error{6,2},error{6,3}] = Runoff_Processing(R_insitu_OB,PCRGLOBWB_R_OB);
-[error{7,2},error{7,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_CLSM_OB);
-[error{8,2},error{8,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_NOAH_OB);
-[error{9,2},error{9,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_VIC_OB);
-[error{10,2},error{10,3}] = Runoff_Processing(R_insitu_OB,SURFEX_TRIP_R_OB);
-[error{11,2},error{11,3}] = Runoff_Processing(R_insitu_OB,W3RA_R_OB);
-[error{12,2},error{12,3}] = Runoff_Processing(R_insitu_OB,WaterGAP3_R_OB);
+error{1,3} = "RMSE";
+% [error{2,2},error{2,3}] = Runoff_Processing(R_insitu_OB,ERA5_R_OB);
+% [error{3,2},error{3,3}] = Runoff_Processing(R_insitu_OB,HTESSEL_R_OB);
+% [error{4,2},error{4,3}] = Runoff_Processing(R_insitu_OB,LISFLOOD_R_OB);
+% [error{5,2},error{5,3}] = Runoff_Processing(R_insitu_OB,ORCHIDEE_R_OB);
+% [error{6,2},error{6,3}] = Runoff_Processing(R_insitu_OB,PCRGLOBWB_R_OB);
+% [error{7,2},error{7,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_CLSM_OB);
+% [error{8,2},error{8,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_NOAH_OB);
+% [error{9,2},error{9,3}] = Runoff_Processing(R_insitu_OB,R_GLDAS_VIC_OB);
+% [error{10,2},error{10,3}] = Runoff_Processing(R_insitu_OB,SURFEX_TRIP_R_OB);
+% [error{11,2},error{11,3}] = Runoff_Processing(R_insitu_OB,W3RA_R_OB);
+% [error{12,2},error{12,3}] = Runoff_Processing(R_insitu_OB,WaterGAP3_R_OB);
 datasets{1,1} = "ERA5";
 datasets{2,1} = "HTESSEL";
 datasets{3,1} = "LISFLOOD";
@@ -427,6 +427,7 @@ datasets{8,1} = "GLDAS VIC";
 datasets{9,1} = "SURFEX TRIP";
 datasets{10,1} = "W3RA";
 datasets{11,1} = "WaterGAP3";
+datasets{12,1} = "In-situ";
 
 figure
 hold on 
@@ -441,7 +442,9 @@ plot(datenum(SURFEX_TRIP_R_OB(253:end,1),SURFEX_TRIP_R_OB(253:end,2),15),SURFEX_
 plot(datenum(W3RA_R_OB(253:end,1),W3RA_R_OB(253:end,2),15),W3RA_R_OB(253:end,3))
 plot(datenum(WaterGAP3_R_OB(253:end,1),WaterGAP3_R_OB(253:end,2),15),WaterGAP3_R_OB(253:end,3))
 plot(datenum(ERA5_R_OB(253:end,1),ERA5_R_OB(253:end,2),15),ERA5_R_OB(253:end,3))
+plot(datenum(R_insitu_OB(553:end,1),R_insitu_OB(553:end,2),R_insitu_OB(553:end,3)),R_insitu_OB(553:end,4),'color',[0 0 0]./255,'LineWidth', 3)
 ax = gca;
+
 set(gcf,'color','w')
 set(gca,'fontsize',16)
 ylim([-10,200])
@@ -474,13 +477,13 @@ for i = 1:11
 cdfplot(error{i+1,2})
 xlim([0 4])
 end
-plot([limit,limit],[0,1],'color',[0 0 0]./255,'Linewidth',2)
+plot([1,1],[0,1],'color',[0 0 0]./255,'Linewidth',2)
 plot([0,4],[0.9,0.9],'color',[0 0 0]./255,'Linewidth',2)
 legend(datasets)
 set(gcf,'color','w')
 set(gca,'fontsize',16)
 pbaspect([1 1 1])
-xlabel('RMSE (mm/month)')
+xlabel('difference (mm/month)')
 ylabel('F(RMSE)')
 %% Mean Value before and after
 change_time = zeros(1,4);
@@ -645,6 +648,7 @@ ylim([-10,140])
 
 
 % Runoff
+
 count = 1;
 for i = 2003:2010
     for j = 1:12
@@ -731,4 +735,4 @@ ewh2 = TWSA_all(127:162,4);
 ewh3 = TWSA_all(163:183,4);
 ewh4 = TWSA_all(195:210,4);
 
-aa = sqrt(0.52^2 + 0.61^2 + 0.46^2)/3
+aa = sqrt(0.52^2 + 0.61^2 + 0.46^2)/3;
