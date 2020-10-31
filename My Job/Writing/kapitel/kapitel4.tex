@@ -85,20 +85,18 @@ We assume that the precipitation and evatranspiration are stable during 2002 to 
 \end{gather}
 where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evatranspiration in other eleven months. 
 \section{Estimating the reliability of runoff datasets}
-It was mentioned in (3.1.4) that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyse. \\\\
-In probability theory and statistics ,the cumulative distribution function (CDF) of a real-valued random variable $X$, or just distribution function of $X$, evaluated at $x$, is the probability that $X$ will take a value less than or equal to $x$. Quantiles are cut points dividing the range of a probability distribution into continuous intervals with equal probabilities, or dividing the observations in a sample in the same way. The quantile function, associated with a probability distribution of a random variable, specifies the value of the random variable such that th probability of teh variable being less than or equal to that value equals the given probability. It is also called the percent-point function or invers cumulative distribution function. \\\\
+It was mentioned in (3.1.4) that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyse. A simple way to do that is to calculate the RMSE (Root Mean Square Error)
+\begin{equation*}
+	RMSE = \sqrt{\frac{\sum_{t=1}^T (R(t)_{insitu} - R(t)_{model})^2}{T}}
+\end{equation*}
+Meanwhile in probability theory and statistics ,the cumulative distribution function (CDF) of a real-valued random variable $X$, or just distribution function of $X$, evaluated at $x$, is the probability that $X$ will take a value less than or equal to $x$. Quantiles are cut points dividing the range of a probability distribution into continuous intervals with equal probabilities, or dividing the observations in a sample in the same way. The quantile function, associated with a probability distribution of a random variable, specifies the value of the random variable such that th probability of teh variable being less than or equal to that value equals the given probability. It is also called the percent-point function or invers cumulative distribution function. \\\\
 First of all, we calculate the difference between the model and the in-situ data:
 \begin{equation}
 d(t) = R(t)_{insitu} - R(t)_{model}
 \end{equation}
-To make it easier to compare and to eliminate the negative number:
-\begin{equation}
-e(t) = \sqrt{\frac{d(t)}{l}}
-\end{equation}
-where $e$ is the error for the model and $l$ is the length of the time series (here: $l = $ 32 years $\times$ 12 months $= 384$)\\\\
-By presenting the CDF of $e$, the quality of the model can be estimate. By setting the appropriate quantile we are able to choose better time series for further analyse. 
+By presenting the CDF of $d$, the quality of the model can be estimate. By setting the appropriate quantile we are able to choose better time series for further analyse. 
 \section{Estimating the runoff using quantile function and water level height}\label{sec:waterlevel}
-Within previous altimetry based studies, the river discharge at the selected gauges is typically determined from an empirical functional relation between water level estimated by satellite altimetry and measured discharges. This relation, referred to as a rating curve, is specific to each gauging station and location of altimetry. However, this technique has many limitations. First, first, this technique is limited by the availability of in situ discharge measurements simultaneous with altimetry data. Second, the location of the altimetry foot- print can also limit the usage of the technique.\\\\
+The river discharge at the selected gauges is typically determined from an empirical functional relation between water level estimated by satellite altimetry and measured discharges. This relation, referred to as a rating curve, is specific to each gauging station and location of altimetry. However, this technique has many limitations. First, first, this technique is limited by the availability of in situ discharge measurements simultaneous with altimetry data. Second, the location of the altimetry foot- print can also limit the usage of the technique.\\\\
 Fortunately, \cite{tourian2013quantile} provides a methods, which can represent a direct connection between the quantile functions at the corresponding probability and the relationship between runoff and water level. \\\\
 first, we get the quantile functions for altimetric water level,$Q_R(p)$ and discharge from in situ measurement, $Q_W(p)$:
 \begin{gather*}

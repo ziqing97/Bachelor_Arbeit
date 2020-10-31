@@ -1,3 +1,5 @@
+addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
+addpath(genpath('E:\Studium\altmany-export_fig-d7671fe'))
 load("ERA5_R_OB.mat")
 load("HTESSEL_R_OB.mat")
 load("LISFLOOD_R_OB.mat")
@@ -76,23 +78,94 @@ pbaspect([1 3 1])
 set(gcf,'color','w')
 set(gca,'fontsize',16)
 
+
 figure
 load("WL_Ob.mat")
 load("WaterLevel_Ob.mat")
-plot(TS_final(:,4),TS_final(:,3),'color',[0 0 0]./255,'Linewidth',3)
+plot(TS_final(1:84,4),TS_final(1:84,3),'color',[0 0 0]./255,'Linewidth',3)
 datetick('y')
 pbaspect([1 3 1])
 set(gcf,'color','w')
 set(gca,'fontsize',16)
 
 figure
-p = cdfplot(R_insitu(:,4));
+K1 = R_insitu(~isnan(R_insitu(:,4)),:);
+[p1,stats1] = cdfplot(K1(:,4));
 pbaspect([1 1 1])
 set(gcf,'color','w')
-p.Color = [0 0 0]./255;
+set(gca,'fontsize',20)
+title("")
+p1.Color = [0 0 0]./255;
 
 figure
-p = cdfplot(TS_final(:,4));
+K2 = TS_final(~isnan(TS_final(1:84,4)),:);
+[p2,stats2] = cdfplot(K2(:,4));
 pbaspect([1 1 1])
 set(gcf,'color','w')
-p.Color = [0 0 0]./255;
+set(gca,'fontsize',20)
+title("")
+p2.Color = [0 0 0]./255;
+
+addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
+addpath(genpath('E:\Studium\altmany-export_fig-d7671fe'))
+load('Dis_final_filled_Ob.mat')
+change_time(1) = datenum(2003,10,15);
+change_time(2) = datenum(2012,10,15);
+change_time(3) = datenum(2015,9,15);
+change_time(4) = datenum(2019,9,15);
+figure
+hold on 
+id = zeros(1,4);
+time_lookup = datenum(Dis_final_filled(:,1),Dis_final_filled(:,2),15);
+id(1) = find(time_lookup == change_time(1));
+id(2) = find(time_lookup == change_time(2));
+id(3) = find(time_lookup == change_time(3));
+id(4) = find(time_lookup == change_time(4));
+R_1 = mean(Dis_final_filled(id(1):id(2)-1,4),'omitnan');
+R_2 = mean(Dis_final_filled(id(2):id(3),4),'omitnan');
+R_3 = mean(Dis_final_filled(id(3)+1:id(4),4),'omitnan');
+h = plot(Dis_final_filled(:,3), Dis_final_filled(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+pbaspect([3 1 1])
+ax = gca;
+set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
+set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
+set(gca,'YGrid','on')
+set(gcf,'color','w')
+set(gca,'fontsize',16)
+ylabel('Discharge [mm/month]','fontsize',20)
+plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+ylim([0,50])
+datetick
+
+pd1 = makedist('Normal','mu',stats1.mean,'sigma',stats1.std);
+pd2 = makedist('Normal','mu',stats2.mean,'sigma',stats2.std);
+F1 = cdf(pd1,K1(:,4));
+F2 = cdf(pd2,K2(:,4));
+F1 = [K1(:,4),F1];
+F2 = [K2(:,4),F2];
+F1 = sort(F1);
+F2 = sort(F2);
+FF1 = griddedInterpolant(F1(:,2),F1(:,1));
+FF2 = griddedInterpolant(F2(:,2),F2(:,1));
+tt = 0:0.001:1;
+TT1 = FF1(tt)';
+TT2 = FF2(tt)';
+figure
+plot(TT2,TT1,'color',[0 0 0]./255,'LineWidth', 2)
+ax = gca;
+set(gca,'YGrid','on')
+set(gca,'XGrid','on')
+set(gcf,'color','w')
+set(gca,'fontsize',22)
+pbaspect([1 1 1])
+xlabel('water level (m)','fontsize',20)
+ylabel('monthly discharge (mm/month)','fontsize',20)
+xlim([min(TT2),max(TT2)]);
+ylim([min(TT1),max(TT1)]);
+
+
+
+

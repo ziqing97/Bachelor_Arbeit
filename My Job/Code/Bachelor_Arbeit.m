@@ -301,11 +301,11 @@ for i = 1:216
     Pre_all(i) = (A' * P * A) \ A' * P * y;
     uc_pre_all(i) = sqrt(sum(st(:,i).^2))/len;
 end
-figure
-hold on
-plot(date_Pre,Pre_all);
-datetick("x")
-title("precipitation")
+% figure
+% hold on
+% plot(date_Pre,Pre_all);
+% datetick("x")
+% title("precipitation")
 
 %% The Evatranspiration
 % some Preparation
@@ -378,11 +378,11 @@ for i = 1:204
 end
 
 % plot
-figure
-hold on
-plot(date_ET,ET_all);
-datetick("x")
-title("evatranspiration")
+% figure
+% hold on
+% plot(date_ET,ET_all);
+% datetick("x")
+% title("evatranspiration")
 
 %% Runoff
 LISFLOOD_R_OB = double(LISFLOOD_R_OB);
@@ -471,26 +471,26 @@ datetick
 % title(error{i+1,1})
 % end
 % sgtitle('Error CDF')
-figure
-hold on
-for i = 1:11
-cdfplot(error{i+1,2})
-xlim([0 4])
-end
-plot([1,1],[0,1],'color',[0 0 0]./255,'Linewidth',2)
-plot([0,4],[0.9,0.9],'color',[0 0 0]./255,'Linewidth',2)
-legend(datasets)
-set(gcf,'color','w')
-set(gca,'fontsize',16)
-pbaspect([1 1 1])
-xlabel('difference (mm/month)')
-ylabel('F(RMSE)')
+% figure
+% hold on
+% for i = 1:11
+% cdfplot(error{i+1,2})
+% xlim([0 4])
+% end
+% plot([1,1],[0,1],'color',[0 0 0]./255,'Linewidth',2)
+% plot([0,4],[0.9,0.9],'color',[0 0 0]./255,'Linewidth',2)
+% legend(datasets)
+% set(gcf,'color','w')
+% set(gca,'fontsize',16)
+% pbaspect([1 1 1])
+% xlabel('difference (mm/month)')
+% ylabel('F(RMSE)')
 %% Mean Value before and after
 change_time = zeros(1,4);
-change_time(1) = datenum(2003,10,15);
-change_time(2) = datenum(2012,10,15);
-change_time(3) = datenum(2015,9,15);
-change_time(4) = datenum(2019,9,15);
+change_time(1) = datenum(2003,1,15);
+change_time(2) = datenum(2013,1,15);
+change_time(3) = datenum(2015,12,15);
+change_time(4) = datenum(2019,12,15);
 
 % TWSA
 figure
@@ -532,6 +532,7 @@ plot(dSdt(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth
 plot(dSdt(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 ylim([-50,60])
 datetick
+TWSA_3 = -0.79645;
 
 % Pre
 Precipitation = [date_Pre,Pre_all,uc_pre_all];
@@ -648,63 +649,49 @@ ylim([-10,140])
 
 
 % Runoff
+% 
+% count = 1;
+% for i = 2003:2010
+%     for j = 1:12
+%         t(count) = datenum(i,j,15);
+%         count = count+1;
+%     end
+% end
+% for i = 2011:2013
+%     for j = 1:12
+%         t(count) = NaN;
+%         count = count+1;
+%     end
+% end
+% for i = 2014:2019
+%     for j = 1:12
+%         t(count) = datenum(i,j,15);
+%         count = count+1;
+%     end
+% end
+% date_R = datenum(Discharge(:,1),Discharge(:,2),15);
+% F = griddedInterpolant(date_R,Discharge(:,3),"spline");
+% Runoff = zeros(204,2);
+% Runoff(:,1) = t;
+% Runoff(:,2) = F(t);
 
-count = 1;
-for i = 2003:2010
-    for j = 1:12
-        t(count) = datenum(i,j,15);
-        count = count+1;
-    end
-end
-for i = 2011:2013
-    for j = 1:12
-        t(count) = NaN;
-        count = count+1;
-    end
-end
-for i = 2014:2019
-    for j = 1:12
-        t(count) = datenum(i,j,15);
-        count = count+1;
-    end
-end
-date_R = datenum(Discharge(:,1),Discharge(:,2),15);
-F = griddedInterpolant(date_R,Discharge(:,3),"spline");
-Runoff = zeros(204,2);
-Runoff(:,1) = t;
-Runoff(:,2) = F(t);
+
+% id = [0,0,0,0];
+% id(1) = find(Evatranspiration(:,3) == change_time(1));
+% id(2) = find(Evatranspiration(:,3) == change_time(2));
+% id(3) = find(Evatranspiration(:,3) == change_time(3));
+% id(4) = find(Evatranspiration(:,3) == change_time(4));
+% R_1 = mean(Runoff(id(1):id(2)-1,2),'omitnan');
+% R_2 = mean(Runoff(id(2)+1:id(3),2),'omitnan');
+% R_3 = mean(Runoff(id(3)+1:id(4),2),'omitnan');
+% 
+% figure
+% h = plot(Evatranspiration(:,3),Runoff(:,2),'color', [0 0 53]./255, 'LineWidth', 2);
 
 
-id = [0,0,0,0];
-id(1) = find(Evatranspiration(:,3) == change_time(1));
-id(2) = find(Evatranspiration(:,3) == change_time(2));
-id(3) = find(Evatranspiration(:,3) == change_time(3));
-id(4) = find(Evatranspiration(:,3) == change_time(4));
-R_1 = mean(Runoff(id(1):id(2)-1,2),'omitnan');
-R_2 = mean(Runoff(id(2)+1:id(3),2),'omitnan');
-R_3 = mean(Runoff(id(3)+1:id(4),2),'omitnan');
-
-figure
-h = plot(Evatranspiration(:,3),Runoff(:,2),'color', [0 0 53]./255, 'LineWidth', 2);
-hold on
-ax = gca;
-set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
-set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
-set(gca,'YGrid','on')
-set(gcf,'color','w')
-set(gca,'fontsize',14)
-ylabel('Runoff [mm/month]','fontsize',20)
-plot(Evatranspiration(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-pbaspect([3 1 1])
-ylim([0,50])
-datetick
-
-figure
-cdfplot(TS(:,3))
-pbaspect([1 1 1])
+% figure
+% cdfplot(TS(:,3))
+% pbaspect([1 1 1])
 
 %
 figure
@@ -723,16 +710,98 @@ set(gca,'fontsize',16)
 ylim([-150,220])
 
 
-% RMSE 2002 - 2010
-insitu = R_Baseline(25:end);
-satellite = Runoff(1:96,2);
-RMSE = sqrt(sum((insitu - satellite).^2) / length(insitu));
-
+% % RMSE 2002 - 2010
+% insitu = R_Baseline(25:end);
+% satellite = Runoff(1:96,2);
+% RMSE = sqrt(sum((insitu - satellite).^2) / length(insitu));
+load('Dis_final_filled_Ob.mat')
+figure
+r_date = datenum(Dis_final_filled(:,1),Dis_final_filled(:,2),15);
+id(1) = find(r_date == change_time(1));
+id(2) = find(r_date == change_time(2));
+id(3) = find(r_date == change_time(3));
+id(4) = find(r_date == change_time(4));
+R_1 = mean(Dis_final_filled(id(1):id(2)-1,4),'omitnan');
+R_2 = mean(Dis_final_filled(id(2):id(3),4),'omitnan');
+R_3 = mean(Dis_final_filled(id(3)+1:id(4),4),'omitnan');
+plot(Dis_final_filled(:,3),Dis_final_filled(:,4), 'color', [0 0 0]./255, 'LineWidth', 2)
+hold on
+ax = gca;
+set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
+set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
+set(gca,'YGrid','on')
+set(gcf,'color','w')
+set(gca,'fontsize',20)
+ylabel('Runoff [mm/month]','fontsize',20)
+plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+pbaspect([3 1 1])
+ylim([0,50])
+datetick
 
 
 ewh1 = TWSA_all(19:126,4);
 ewh2 = TWSA_all(127:162,4);
-ewh3 = TWSA_all(163:183,4);
-ewh4 = TWSA_all(195:210,4);
+ewh3 = TWSA_all(163:210,4);
+figure
+plot(ewh3)
+TABLE_num = zeros(9,3);
+TABLE_num(1,1) = TWSA_1;
+TABLE_num(1,2) = TWSA_2;
+TABLE_num(1,3) = TWSA_3;
+TABLE_num(2,1) = Pre_1;
+TABLE_num(2,2) = Pre_2;
+TABLE_num(2,3) = Pre_3;
+TABLE_num(3,1) = ET_1;
+TABLE_num(3,2) = ET_2;
+TABLE_num(3,3) = ET_3;
+TABLE_num(4,1) = R_1;
+TABLE_num(4,2) = R_2;
+TABLE_num(4,3) = R_3;
+TABLE_num(5,1) = 0;
+TABLE_num(5,2) = TWSA_2 - TWSA_1;
+TABLE_num(5,3) = TWSA_3 - TWSA_1;
+TABLE_num(6,1) = 0;
+TABLE_num(6,2) = Pre_2 - Pre_1;
+TABLE_num(6,3) = Pre_3 - Pre_1;
+TABLE_num(7,1) = 0;
+TABLE_num(7,2) = ET_2 - ET_1;
+TABLE_num(7,3) = ET_3 - ET_1;
+TABLE_num(8,1) = 0;
+TABLE_num(8,2) = R_2 - R_1;
+TABLE_num(8,3) = R_3 - R_1;
+TABLE_num(9,1) = 0;
+TABLE_num(9,2) = TABLE_num(6,2)-TABLE_num(5,2)-TABLE_num(7,2)-TABLE_num(8,2);
+TABLE_num(9,3) = TABLE_num(6,3)-TABLE_num(5,3)-TABLE_num(7,3)-TABLE_num(8,3);
 
-aa = sqrt(0.52^2 + 0.61^2 + 0.46^2)/3;
+
+TABLE_UC = zeros(9,3);
+TABLE_UC(1,1) = uc_TWSA_1;
+TABLE_UC(1,2) = uc_TWSA_2;
+TABLE_UC(1,3) = uc_TWSA_3;
+TABLE_UC(2,1) = uc_Pre_1;
+TABLE_UC(2,2) = uc_Pre_2;
+TABLE_UC(2,3) = uc_Pre_3;
+TABLE_UC(3,1) = uc_ET_1;
+TABLE_UC(3,2) = uc_ET_2;
+TABLE_UC(3,3) = uc_ET_3;
+TABLE_UC(4,1) = 4.16;
+TABLE_UC(4,2) = 4.16;
+TABLE_UC(4,3) = 4.16;
+TABLE_UC(5,1) = 0;
+TABLE_UC(5,2) = sqrt(uc_TWSA_2^2 + uc_TWSA_1^2)/2;
+TABLE_UC(5,3) = sqrt(uc_TWSA_2^2 + uc_TWSA_3^2)/2;
+TABLE_UC(6,1) = 0;
+TABLE_UC(6,2) = sqrt(uc_Pre_2^2 + uc_Pre_1^2)/2;
+TABLE_UC(6,3) = sqrt(uc_Pre_2^2 + uc_Pre_3^2)/2;
+TABLE_UC(7,1) = 0;
+TABLE_UC(7,2) = sqrt(uc_ET_2^2 + uc_ET_1^2)/2;
+TABLE_UC(7,3) = sqrt(uc_ET_2^2 + uc_ET_3^2)/2;
+TABLE_UC(8,1) = 0;
+TABLE_UC(8,2) = sqrt(4.16^2 + 4.16^2)/2;
+TABLE_UC(8,3) = sqrt(4.16^2 + 4.16^2)/2;
+TABLE_UC(9,1) = 0;
+TABLE_UC(9,2) = sqrt(TABLE_UC(6,2)^2+TABLE_UC(5,2)^2+TABLE_UC(7,2)^2+TABLE_UC(8,2)^2)/4;
+TABLE_UC(9,3) = sqrt(TABLE_UC(6,3)^2+TABLE_UC(5,3)^2+TABLE_UC(7,3)^2+TABLE_UC(8,3)^2)/4;
