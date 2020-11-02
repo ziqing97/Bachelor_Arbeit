@@ -8,7 +8,7 @@ where
 \begin{table}[htbp]
 	\begin{tabular}{ll}
 		$Pre$   & Precipitation    \\ 
-		$ET$    & Evatranspiration \\ \
+		$ET$    & evapotranspiration \\ \
 		$R$     & Surface Runoff \\ 
 		$dS / dt$ & total water storage change \\ 
 	\end{tabular}
@@ -21,7 +21,6 @@ If two known points are given by the coordinates $(x_0,y0)$ and $(x_1,y_1)$, the
 \end{equation}
 Spline was a term of elastic rulers that were bent to pass through a number of predifined points (knots). The approch to mathematically modelling the shape of such elastic rulers fixed by $n+1$ knots is to interpolate between all the pairs of knots and new point with polynomials. In MatLab, both of these interpolation methods can be finished using function \textit{griddedInterpolant}.\\\\
 We have 4 EWH time series from CSR, GFZ, ITSG and JPL with different uncertainties. To generate one time series of EWH for further analyse we use Gaus-Markov model.
-
 \subsection{Adjustment using Gauss-Markov model}\label{sec:Gaussmarkov}
 Gauss-Markov model is known as the adjustment with observation equations. The model is as follows
 \begin{equation}
@@ -48,7 +47,7 @@ the weighted least squares estimations are:
 &\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
 &\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}]\bm{y}
 \end{align}\\
-For each month, their are 4 EWH values $S_{CSR}(t)$, $S_{GFZ}(t)$, $S_{ITSG}(t)$, $S_{JPL}(t)$ along with their uncertainty $\sigma_{CSR}(t)$, $\sigma_{GFZ}(t)$, $\sigma_{ITSG}(t)$, $\sigma_{JPL}(t)$, which are calculated by (3.21) and (3.22). We use the uncertainty to build the weight matrix $\bm{P}$, then we have:
+For each month, their are 4 EWH values $S_{CSR}(t)$, $S_{GFZ}(t)$, $S_{ITSG}(t)$, $S_{JPL}(t)$ along with their uncertainty $\sigma_{CSR}(t)$, $\sigma_{GFZ}(t)$, $\sigma_{ITSG}(t)$, $\sigma_{JPL}(t)$. We use the uncertainty to build the weight matrix $\bm{P}$, then we have:
 \begin{align}
 \bm{y} &= \begin{pmatrix} \label{equa:guass1}
 S_{CSR}(t)\\
@@ -69,29 +68,32 @@ S_{JPL}(t)
 1
 \end{pmatrix}
 \end{align}
-By inserting \ref{equa:guass1}, \ref{equa:guass2} and \ref{equa:guass3} into \ref{equa:guass0} we are able to get one EWH for one month
+By inserting \autoref{equa:guass1}, \autoref{equa:guass2} and \autoref{equa:guass3} into \autoref{equa:guass0} we are able to get one EWH for one month
 \begin{equation} \label{equa:finalgauss}
 \underset{1 \times 1}{\hat{\bm{x}}} = (\underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{A}})^{-1} \underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{y}}
 \end{equation}
-where $\hat{\bm{x}}$ is the EWH for one month. By repeating \ref{equa:finalgauss}, we are able to get one whole time series for equivalent water height. The uncertainty for this new time series would be calculated using least squares error:
+where $\hat{\bm{x}}$ is the EWH for one month. By repeating \autoref{equa:finalgauss}, we are able to get one whole time series for equivalent water height. The uncertainty for this new time series would be calculated using least squares error:
 \begin{equation}
 	\sigma(t) = \frac{1}{4}\sqrt{\sigma^2_{CSR}(t)+\sigma^2_{GFZ}(t)+\sigma^2_{ITSG}(t)+\sigma^2_{JPL}(t)}
 \end{equation}
-The derivation of the EWH would be calculated using central difference:
+The derivation of the TWSA would be calculated using central difference:
 \begin{align}\label{eq:dsdt}
 \frac{dS(t)}{dt} = &\frac{(dS(t+\Delta t) - dS(t)) + (dS(t) - dS(t-\Delta t))}{2 \Delta t}\\
 = & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
 \end{align}
 where $\Delta t$ is one month. 
 \subsection{Validation of model-based estimations}
-The method used in \ref{sec:Gaussmarkov} also works for precipitation, evatranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
-We assume that the precipitation and evatranspiration are normal distributed during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evatranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
+The method used in \autoref{sec:Gaussmarkov} also works for precipitation, evapotranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
+We assume that the precipitation and evapotranspiration are normal distributed during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evapotranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
 \begin{gather}
 \sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
 \end{gather}
-where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evatranspiration in other eleven months. 
-\section{Estimating the reliability of runoff datasets}
-It was mentioned in (3.1.4) that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyse. A simple way to do that is to calculate the RMSE (Root Mean Square Error)
+where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evapotranspiration in other eleven months. 
+\subsection{Finding changing point}
+The changing points can be found using moving average (MA). In statistics, a moving average is a calculation used to analyze data points by creating a series of averages of different subsets of the full data set. The reason for calculating the moving average is to help smooth out the data by creating a constantly updated average data. In MatLab, this could be down with \textit{movmean} function. The size of subsets is 12 in this thesis because of the number of months in one year.\\\\
+After that, a moving average time series is generated. By computing the abrupt changes in the mean of the this new series, the sudden change of the time series can be founded. This can be achieved using MatLab function \textit{ischange}. 
+\section{Estimating the quality of runoff datasets}
+It was mentioned in \autoref{sec:runoff} that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyze. A simple way to do that is to calculate the RMSE (Root Mean Square Error)
 \begin{equation*}
 	RMSE = \sqrt{\frac{\sum_{t=1}^T (R(t)_{insitu} - R(t)_{model})^2}{T}}
 \end{equation*}
@@ -114,30 +116,30 @@ By achieving the function $T$ between the quantile functions, we can get the fun
 \begin{equation}
 	Q_R = T(Q_W) \Longrightarrow X_R = T(X_W)
 \end{equation}
-In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve is achieved by fitting a quadratic curve over the obtained statistical relationship. \ref{fig:wltodischarge} showed the example of achieving the runoff using water level data from Envisat. 
+In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve is achieved by fitting a quadratic curve over the obtained statistical relationship. \autoref{fig:wltodischarge} showed an example of achieving the runoff using water level data from Envisat. 
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.3\textwidth]{leftinsitu} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+		\includegraphics[width=0.4\textwidth]{leftinsitu} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.3\textwidth]{rightwl} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+		\includegraphics[width=0.4\textwidth]{rightwl} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.5\textwidth]{cdfleft} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+		\includegraphics[width=0.7\textwidth]{cdfleft} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.5\textwidth]{cdfright} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+		\includegraphics[width=0.7\textwidth]{cdfright} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.5\textwidth]{cdfcombine} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+		\includegraphics[width=0.7\textwidth]{cdfcombine} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
 	\caption{EstimatEd water level from Envisat and available runoff for Ob river (top) and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}
 	\label{fig:wltodischarge}
-\end{figure}\\
+\end{figure}\\\\
 By repeating this process to Saral and Sentinel missions we can generate an whole runoff time series from 2002 to 2020. (note there is a gap between Envisat and Saral) 

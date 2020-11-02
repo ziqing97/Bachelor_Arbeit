@@ -1,3 +1,4 @@
+
 \chapter{Data}
 \section{GRACE and GRACE-FO}
 \subsection{Spherical harmonics}
@@ -143,7 +144,7 @@ This mascon solutions have no stripe errors and capture all the signals ovserved
 In this thesis the mascon solution from CSR are compared with the results from spherical harmonic solutions.
 \newpage
 \section{Precipitation}
-In this thesis the precipitation data from 9 data resources are gathered and processed (\ref{tab:pre}). The methods dealing with these data sets will be discussed later in this chapter:
+In this thesis the precipitation data from 9 data resources are gathered and processed (\autoref{tab:pre}). The methods dealing with these data sets will be discussed later in this chapter:
 \begin{table}[htbp]\centering 
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
@@ -179,8 +180,8 @@ The ERA5 dataset contains one (hourly, 31 km) high resolution realisation (refer
 The daily total precipitation can then be calculated from ERA5 data using python with the help of CDS API.
 \paragraph{Modern-Era Retrospective analysis for research and Applications, version 2 (MERRA-2)}
 This is a global atmospheric reanalysis produced by the NASA Global Modeling and Assimilation Office(GMAO). It spans the satellite observing era from 1980 to the present. The goals of MERRA-2 are to provide a regularly-gridded, homogeneous record of the global atmosphere, and to incorporate additional aspects of the climate system including trace gas constituents (stratospheric ozone), and improved land surface representation, and cryospheric processes.
-\section{Evatranspiration}
-Evaporation is the process whereby liquid water is converted to water vapour (vaporization) and removed from the evaporating surface (vapour removal). Water evaporates from a variety of surfaces, such as lakes, rivers, pavements, soils and wet vegetation. 6 datasets are used in this thesis (\ref{tab:et}). 
+\section{Evapotranspiration}
+Evaporation is the process whereby liquid water is converted to water vapour (vaporization) and removed from the evaporating surface (vapour removal). Water evaporates from a variety of surfaces, such as lakes, rivers, pavements, soils and wet vegetation. 6 datasets are used in this thesis (\autoref{tab:et}). 
 \begin{table}[htbp]\centering 
 	\begin{tabular}{lllll}
 		&                                     &                                          &                                         &                                       \\ \hline
@@ -192,7 +193,7 @@ Evaporation is the process whereby liquid water is converted to water vapour (va
 		\multicolumn{1}{|l|}{SSEBop}     & \multicolumn{1}{l|}{2003- present}  & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.0097^{\circ} \times 0.0097^{\circ}$}    & \multicolumn{1}{l|}{$60^{\circ}S - 60^{\circ}N$}      \\ \hline
 		\multicolumn{1}{|l|}{ERA5}       & \multicolumn{1}{l|}{1979 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$31\ut{km} \times 31\ut{km}$}            & \multicolumn{1}{l|}{Global}           \\ \hline
 	\end{tabular}
-	\caption{evatranspiration datasets}
+	\caption{evapotranspiration datasets}
 	\label{tab:et}
 \end{table}
 \paragraph{The Global Land Data Assimilation System (GLDAS)}
@@ -206,7 +207,7 @@ The SSEBop seTup is based on the Simplified Surface Energy Balance (SSEB) approa
 \subsection{Global datasets}
 Runoff is quantity of water discharged in surface streams. Runoff includes not only the waters that travel over the land surface and through channels to reach a stream but also interflow, the water that infiltrates the soil surface and travels by means of gravity toward a stream channel (always above the main groundwater level) and eventually empties into the channel. Runoff also includes groundwater that is discharged into a stream; streamflow that is composed entirely of groundwater is termed base flow, or fair-weather runoff, and it occurs where a stream channel intersects the water table.\\\\
 The in-situ run off data are from Global Runoff Data Center (GRDC). The GRDC is an international archive of data up to 200 years old, and fosters multinational and global long-term hydrological studies. Originally established three decades ago, the aim of the GRDC is to help earth scientists analyse global climate trends and assess environmental impacts and risks. Operating under the auspices of WMO the database of quality controlled "historical" mean daily and monthly discharge data grows steadily and currently comprises river discharge data of more than 9,900 stations from 159 countries.\\\\
-However, the discharge data from GRDC of Ob river are only up to 2010, which doesn't fit the purpose totally. Thus, like precipitation and evatranspiration, models from different data centers play a role. The datasets (\ref{tab:runoff}), which fit the in-situ discharge the best, are chosen while others are denied. The chosen data will then be processed. But it is shown later, that not all these datasets are good enough. In addition to those hydrological models, the altimetry measurement using satellite is also taken into consideration since the station for in-situ discharge(Salekhard)(\ref{fig:Salekhard}) is known. 
+However, the discharge data from GRDC of Ob river are only up to 2010, which doesn't fit the purpose totally. Thus, like precipitation and evapotranspiration, models from different data centers play a role. The datasets (\autoref{tab:runoff}), which fit the in-situ discharge the best, are chosen while others are denied. The chosen data will then be processed. But it is shown later, that not all these datasets are good enough. In addition to those hydrological models, the altimetry measurement using satellite is also taken into consideration since the station for in-situ discharge(Salekhard)(\autoref{fig:Salekhard}) is known. 
 \begin{table}[htbp]\centering
 	\begin{tabular}{lllll}
 		&                                     &                                          &                                         &                                       \\ \hline
@@ -225,12 +226,14 @@ However, the discharge data from GRDC of Ob river are only up to 2010, which doe
 	\caption{Station Salekhard} 
 	\label{fig:Salekhard}
 \end{figure}
-\subsection{Water Level Height}
- Among the space-borne sensors, satellite altimetry can provide surface water height successively with repeat periods of 10 and 35 days. Although satellite altimetry was initially designed for oceanography, four decades of altimetry missions have provided an opportunity to study the continental hydrological cycle as well. By using the methods mentioned later, the runoff can be estimated from the satellite water lev
+\subsection{Water level height}
+ Among the space-borne sensors, satellite altimetry can provide surface water height successively with repeat periods of 10 and 35 days. Although satellite altimetry was initially designed for oceanography, four decades of altimetry missions have provided an opportunity to study the continental hydrological cycle as well. By using the methods mentioned later, the runoff can be estimated from the satellite water level.\\\\
+ Altimetry satellites basically determine the distance from the satellite to a target surface by measuring the satellite-to-surface round-trip time of a radar pulse. However, this is not the only measurement made in the process, and a lot of other information can be extracted from altimetry.\\\\
+ The magnitude and shape of the echoes (or waveforms) also contain information about the characteristics of the surface which caused the reflection. The best results are obtained over the ocean, which is spatially homogeneous, and has a surface which conforms with known statistics.
  \paragraph{Envisat}
-Envisat (Environmental Satellite) is a large inactive Earth-observing satellite which is still in orbit. Operated by the European Space Agency (ESA), it was the world's largest civilian Earth observation satellite. It was launched on 1 March 2002 aboard an Ariane 5 from the Guyana Space Centre in Kourou, French Guiana, into a Sun synchronous polar orbit at an altitude of $790 \pm 10$ km. It orbits the Earth in about 101 minutes, with a repeat cycle of 35 days. After losing contact with the satellite on 8 April 2012, ESA formally announced the end of Envisat's mission on 9 May 2012.\\\\
+Envisat (Environmental Satellite) is a large inactive Earth-observing satellite which is still in orbit. Operated by the European Space Agency (ESA), it was the world's largest civilian Earth observation satellite. It was launched on 1 March 2002 aboard an Ariane 5 from the Guyana Space Centre in Kourou, French Guiana, into a Sun synchronous polar orbit at an altitude of $790\pm10$ km. It orbits the Earth in about 101 minutes, with a repeat cycle of 35 days. After losing contact with the satellite on 8 April 2012, ESA formally announced the end of Envisat's mission on 9 May 2012.\\\\
 In working towards the global and regional objectives of the mission, numerous scientific disciplines currently use the data acquired from the different sensors on the satellite to study such things as atmospheric chemistry, ozone depletion, biological oceanography, ocean temperature and colour, wind waves, hydrology (humidity, floods), agriculture and arboriculture, natural hazards, digital elevation modelling (using interferometry), monitoring of maritime traffic, atmospheric dispersion modelling (pollution), cartography and study of snow and ice.
-\paragraph{SARAL}
+\paragraph{Saral}
 SARAL (Satellite with ARgos and ALtiKa) is a cooperative altimetry technology mission of Indian Space Research Organisation (ISRO) and CNES (Space Agency of France). SARAL performs altimetric measurements designed to study ocean circulation and sea surface elevation. The payloads of SARAL are The ISRO built satellite with payloads modules (ALTIKA altimeter), DORIS, Laser Retro-reflector Array (LRA) and ARGOS-3 (Advanced Research and Global Observation Satellite) data collection system provided by CNES was launched by Indian Polar Satellite Launch Vehicle rocket into the Sun-synchronous orbit (SSO). SARAL was successfully launched on 25 February 2013. It will fill the gap between Envisat and the Sentinel 3 mission of the European GMES program.
 \paragraph{Sentinel-3}
 Sentinel-3 is an Earth observation satellite constellation developed by the European Space Agency as part of the Copernicus Programme. The Sentinel-3 mission's main objective is to measure sea-surface topography, sea- and land-surface temperature and ocean- and land-surface colour with accuracy in support of ocean forecasting systems, and for environmental and climate monitoring. Sentinel-3 builds directly on the heritage pioneered by ERS-2 and Envisat satellites. Near-real time data will be provided for ocean forecasting, sea-ice charting, and maritime safety services on the state of the ocean surface, including surface temperature, marine ecosystems, water quality and pollution monitoring. The satellite orbit provides a 27-day repeat for the topography package, with a 4-day sub-cycle.

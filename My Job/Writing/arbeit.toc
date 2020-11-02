@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Water Cycle}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Precipitation}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Evatranspiration}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}evapotranspiration}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Runoff}{3}{subsection.1.1.3}%
 \contentsline {section}{\numberline {1.2}Observation from satellite gravimetry}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Motivation}{5}{section.1.3}%
@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {2.2}Climate}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Hydrology}{9}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Plants and animals}{9}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Human use}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Human use}{10}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Data}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}GRACE and GRACE-FO}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Spherical harmonics}{11}{subsection.3.1.1}%
@@ -29,31 +29,32 @@
 \contentsline {paragraph}{\nonumberline NCEP/NCAR Reanalysis 1\&2}{16}{section*.10}%
 \contentsline {paragraph}{\nonumberline ERA5}{17}{section*.11}%
 \contentsline {paragraph}{\nonumberline Modern-Era Retrospective analysis for research and Applications, version 2 (MERRA-2)}{17}{section*.12}%
-\contentsline {section}{\numberline {3.3}Evatranspiration}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Evapotranspiration}{17}{section.3.3}%
 \contentsline {paragraph}{\nonumberline The Global Land Data Assimilation System (GLDAS)}{18}{section*.13}%
 \contentsline {paragraph}{\nonumberline Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS)}{18}{section*.14}%
 \contentsline {paragraph}{\nonumberline optiaonal Simplified Surface Energy Balance (SSEBop)}{18}{section*.15}%
 \contentsline {section}{\numberline {3.4}Runoff}{18}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Global datasets}{18}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Water Level Height}{20}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Water level height}{20}{subsection.3.4.2}%
 \contentsline {paragraph}{\nonumberline Envisat}{20}{section*.16}%
-\contentsline {paragraph}{\nonumberline SARAL}{20}{section*.17}%
-\contentsline {paragraph}{\nonumberline Sentinel-3}{20}{section*.18}%
-\contentsline {chapter}{\numberline {4}Method}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Estimating hydrological component combining different datasets}{21}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Adjustment using Gauss-Markov model}{22}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Validation of model-based estimations}{23}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Estimating the reliability of runoff datasets}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Estimating the runoff using quantile function and water level height}{24}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Result}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Equivalent water height}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Precipitation}{30}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Evatranspiration}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Runoff}{32}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Runoff from global datasets}{32}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Estimating runoff using quantile function and satellite altimetry}{33}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Discussion about the quality}{36}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion and outlook}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Outlook}{37}{section.6.2}%
+\contentsline {paragraph}{\nonumberline Saral}{20}{section*.17}%
+\contentsline {paragraph}{\nonumberline Sentinel-3}{21}{section*.18}%
+\contentsline {chapter}{\numberline {4}Method}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Estimating hydrological component combining different datasets}{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Adjustment using Gauss-Markov model}{24}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Validation of model-based estimations}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Finding changing point}{25}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Estimating the quality of runoff datasets}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Estimating the runoff using quantile function and water level height}{26}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Result}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Equivalent water height}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Precipitation}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Evapotranspiration}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Runoff}{34}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Runoff from global datasets}{34}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Estimating runoff using quantile function and satellite altimetry}{35}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Discussion about the quality}{38}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion and outlook}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Outlook}{39}{section.6.2}%
 \contentsline {chapter}{\numberline {A}Anhang}{XV}{appendix.A}%

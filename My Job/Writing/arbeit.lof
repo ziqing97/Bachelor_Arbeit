@@ -5,28 +5,30 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces hydrologic cycle}}{2}{figure.1.1}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces GRACE Component}}{4}{figure.1.2}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces global water storage change}}{5}{figure.1.3}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Ob basin}}{5}{figure.1.4}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces GRACE-FO twin satellites}}{5}{figure.1.3}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Trends in TWS (in centimetres per year) obtained on the basis of GRACE observations from April 2002 to March 2016. The cause of the trend in each outlined study region is briefly explained and colour-coded by category. The trend map was smoothed with a 150 km radius Gaussian filter for the purpose of visualization; however, all calculations were performed at the native $3^{\circ }$ resolution of the data product.}}{6}{figure.1.4}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Total water storage change from Apr.2002 to May.2020 in Ob river basin}}{6}{figure.1.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces River Basins Ob}}{7}{figure.2.1}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces River Basins Ob http://www.geologypage.com/2014/03/ob-river.html}}{7}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The distribution of 40,962 geodesic grid tiles over the Earth used as a basis function for estimation of mass anomalies from GRACE for CSR mascon solutions. (top) Global view, (bottom left) South Pole view, and (bottom right) North Pole view \cite {save2016high}}}{9}{figure.2.2}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The distribution of 40,962 geodesic grid tiles over the Earth used as a basis function for estimation of mass anomalies from GRACE for CSR mascon solutions. (top) Global view, (bottom left) South Pole view, and (bottom right) North Pole view \cite {save2016high}}}{15}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Station Salekhard}}{19}{figure.3.2}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces EstimatEd water level from Envisat and available runoff for Ob river (top) and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}}{25}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces EstimatEd water level from Envisat and available runoff for Ob river (top) and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}}{28}{figure.4.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Equivalent water height from CSR, GFZ, ITSG and JPL between 2002 and 2020}}{27}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Equivalent water height between 2002 and 2020}}{28}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces dS/dt between 2003 and 2020}}{28}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Sudden change of dS/dt between 2003 and 2020 after using movmean}}{29}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The mean value of dS/dt in three periods}}{29}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Precipitation datasets}}{30}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces precipitation with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{30}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Evatranspiration datasets}}{31}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces evatranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{31}{figure.5.9}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Runoff datasets}}{32}{figure.5.10}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces CDF of differences}}{33}{figure.5.11}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces water level time series and the location of virtual station}}{34}{figure.5.12}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces runoff timeseries calculated from water level (up) and the mean value in 3 periods(bottom) }}{35}{figure.5.13}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Total water storage anomaly from CSR, GFZ, ITSG and JPL between Apr.2002 and May.2020}}{29}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Total water storage anomaly between Apr.2002 and May.2020}}{30}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces dS/dt between 2003 and 2020}}{30}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Sudden change of dS/dt between 2003 and 2020 after using movmean}}{30}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The mean value of dS/dt in three periods}}{31}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Precipitation datasets}}{32}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces precipitation with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{32}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces evapotranspiration datasets}}{33}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces evapotranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods}}{33}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Runoff datasets}}{34}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces CDF of differences}}{35}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces water level time series and the location of virtual station}}{36}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces runoff timeseries calculated from water level (up) and the mean value in 3 periods(bottom) }}{37}{figure.5.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

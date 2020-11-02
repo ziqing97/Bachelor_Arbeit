@@ -1,33 +1,20 @@
 \chapter{Result}
 Now we can use our method to determine $dS/dt$, $Pre$, $ET$ and $R$. After that, we can combine these results and discuss the trend of water storage in Ob basin and the reason for it.
 \section{Equivalent water height}
-As mentioned in chapter 3, We have GRACE and GRACE-FO data from 4 data centers, which are CSR, GFZ, ITSG and JPL. We can plot the total water storage anomaly from 2002 to 2019. we can see in \ref{fig:4centers} that the trends of 4 curves suit each other well. By using the methods mentioned in \ref{sec:Gaussmarkov} we can generate one timeseries with their uncertainty in this period (\ref{fig:EWHs}).
+As mentioned in chapter 3, 4 time series of TWSA from Apr.2002 to May.2020 are handled in this work \autoref{fig:4centers}. It is shown that before 2010 no obvious trend in TWSA can be seen, from 2012 to 2016 TWSA has gained consistently. By using the method in \autoref{sec:Gaussmarkov}, these four time series can be summarized into one time series. \autoref{fig:EWHs}. The summarized time series shows the same tendency as in \autoref{fig:4centers}. To prove that, the deviation of TWSA can be reached by using centre difference, since data in 2002 and 2020 are not for whole year available, the time series from Jan.2013 to Dec.2019 are chosen. \autoref{fig:dsdtall}. note that $dS/dt$ is between $-50$ and $50$ \ut{mm/month}.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{TWSAall} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{Equivalent water height from CSR, GFZ, ITSG and JPL between 2002 and 2020} 
+	\caption{Total water storage anomaly from CSR, GFZ, ITSG and JPL between Apr.2002 and May.2020} 
 	\label{fig:4centers}
 \end{figure}
-
-% figure 4 data centers label(fig:4centers)
-
-Since Ob basin is a quite big area, it is necessary to confirm if the behavior of the total water storage are identical in the whole area, we can divide the whole area in many grids \\
-
-% text needs to be finished,  label(fig:grid of ob)
-
-From the timeseries of the TWSA we see an obvious positive trend from 2013 to 2015. Thus, the whole period can divide into 3 phases. In order to find the changing points, we first plot the $dS/dt$ \ref{fig:dsdtall} by using the equation \ref{eq:dsdt}. With the help of the matlab functions \textit{movmean} and \textit{ischange} we can see the mean value of $dS/dt$ between 2013 and 2015 are much bigger than other periods, which confirms our assumption. This big change of the trend happened between October 2012 and September 2015.\ref{fig:dsdtmovmean} Therefore, we divide the whole timeseries into following 3 periods:\\\\
-\begin{table}[htbp] \centering
-	\begin{tabular}{|l|l|l|}
-		\hline
-		2003 - 2012 & 2013 - 2015 & 2015 - 2019 \\ \hline
-	\end{tabular}
-\end{table}\\
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{EWH} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{Equivalent water height between 2002 and 2020} 
+	\caption{Total water storage anomaly between Apr.2002 and May.2020} 
 	\label{fig:EWHs}
-\end{figure}
+\end{figure}\\
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{dSdt} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
@@ -39,19 +26,23 @@ From the timeseries of the TWSA we see an obvious positive trend from 2013 to 20
 	\includegraphics[width=0.9\textwidth]{dSdtmovmean} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\caption{Sudden change of dS/dt between 2003 and 2020 after using movmean} 
 	\label{fig:dsdtmovmean}
-\end{figure}\\
-% dsdt figure \label(fig:dsdtall)
-Then, the mean value of $dS/dt$ with uncertainty in these 3 periods can be calculated. which can be seen as the trend of the total water storage change. However, it was a little tricky to do that for the periods because of the gap between GRACE and GRACE-FO. The data in 2017 and 2018 are partly lost. Therefore, instead by calculating the mean of dS/dt, we obtain the trend value by linear regression. The results are showed in \ref{fig:dsdtwithnum}
+\end{figure}
+\begin{table}[htbp] \centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		2003 - 2012 & 2013 - 2015 & 2015 - 2019 \\ \hline
+	\end{tabular}
+\end{table}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{dSdtwithnum} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\caption{The mean value of dS/dt in three periods} 
 	\label{fig:dsdtwithnum}
-\end{figure}\\\\
-From \ref{fig:dsdtwithnum} we can see, that the total water storage in the first and the third period are relative stable. However, between 2013 and 2015, the water in Ob river basin has gained from outside. 
+\end{figure}
+From \autoref{fig:dsdtwithnum} we can see, that the total water storage in the first and the third period are relative stable. However, between 2013 and 2015, the water in Ob river basin has gained from outside. 
 \clearpage
 \section{Precipitation}
-It was mentioned in chapter 3 that we have precipitation data from 9 resources \ref{fig:precenter}, and one timeseries with uncertainty can be generated by combining them. The spatial behavior of precipitation in this area is also interesting to us. 
+It was mentioned in chapter 3 that we have precipitation data from 9 resources \autoref{fig:precenter}, and one timeseries with uncertainty can be generated by combining them. The spatial behavior of precipitation in this area is also interesting to us. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{precenter} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
@@ -59,7 +50,7 @@ It was mentioned in chapter 3 that we have precipitation data from 9 resources \
 	\label{fig:precenter}
 \end{figure}
 \\
-Since we have already divide the whole period into 3 phases, we are interested what we see the behavior of precipitations in this 3 phases. \ref{fig:allpre}
+Since we have already divide the whole period into 3 phases, we are interested what we see the behavior of precipitations in this 3 phases. \autoref{fig:allpre}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{precipitationwithnumber} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
@@ -70,26 +61,26 @@ Since we have already divide the whole period into 3 phases, we are interested w
 We can see the precipitation in the second period is obviously higher than the other 2 periods.After 2016, the amount of precipitation has decreased. 
 \clearpage
 % all precipitation in one 
-\section{Evatranspiration}
-Just as precipitation, we present the evatranspiration temparally and spatially and cut the timeseries into 3 periods. 
+\section{Evapotranspiration}
+Just as precipitation, we present the evapotranspiration temparally and spatially and cut the timeseries into 3 periods. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{etcenter} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{Evatranspiration datasets} 
+	\caption{evapotranspiration datasets} 
 	\label{fig:etcenter}
 \end{figure}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{etall} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{evatranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods} 
+	\caption{evapotranspiration with uncertainties between 2003 and 2020 and the mean value in 3 periods} 
 	\label{fig:etall}
 \end{figure}
 \\
-The behavior of evatranspiration is similar to precipitation, in second period the evatranspiration reached the summit and then decreased, which suits theory of water cycle.  
+The behavior of evapotranspiration is similar to precipitation, in second period the evapotranspiration reached the summit and then decreased, which suits theory of water cycle.  
 \clearpage
 \section{Runoff}
 \subsection{Runoff from global datasets}
-Like precipitation and evatranspiration, we have runoff data estimated from several models and meanwhile we have in-situ data till end of 2010. We can plot them in a way we did for precipitation and evatranspiration. From the \ref{fig:rcenter} we can assume that there are large differences between these models and in-situ. By calculating RMSE for these models \ref{tab:rmse} this assumption can be confirmed. The smallest RMSE for those daatsets are bigger than $8.18 \frac{mm}{month}$, which is far from what we needed.
+Like precipitation and evapotranspiration, we have runoff data estimated from several models and meanwhile we have in-situ data till end of 2010. We can plot them in a way we did for precipitation and evapotranspiration. From the \autoref{fig:rcenter} we can assume that there are large differences between these models and in-situ. By calculating RMSE for these models \autoref{tab:rmse} this assumption can be confirmed. The smallest RMSE for those daatsets are bigger than $8.18 \frac{mm}{month}$, which is far from what we needed.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{runoffcenter} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
@@ -114,7 +105,7 @@ Like precipitation and evatranspiration, we have runoff data estimated from seve
 	\end{tabular}
 	\caption{RMSE for runoff datacenters}
 \end{table}\\
-Then, if we take the CDF of the difference from those models and in-situ data and set 10\% of mean in-situ runoff as quantile \ref{fig:rcdf} , it is shown that none of these datasets has achieved probability of 90\%
+Then, if we take the CDF of the difference from those models and in-situ data and set 10\% of mean in-situ runoff as quantile \autoref{fig:rcdf} , it is shown that none of these datasets has achieved probability of 90\%
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{rcdf} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
@@ -122,8 +113,8 @@ Then, if we take the CDF of the difference from those models and in-situ data an
 	\label{fig:rcdf}
 \end{figure}\\
 \subsection{Estimating runoff using quantile function and satellite altimetry}
- As mentioned in \ref{sec:runoff}, we can use the satellite to determine the water level height in Ob river basin, and we also have the in-situ data, using the methods in \ref{sec:waterlevel}, the runoff can be estimated. We have chosen several virtual station for each satellite mission. After denying the virtual stations in bad locations we get 2 water level timeseries from Envisat, 2 from Saral and 2 from Sentinel. In order to get the most accurate runoff, we choose the water level timeseries from the virtual stations, which are closer to Salekhard, where the in-situ runoff are measured. \\\\
- In \ref{fig:waterlevel} the location of those virtual stations and the water level timeseries are represented. we finally choose the blue line from Envisat, the blue line from Saral and timeseries from Sentinel-3A to generate discharge.
+ As mentioned in \autoref{sec:runoff}, we can use the satellite to determine the water level height in Ob river basin, and we also have the in-situ data, using the methods in \autoref{sec:waterlevel}, the runoff can be estimated. We have chosen several virtual station for each satellite mission. After denying the virtual stations in bad locations we get 2 water level timeseries from Envisat, 2 from Saral and 2 from Sentinel. In order to get the most accurate runoff, we choose the water level timeseries from the virtual stations, which are closer to Salekhard, where the in-situ runoff are measured. \\\\
+ In \autoref{fig:waterlevel} the location of those virtual stations and the water level timeseries are represented. we finally choose the blue line from Envisat, the blue line from Saral and timeseries from Sentinel-3A to generate discharge.
  \begin{figure}[htbp]
  	\centering
  	\begin{minipage}[t]{0.7\textwidth}
@@ -142,7 +133,7 @@ Then, if we take the CDF of the difference from those models and in-situ data an
  \label{fig:waterlevel}
  \end{figure}
 \\\\
-Now we have in-situ runoff data from 2001 to 2010 and water level, Using the methods in \ref{sec:waterlevel}, we are able to find the probability connections between them and after all obtain a smoothened rating curve. We use this method for Envisat, Saral and Sentinel separetly and combine them in one time series. There are still several gaps in the series, we use interpolation to fill the gaps. Since we don't have uncertainty information for each month, we take the RMSE as the uncertainty for 3 periods.  
+Now we have in-situ runoff data from 2001 to 2010 and water level, Using the methods in \autoref{sec:waterlevel}, we are able to find the probability connections between them and after all obtain a smoothened rating curve. We use this method for Envisat, Saral and Sentinel separetly and combine them in one time series. There are still several gaps in the series, we use interpolation to fill the gaps. Since we don't have uncertainty information for each month, we take the RMSE as the uncertainty for 3 periods.  
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[t]{0.9\textwidth}
@@ -158,7 +149,7 @@ Now we have in-situ runoff data from 2001 to 2010 and water level, Using the met
 \end{figure}
 \clearpage
 \section{Discussion about the quality}
-Since the total water storage in the first period can be seen as stable, we take this period as the baseline for further analyze. Relative dS/dt, precipitaion, evatranspiration and runoff numbers of other 2 period are obtained based on that. \\\\
+Since the total water storage in the first period can be seen as stable, we take this period as the baseline for further analyze. Relative dS/dt, precipitaion, evapotranspiration and runoff numbers of other 2 period are obtained based on that. \\\\
 In any case, the equation of the water cycle has to be a true statement, which means the result of $Pre-\frac{dS}{dt}-ET-R$ should be 0. By setting results of both periods into this statement, it is shown that the results for the second period are proved while the results for the third periods are not ideal. This can be caused by the gap between GRACE and GRACE-FO. This gap is between Jul.2017 and May.2018, therefore, we only have full year data of 2016 and 2019 in this period. Though we tried linear regression to make the best use of what we have, this gap can still increase the instability of the final results because the period is not long enough. 
 \begin{table}[htbp]\centering
 	\begin{tabular}{|l|l|l|l|}
@@ -166,12 +157,12 @@ In any case, the equation of the water cycle has to be a true statement, which m
 		Period &  2003 - 2012 & 2013 - 2015 & 2016 - 2019  \\ \hline
 		dS/dt            & $-0.68 \pm 0.25$     & $3.31 \pm 0.86$        & $-0.80 \pm 0.57$        \\ \hline
 		Precipitaion               & $39.12 \pm 0.51$      & $44.32 \pm 0.93$       &$41.28 \pm 0.80$        \\ \hline
-		Evatranspiration           & $32.59 \pm 0.38$       & $34.13 \pm 0.70$       & $33.78 \pm 0.6$        \\ \hline
+		evapotranspiration           & $32.59 \pm 0.38$       & $34.13 \pm 0.70$       & $33.78 \pm 0.6$        \\ \hline
 		Runoff                     & $10.57  \pm 4.16$      & $10.80 \pm 4.16 $     & $12.80 \pm 4.16 $      \\ \hline
 		\multicolumn{4}{|l|}{Based on the first period}                                         \\ \hline
 		dS/dt           &             & $4.00 \pm 0.45$        & $-0.11 \pm 0.52$        \\ \hline
 		Precipitaion               &             & $5.20 \pm 0.53$        & $2.15 \pm 0.61$         \\ \hline
-		Evatranspiration           &             & $1.53 \pm 0.40$        & $1.19 \pm 0.46 $        \\ \hline
+		evapotranspiration           &             & $1.53 \pm 0.40$        & $1.19 \pm 0.46 $        \\ \hline
 		Runoff                     &             & $0.23 \pm 2.94 $       & $2.23 \pm 2.94   $      \\ \hline
 		Pre - dS/dt - ET - R &             & $-0.57 \pm 0.76$       & $-1.14 \pm 0.76 $    \\ \hline 
 	\end{tabular}
