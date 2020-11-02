@@ -1,0 +1,5 @@
+\begin{align}\label{eq:dsdt}
+\frac{dS(t)}{dt} = &\frac{(dS(t+\Delta t) - dS(t)) + (dS(t) - dS(t-\Delta t))}{2 \Delta t}\\
+= & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
+\end{align}
+where $\Delta t$ is one month. \\\\

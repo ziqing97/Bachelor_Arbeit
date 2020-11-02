@@ -1,0 +1,64 @@
+List of Precipitation Datasets
+------------------------------
+#   Dataset            Version     TimeSpan              Temporal Resolution(S)             Spatial Resolution(s)   Source(*)  Spatial-Coverage    
+1   CRU                4.04        1901--2019            Monthly                            0.5°×0.5°               G          Global
+2   GPCC               2018        1891--2016 (monthly)  Monthly, Daily                     0.25°×0.25°             G          Global
+                                   1982--2016 (daily)                                       1.0°×1.0°                          Global
+3   PRECL              2018        1948--present**       Monthly                            0.5°×0.5°               G          Global
+4   UDEL               5.01        1900--2017            Monthly                            0.5°×0.5°               G          Global
+5   CPC                -           1979--present         Monthly, Daily                     0.5°×0.5°               G          Global
+
+6   PERSIANN           -           Mar.2000--present     Monthly, Daily + (***)             0.25°×0.25°             S          60°S to 60°N
+7   PERSIANN-CCS       -           2003--present         Monthly, Daily +                   0.5°×0.5°               S          60°S to 60°N
+8   TRMM3B42           07          1998--2019            Monthly, Daily +                   0.25°×0.25°             S          Global
+9   GSMaP-MVK          -           Mar.2000--Nov.2010    Monthly, Daily +                   0.1°×0.1°               S          60°S to 60°N
+		       -           Mar.2014--present     Monthly, Daily +                   0.1°×0.1°               S          60°S to 60°N
+10  GSMaP-NRT          -           Mar.2000--present     Monthly, Daily +                   0.1°×0.1°               S          60°S to 60°N
+11  GSMaP-RNL          -           Mar.2000--Feb.2014    Monthly, Daily +                   0.1°×0.1°               S          60°S to 60°N
+12  CMORPH-RAW         -           2003--2017            Monthly, Daily +                   0.25°×0.25°             S          60°S to 60°N
+13  CMORPH-CRT         -           1998--2019            Monthly, Daily +                   0.25°×0.25°             S          60°S to 60°N
+14  GPM-IMERG-Early    -           Jun.2000--present     Monthly, Daily +                   0.1°×0.1°               S          Global
+
+15  GPCP               2.3         1979--present         Monthly                            2.5°×2.5°               G, S       Global
+16  GPCP1DD            -           1996--present         Monthly, Daily                     1.0°×1.0°               G, S       Global
+17  CMAP               -           1979--present         Monthly                            2.5°×2.5°               G, S       Global
+18  PERSIANN-CDR       -           1983--present         Monthly, Daily                     0.25°×0.25°             G, S       60°S to 60°N
+19  TRMM3B43           07          1998--Jul.2019        Monthly                            0.25°×0.25°             G, S       50°S to 50°N
+20  GSMaP-Gauge        -           Mar.2014--present     Monthly, Daily +                   0.1°×0.1°               S          60°S to 60°N
+21  CMORPH-CDR         -           1998--Jun.2019        Monthly, Daily +                   0.25°×0.25°             G, S       60°S to 60°N
+22  CMORPH-BLD         -           1998--2019            Monthly, Daily +                   0.25°×0.25°             G, S       60°S to 60°N
+23  CHIRP              -           1981--present         Monthly, Daily                     0.05°×0.05°             G, S       50°S to 50°N
+24  GPM-IMERG-Final    -           Jun.2000--present     Monthly, Daily +                   0.1°×0.1°               G, S       Global
+
+25  NCEP1              -           1948--present         Monthly, Daily +                   2.5°×2.5°               R          Global
+26  NCEP2              -           1979--present         Monthly, Daily +                   1.875°×1.875°           R          Global
+27  ERA-Interim        -           1979--2019            Monthly, Daily +                   79km×79km               R          Global
+28  ERA5               -           1979--present         Monthly, +                         31km×31km               R          Global
+29  CFSR               -           1979--2017            Monthly, Daily +                   38km×38km               R          Global
+30  20CR               3           1836--2015            Monthly, Daily +                   1.0°×1.0°               R          Global
+31  JRA-55             -           1958--present         Monthly, Daily +                   0.5569°×0.5625°         R          Global
+
+32  AgCFSR             -           1980--2010            Monthly, Daily +                   0.25°×0.25°             G, R       Global
+33  PGF                3           1948--2016            Monthly, Daily +                   0.25°×0.25°             G, R       Global
+34  WFDEI-CRU          -           1979--2016            Monthly, Daily +                   0.5°×0.5°               G, R       Global
+35  WFDEI-GPCC         -           1901--2016            Monthly, Daily +                   0.1°×0.5°               G, R       Global
+
+36  MSWEP              2.2         1979--Oct.2017****    Monthly, Daily +                   0.1°×0.1°               G, S, R    Global
+37  CHIRPS             -           1981--present         Monthly, Daily                     0.05°×0.05°             G, S, R    50°S to 50°N
+38  MERRA-2            -           1980--present         Monthly, Daily +                   0.5°×0.625°             G, S, R    Global
+39  MERRA-Land         -           1979--2016            Monthly +                          0.5°×0.667°             G, S, R    Global
+40  AgMERRA            -           1980--2010            Monthly, Daily +                   0.25°×0.25°             G, S, R    Global
+
+List of Evapotranspiration Datasets
+-----------------------------------
+#   Dataset            Version     TimeSpan              Temporal Resolution(S)             Spatial Resolution(s)   Source(*)  Spatial-Coverage    
+1   GLEAMa             3.1a        1980--2016            Monthly, Daily                     0.25°×0.25°             G, S, R    Global
+2   GLEAMb             3.1b        2003--2015            Monthly, Daily                     0.25°×0.25°             S          50°S to 60°N
+3   GLEAMc             3.1c        2011--2015            Monthly, Daily                     0.25°×0.25°             S          50°S to 60°N  
+4   SSEBop             -           2003--present         Monthly                            0.0097°×0.0097°         X          60°S to 80°N
+5   JRA-55             -           1958--present         Monthly, Daily +                   0.5569°×0.5625°         R          Global
+6   WECANN             -           2007--2015            Monthly                            1.0°×1.0°               S, R       Global
+7   PML                2           Jul.2002--Aug.2019    Monthly                            0.05°×0.05°             X          60°S to 90°N
+8   FLDAS-NOAH         -           2002--present         Monthly                            0.1°×0.1°               X          60°S to 90°N
+9   MERRA-Land         -           1979--2016            Monthly +                          0.5°×0.667°             G, S, R    Global
+10  ERA5               -           1979--present         Monthly, +                         31km×31km               R          Global

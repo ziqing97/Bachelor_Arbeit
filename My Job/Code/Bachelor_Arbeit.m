@@ -158,30 +158,30 @@ for y=2002:2020
     plot(datenum(y,1,1)*ones(361,1),[-180:180]',':','color',[64 64 64]./255)
     hold on
 end
-ts_min1 = TWSA1(:,4) - TWSA1(:,5);
-ts_max1 = TWSA1(:,4) + TWSA1(:,5);
-patch1 = fill([TWSA1(:,3)' fliplr(TWSA1(:,3)')], [ts_min1' fliplr(ts_max1')],[96 96 96]./255);
-hold on
-ts_min2 = TWSA2(:,4) - TWSA2(:,5);
-ts_max2 = TWSA2(:,4) + TWSA2(:,5);
-patch2 = fill([TWSA2(:,3)' fliplr(TWSA2(:,3)')], [ts_min2' fliplr(ts_max2')],[96 96 96]./255);
-ax = gca;
-set(patch1, 'edgecolor', 'none');
-set(patch1, 'FaceAlpha', 0.5);
-set(patch2, 'edgecolor', 'none');
-set(patch2, 'FaceAlpha', 0.5);
-h = plot(TWSA_all(:,3), TWSA_all(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+% ts_min1 = TWSA1(:,4) - TWSA1(:,5);
+% ts_max1 = TWSA1(:,4) + TWSA1(:,5);
+% patch1 = fill([TWSA1(:,3)' fliplr(TWSA1(:,3)')], [ts_min1' fliplr(ts_max1')],[96 96 96]./255);
+% hold on
+% ts_min2 = TWSA2(:,4) - TWSA2(:,5);
+% ts_max2 = TWSA2(:,4) + TWSA2(:,5);
+% patch2 = fill([TWSA2(:,3)' fliplr(TWSA2(:,3)')], [ts_min2' fliplr(ts_max2')],[96 96 96]./255);
+% ax = gca;
+% set(patch1, 'edgecolor', 'none');
+% set(patch1, 'FaceAlpha', 0.5);
+% set(patch2, 'edgecolor', 'none');
+% set(patch2, 'FaceAlpha', 0.5);
+h = plot(TWSA_all(1:end,3), TWSA_all(1:end,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
 datetick
 ylim([-150,180])
-xlim([TWSA_all(1,3)-365,TWSA_all(end,3)+365])
-set(ax,'xtick',datenum(TWSA_all(1,1):1:TWSA_all(end,1),7,1))
-set(ax,'xticklabel',TWSA_all(1,1):1:TWSA_all(end,1))
+% xlim([TWSA_all(1,3)-365,TWSA_all(end,3)+365])
+% set(ax,'xtick',datenum(TWSA_all(1,1):1:TWSA_all(end,1),7,1))
+% set(ax,'xticklabel',TWSA_all(1,1):1:TWSA_all(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
 set(gca,'fontsize',16)
-ylabel('Equivalent Water Height','fontsize',20)
-legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',20)
+ylabel('equivalent water height Ob','fontsize',20)
+% legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',20)
 
 dSdt = zeros(216,5);
 dSdt(:,1) = TWSA_all(2:end-1,1);

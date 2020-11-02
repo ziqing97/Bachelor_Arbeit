@@ -143,24 +143,23 @@ This mascon solutions have no stripe errors and capture all the signals ovserved
 In this thesis the mascon solution from CSR are compared with the results from spherical harmonic solutions.
 \newpage
 \section{Precipitation}
-Precipitation is any form of water particle, solid or liquid, that falls from the atmosphere and reaches the ground. Precipitation can include drizzle, rain, snow, sleet, and hail. Precipitation forms in the clouds when water vapor condenses into bigger and bigger droplets of water. When the drops are heavy enough, they fall to the Earth. If a cloud is colder, like it would be at higher altitudes, the water droplets may freeze to form ice. These ice crystals then fall to the Earth as snow, hail, or rain, depending on the temperature within the cloud and at the Earth's surface. Most rain actually begins as snow high in the clouds. As the snowflakes fall through warmer air, they become raindrops. \\\\
 In this thesis the precipitation data from 9 data resources are gathered and processed (\ref{tab:pre}). The methods dealing with these data sets will be discussed later in this chapter:
-\begin{table}[htbp]\centering
-	\begin{tabular}{|l|}
+\begin{table}[htbp]\centering 
+	\begin{tabular}{|l|l|l|l|l|}
 		\hline
-	Precipitation reconstruction over land (PREC/L)	\\ \hline
-	CPC unified gauge-based analysis of global daily precipitation	\\ \hline
-	Global Precipitation Climatology Project (GPCP)	\\ \hline
-	CPC Merged Analysis of Precipitation (CMAP)	\\ \hline
-	Precipitation Estimation from Remotely Sensed \\
-	Information using Artificial Neural Networks - Climate Data Record(PERSIANN-CDR)	\\ \hline
-	NCEP/NCAR Reanalysis 1	\\ \hline
-	NCEP/NCAR Reanalysis 2	\\ \hline
-	ERA5	\\ \hline
-	Modern-Era Retrospective analysis for research and Applications, version 2 (MERRA-2)	\\ \hline
+		Dataset      & Timespan       & Temporal Resolution & Spatial Resolution & Spatial Coverage \\ \hline
+		PREC/L       & 1948 - present & Monthly             & $0.5^{\circ} \times 0.5^{\circ}$          & Global           \\ \hline
+		CPC          & 1979 - present & Monthly \& Daily    & $0.5^{\circ} \times 0.5^{\circ}$          & Global           \\ \hline
+		GPCP         & 1979 - present & Monthly             & $2.5^{\circ} \times 2.5^{\circ}$          & Global           \\ \hline
+		CMAP         & 1979 - present & Monthly             & $2.5^{\circ} \times 2.5^{\circ}$          & Global           \\ \hline
+		PERSIANN-CDR & 1983 - present & Monthly \& Daily    & $0.25^{\circ} \times 0.25^{\circ}$        & $60S^{\circ} - 60N^{\circ}$      \\ \hline
+		NCEP1        & 1948 - present & Monthly \& Daily    & $2.5^{\circ} \times 2.5^{\circ}$          & Global           \\ \hline
+		NCEP2        & 1979 - present & Monthly \& Daily    & $1.875^{\circ} \times 1.875^{\circ}$      & Global           \\ \hline
+		ERA5         & 1979 - present & Monthly             & $31\ut{km} \times 31\ut{km}$        & Global           \\ \hline
+		MERRA-2      & 1980- present  & Monthly \& Daily    & $0.5^{\circ} \times 0.625^{\circ}$        & Global           \\ \hline
 	\end{tabular}
-	\label{tab:pre}
 	\caption{precipitation datasets}
+	\label{tab:pre}
 \end{table}
 \paragraph{Precipitation reconstruction over land (PREC/L)}
 PREC/L if provided from National Oceanic and Atmospheric Administration (NOAA).It is derived from gauge observations from over 17 000 stations collected in the Global Historical Climatology Network(GNCN), and the Climate Anomaly Monitoring System(CAMS) datasets. By using OI analysis procedure, the monthly gridded analyses of precipitation over the global land area since 1948 are presented. The mean distribution and annual cycle of precipitation observed in the PREC/L showed good agreement with those in several published gauge-based datasets. \cite{chen2002global}
@@ -182,18 +181,19 @@ The daily total precipitation can then be calculated from ERA5 data using python
 This is a global atmospheric reanalysis produced by the NASA Global Modeling and Assimilation Office(GMAO). It spans the satellite observing era from 1980 to the present. The goals of MERRA-2 are to provide a regularly-gridded, homogeneous record of the global atmosphere, and to incorporate additional aspects of the climate system including trace gas constituents (stratospheric ozone), and improved land surface representation, and cryospheric processes.
 \section{Evatranspiration}
 Evaporation is the process whereby liquid water is converted to water vapour (vaporization) and removed from the evaporating surface (vapour removal). Water evaporates from a variety of surfaces, such as lakes, rivers, pavements, soils and wet vegetation. 6 datasets are used in this thesis (\ref{tab:et}). 
-\begin{table}[htbp]\centering
-	\begin{tabular}{|l|}
-		\hline
-		GLDAS NOAH\\ \hline
-		GLDAS CLSM\\ \hline
-		GLDAS VIC\\ \hline
-		FLDAS\\ \hline
-		SSEBop\\ \hline
-		ERA5\\ \hline
+\begin{table}[htbp]\centering 
+	\begin{tabular}{lllll}
+		&                                     &                                          &                                         &                                       \\ \hline
+		\multicolumn{1}{|l|}{Dataset}    & \multicolumn{1}{l|}{Timespan}       & \multicolumn{1}{l|}{Temporal Resolution} & \multicolumn{1}{l|}{Spatial Resolution} & \multicolumn{1}{l|}{Spatial Coverage} \\ \hline
+		\multicolumn{1}{|l|}{GLDAS NOAH} & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times  0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{GLDAS CLSM} & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times 0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{GLDAS VIC}  & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times 0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{FLDAS}      & \multicolumn{1}{l|}{2002 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.1^{\circ} \times 0.1^{\circ}$}          & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{SSEBop}     & \multicolumn{1}{l|}{2003- present}  & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.0097^{\circ} \times 0.0097^{\circ}$}    & \multicolumn{1}{l|}{$60^{\circ}S - 60^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{ERA5}       & \multicolumn{1}{l|}{1979 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$31\ut{km} \times 31\ut{km}$}            & \multicolumn{1}{l|}{Global}           \\ \hline
 	\end{tabular}
-	\label{tab:et}
 	\caption{evatranspiration datasets}
+	\label{tab:et}
 \end{table}
 \paragraph{The Global Land Data Assimilation System (GLDAS)}
 Direct measurements and data acquisition of ET are very difficult and expensive, especially at the global level. Therefore, modeling is one common alternative for estimating ET. GLDAS has been generating quality-controlled, spatially and temporally consistent, terrestrial hydrologic data, including ET and other variants. The goal of GLDAS is to ingest satellite- and ground*based observational data products, using advanced land surface modeling and data assimilation techniques, in order to generate optimal fields of land surface states and fluxes.\\\\
@@ -208,26 +208,20 @@ Runoff is quantity of water discharged in surface streams. Runoff includes not o
 The in-situ run off data are from Global Runoff Data Center (GRDC). The GRDC is an international archive of data up to 200 years old, and fosters multinational and global long-term hydrological studies. Originally established three decades ago, the aim of the GRDC is to help earth scientists analyse global climate trends and assess environmental impacts and risks. Operating under the auspices of WMO the database of quality controlled "historical" mean daily and monthly discharge data grows steadily and currently comprises river discharge data of more than 9,900 stations from 159 countries.\\\\
 However, the discharge data from GRDC of Ob river are only up to 2010, which doesn't fit the purpose totally. Thus, like precipitation and evatranspiration, models from different data centers play a role. The datasets (\ref{tab:runoff}), which fit the in-situ discharge the best, are chosen while others are denied. The chosen data will then be processed. But it is shown later, that not all these datasets are good enough. In addition to those hydrological models, the altimetry measurement using satellite is also taken into consideration since the station for in-situ discharge(Salekhard)(\ref{fig:Salekhard}) is known. 
 \begin{table}[htbp]\centering
-	\label{tab:runoff}
-	\begin{tabular}{|l|}
-		\hline
-		ERA5        \\ \hline
-		HTESSEL     \\ \hline
-		LISFLOOD    \\ \hline
-		ORCHIDEE    \\ \hline
-		PCRGLOBWB   \\ \hline
-		GLDAS CLSM  \\ \hline
-		GLDAS NOAH  \\ \hline
-		GLDAS VIC   \\ \hline
-		SURFEX-TRIP \\ \hline
-		W3RA        \\ \hline
-		WaterGAP3   \\ \hline
+	\begin{tabular}{lllll}
+		&                                     &                                          &                                         &                                       \\ \hline
+		\multicolumn{1}{|l|}{Dataset}    & \multicolumn{1}{l|}{Timespan}       & \multicolumn{1}{l|}{Temporal Resolution} & \multicolumn{1}{l|}{Spatial Resolution} & \multicolumn{1}{l|}{Spatial Coverage} \\ \hline
+		\multicolumn{1}{|l|}{GLDAS NOAH} & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times  0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{GLDAS CLSM} & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times 0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\ \hline
+		\multicolumn{1}{|l|}{GLDAS VIC}  & \multicolumn{1}{l|}{1948 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$0.25^{\circ} \times 0.25^{\circ}$}        & \multicolumn{1}{l|}{$60^{\circ}S - 90^{\circ}N$}      \\   \hline
+		\multicolumn{1}{|l|}{ERA5}       & \multicolumn{1}{l|}{1979 - present} & \multicolumn{1}{l|}{Monthly}             & \multicolumn{1}{l|}{$31\ut{km} \times 31\ut{km}$}            & \multicolumn{1}{l|}{Global}           \\ \hline
 	\end{tabular}
 	\caption{runoff datasets}
+	\label{tab:runoff}
 \end{table}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{salekhard} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\includegraphics[width=0.9\textwidth]{salekhard} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\caption{Station Salekhard} 
 	\label{fig:Salekhard}
 \end{figure}

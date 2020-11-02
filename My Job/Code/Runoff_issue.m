@@ -13,6 +13,10 @@ load("W3RA_R_OB.mat")
 load("WaterGAP3_R_OB.mat")
 load("R_insitu_OB.mat")
 
+load('Envisat0x2Dseries_P1_110_B0_WO0_SR1000.mat')
+load('Envisat0x2Dseries_P2_110_B0_WO0_SR1000.mat')
+
+
 LISFLOOD_R_OB = double(LISFLOOD_R_OB);
 
 
@@ -166,6 +170,9 @@ ylabel('monthly discharge (mm/month)','fontsize',20)
 xlim([min(TT2),max(TT2)]);
 ylim([min(TT1),max(TT1)]);
 
-
+figure
+hold on
+plot(Envisat0x2Dseries_P1_110_B0_WO0_SR1000.TS_final(:,1),Envisat0x2Dseries_P1_110_B0_WO0_SR1000.TS_final(:,2))
+datetick
 
 

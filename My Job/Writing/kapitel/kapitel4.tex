@@ -1,6 +1,6 @@
 \chapter{Method}
 \section{Estimating hydrological component combining different datasets}\label{section:combine}
-As mentioned before, the hydrological process can be written as:
+As mentioned before, the terrestrial water balance can be written as:
 \begin{equation}
 Pre - ET - R = \frac{dS}{dt}
 \end{equation}
@@ -12,18 +12,16 @@ where
 		$R$     & Surface Runoff \\ 
 		$dS / dt$ & total water storage change \\ 
 	\end{tabular}
-\end{table}
-For each component in this equation, there are several time series available. For more reliable results, it is necessary to combine them as one time series.\\\\
-The Grace and Grace-Fo provides the EWHA ($S$) with uncertainty ($\sigma_s$), we need to be aware of that these time series are not totally consistent. There are (1) a one-year gap between the GRACE and GRACE-FO and (2) several small gaps. This one-year gap would be ignored since we are interested in the long term trend and these small gaps are dealt using interpolation. In Matlab, this can be done using function \textit{griddedInterpolant}, for the interpolation method, we choose "spline" for EWHA and "linear" for uncertainty. After this, we have 4 consistent EWHA time series $\bm{S_1}$, $\bm{S_2}$, $\bm{S_3}$, $\bm{S_4}$. Since we are only interested in the changing trend $dS / dt$ and the time series are discrete, for each of them we have
-\begin{align}\label{eq:dsdt}
-\frac{dS(t)}{dt} = &\frac{(dS(t+\Delta t) - dS(t)) + (dS(t) - dS(t-\Delta t))}{2 \Delta t}\\
-= & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
-\end{align}
-where $\Delta t$ is one month. \\\\
-We are also able to get the uncertainty using Propagation
-\begin{align}
-\sigma_{dS}(t) = \frac{1}{2} \sqrt{\sigma_{dS}^2(t + \Delta t) + \sigma_{dS}^2(t - \Delta t)}
-\end{align}
+\end{table}\\
+For each, time series from several datasets are processed\\\\
+There are several centers that post process Level-1 data of GRACE and provide solutions in terms of spherical harmonics. It should be noted that there is a one-year gap between the GRACE and GRACE-FO and several monthly gaps. This one-year gap would be ignored since we are interested in the long term trend and these monthly gaps are dealt using interpolation. For the equivalent water height we use spline interpolation while for uncertainty we use linear interpolation.\\\\
+If two known points are given by the coordinates $(x_0,y0)$ and $(x_1,y_1)$, the linear interpolant is the straight line between these points. For a value $x$ in the interval $(x_0,x_1)$, the value $y$ along the straight line is given from the equation of slopes
+\begin{equation}
+	y = y_0 + (x-x_0)\frac{y_1-y_0}{x_1-x_0}
+\end{equation}
+Spline was a term of elastic rulers that were bent to pass through a number of predifined points (knots). The approch to mathematically modelling the shape of such elastic rulers fixed by $n+1$ knots is to interpolate between all the pairs of knots and new point with polynomials. In MatLab, both of these interpolation methods can be finished using function \textit{griddedInterpolant}.\\\\
+We have 4 EWH time series from CSR, GFZ, ITSG and JPL with different uncertainties. To generate one time series of EWH for further analyse we use Gaus-Markov model.
+
 \subsection{Adjustment using Gauss-Markov model}\label{sec:Gaussmarkov}
 Gauss-Markov model is known as the adjustment with observation equations. The model is as follows
 \begin{equation}
@@ -45,41 +43,49 @@ In many cases, the observations are not equal weighted, which means they have di
 \end{equation}
 the weighted least squares estimations are:
 \begin{align}
-&\hat{\bm{x}} = (\bm{A}^T \bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
+\label{equa:guass0}
+&\hat{\bm{x}} = (\bm{A}^T \bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\ 
 &\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
 &\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}]\bm{y}
-\end{align}
-\subsection{Getting one time series using Gauss-Markov model}\label{section:oneseries}
-For each month, their are 4 TWSA change $\frac{dS_1(t)}{dt}$, $\frac{dS_2(t)}{dt}$, $\frac{dS_3(t)}{dt}$, $\frac{dS_4(t)}{dt}$ along with their uncertainty $\sigma_{dS_1}$, $\sigma_{dS_2}$, $\sigma_{dS_3}$, $\sigma_{dS_4}$, which are calculated by (3.21) and (3.22). We use the uncertainty to build the weight matrix $\bm{P}$, then we have:
+\end{align}\\
+For each month, their are 4 EWH values $S_{CSR}(t)$, $S_{GFZ}(t)$, $S_{ITSG}(t)$, $S_{JPL}(t)$ along with their uncertainty $\sigma_{CSR}(t)$, $\sigma_{GFZ}(t)$, $\sigma_{ITSG}(t)$, $\sigma_{JPL}(t)$, which are calculated by (3.21) and (3.22). We use the uncertainty to build the weight matrix $\bm{P}$, then we have:
 \begin{align}
-\bm{y} &= \begin{pmatrix}
-\frac{dS_1(t)}{dt}\\
-\frac{dS_2(t)}{dt}\\
-\frac{dS_3(t)}{dt}\\
-\frac{dS_4(t)}{dt}
+\bm{y} &= \begin{pmatrix} \label{equa:guass1}
+S_{CSR}(t)\\
+S_{GFZ}(t)\\
+S_{ITSG}(t)\\
+S_{JPL}(t)
 \end{pmatrix} \\
-\bm{P} &= \begin{pmatrix}
-\frac{1}{\sigma(t)_{dS_1}^2} & 0 & 0 & 0 \\
-0 & \frac{1}{\sigma(t)_{dS_2}^2} & 0 & 0 \\
-0 & 0 & \frac{1}{\sigma(t)_{dS_3}^2} & 0 \\
-0 & 0 & 0 & \frac{1}{\sigma(t)_{dS_4}^2}
+\bm{P} &= \begin{pmatrix} \label{equa:guass2}
+\frac{1}{\sigma^2_{CSR}(t)} & 0 & 0 & 0 \\
+0 & \frac{1}{\sigma^2_{GFZ}(t)} & 0 & 0 \\
+0 & 0 & \frac{1}{\sigma^2_{ITSG}(t)} & 0 \\
+0 & 0 & 0 & \frac{1}{\sigma^2_{JPL}(t)}
 \end{pmatrix}\\
-\bm{A} &= \begin{pmatrix}
+\bm{A} &= \begin{pmatrix} \label{equa:guass3}
 1\\
 1\\
 1\\
 1
 \end{pmatrix}
 \end{align}
-By inserting (3.32), (3.33) and (3.34) into (3.29) we are able to get one $dS/dt$ for one month
-\begin{equation}
+By inserting \ref{equa:guass1}, \ref{equa:guass2} and \ref{equa:guass3} into \ref{equa:guass0} we are able to get one EWH for one month
+\begin{equation} \label{equa:finalgauss}
 \underset{1 \times 1}{\hat{\bm{x}}} = (\underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{A}})^{-1} \underset{1 \times 4}{\bm{A}}^T \underset{4 \times 4}{\bm{P}} \  \underset{4 \times 1}{\bm{y}}
 \end{equation}
-where $\hat{\bm{x}}$ is the TWSA change for one month.\\\\
-By repeating (3.35), we are able to get one whole time series for $dS / dt$
-\subsection{Uncertainty calculation}
-The method used in 3.2.1.2 also works for precipitation, evatranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
-We assume that the precipitation and evatranspiration are stable during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evatranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
+where $\hat{\bm{x}}$ is the EWH for one month. By repeating \ref{equa:finalgauss}, we are able to get one whole time series for equivalent water height. The uncertainty for this new time series would be calculated using least squares error:
+\begin{equation}
+	\sigma(t) = \frac{1}{4}\sqrt{\sigma^2_{CSR}(t)+\sigma^2_{GFZ}(t)+\sigma^2_{ITSG}(t)+\sigma^2_{JPL}(t)}
+\end{equation}
+The derivation of the EWH would be calculated using central difference:
+\begin{align}\label{eq:dsdt}
+\frac{dS(t)}{dt} = &\frac{(dS(t+\Delta t) - dS(t)) + (dS(t) - dS(t-\Delta t))}{2 \Delta t}\\
+= & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
+\end{align}
+where $\Delta t$ is one month. 
+\subsection{Validation of model-based estimations}
+The method used in \ref{sec:Gaussmarkov} also works for precipitation, evatranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
+We assume that the precipitation and evatranspiration are normal distributed during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evatranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
 \begin{gather}
 \sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
 \end{gather}
@@ -108,5 +114,30 @@ By achieving the function $T$ between the quantile functions, we can get the fun
 \begin{equation}
 	Q_R = T(Q_W) \Longrightarrow X_R = T(X_W)
 \end{equation}
-In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve
-is achieved by fitting a quadratic curve over the obtained statistical relationship.
+In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve is achieved by fitting a quadratic curve over the obtained statistical relationship. \ref{fig:wltodischarge} showed the example of achieving the runoff using water level data from Envisat. 
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{leftinsitu} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{rightwl} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{cdfleft} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{cdfright} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{cdfcombine} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\end{minipage}
+	\caption{EstimatEd water level from Envisat and available runoff for Ob river (top) and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}
+	\label{fig:wltodischarge}
+\end{figure}\\
+By repeating this process to Saral and Sentinel missions we can generate an whole runoff time series from 2002 to 2020. (note there is a gap between Envisat and Saral) 

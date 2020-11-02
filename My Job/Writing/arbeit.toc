@@ -1,12 +1,13 @@
 \babel@toc {english}{}
-\babel@toc {german}{}
+\babel@toc {english}{}
 \babel@toc {ngerman}{}
+\babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Water Cycle}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Precipitation}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Evatranspiration}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Runoff}{3}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Observation from Satellite}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Observation from satellite gravimetry}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Motivation}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Objective}{6}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Study Area}{7}{chapter.2}%
@@ -20,16 +21,16 @@
 \contentsline {subsection}{\numberline {3.1.1}Spherical harmonics}{11}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Mass concentration}{14}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Precipitation}{15}{section.3.2}%
-\contentsline {paragraph}{\nonumberline Precipitation reconstruction over land (PREC/L)}{16}{section*.5}%
+\contentsline {paragraph}{\nonumberline Precipitation reconstruction over land (PREC/L)}{15}{section*.5}%
 \contentsline {paragraph}{\nonumberline CPC unified gauge-based analysis of global daily precipitation}{16}{section*.6}%
 \contentsline {paragraph}{\nonumberline Global Precipitation Climatology Project (GPCP)}{16}{section*.7}%
 \contentsline {paragraph}{\nonumberline CPC Merged Analysis of Precipitation (CMAP)}{16}{section*.8}%
 \contentsline {paragraph}{\nonumberline Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks - Climate Data Record(PERSIANN-CDR)}{16}{section*.9}%
-\contentsline {paragraph}{\nonumberline NCEP/NCAR Reanalysis 1\&2}{17}{section*.10}%
+\contentsline {paragraph}{\nonumberline NCEP/NCAR Reanalysis 1\&2}{16}{section*.10}%
 \contentsline {paragraph}{\nonumberline ERA5}{17}{section*.11}%
 \contentsline {paragraph}{\nonumberline Modern-Era Retrospective analysis for research and Applications, version 2 (MERRA-2)}{17}{section*.12}%
 \contentsline {section}{\numberline {3.3}Evatranspiration}{17}{section.3.3}%
-\contentsline {paragraph}{\nonumberline The Global Land Data Assimilation System (GLDAS)}{17}{section*.13}%
+\contentsline {paragraph}{\nonumberline The Global Land Data Assimilation System (GLDAS)}{18}{section*.13}%
 \contentsline {paragraph}{\nonumberline Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS)}{18}{section*.14}%
 \contentsline {paragraph}{\nonumberline optiaonal Simplified Surface Energy Balance (SSEBop)}{18}{section*.15}%
 \contentsline {section}{\numberline {3.4}Runoff}{18}{section.3.4}%
@@ -41,9 +42,8 @@
 \contentsline {chapter}{\numberline {4}Method}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Estimating hydrological component combining different datasets}{21}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Adjustment using Gauss-Markov model}{22}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Getting one time series using Gauss-Markov model}{23}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Uncertainty calculation}{23}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Estimating the reliability of runoff datasets}{24}{section.4.2}%
+\contentsline {subsection}{\numberline {4.1.2}Validation of model-based estimations}{23}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Estimating the reliability of runoff datasets}{23}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Estimating the runoff using quantile function and water level height}{24}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Result}{27}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Equivalent water height}{27}{section.5.1}%

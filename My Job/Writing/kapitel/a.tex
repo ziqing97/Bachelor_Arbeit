@@ -1,0 +1,25 @@
+\chapter{Adjustment using Gauss-Markov model}\label{sec:Gaussmarkov}
+Gauss-Markov model is known as the adjustment with observation equations. The model is as follows
+\begin{equation}
+\bm{y} = \bm{A}\bm{x} + \bm{e}
+\end{equation}
+where $y$ is a vector of observations, $A$ is the design matrix, $x$ is a vector of unknowns and $e$ is a vector of measurement errors. Define the \textit{Lagrangian} or \textit{cost function};
+\begin{equation}
+\mathcal{L}_{a}(x) = \frac{1}{2} \bm{e}^T \bm{e}
+\end{equation} 
+Then, the adjusted observations can be estimated by using least square criterion, the best $x$ can be found with the minimum cost function. The equations can be solved as following:
+\begin{align}
+&\hat{\bm{x}} = (\bm{A}^T\bm{A})^{-1}\bm{A}^T\bm{y}\\
+&\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{A})^{-1}\bm{A}^T\bm{y}\\
+&\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{A})^{-1}\bm{A}^T]\bm{y}
+\end{align}
+In many cases, the observations are not equal weighted, which means they have different quality. To solve this problem,  we use a matrix $\bm{P}$ to describe the weight. The cost function is formed as:
+\begin{equation}
+\mathcal{L}_{a}(x) = \frac{1}{2} \bm{e}^T \bm{P}\bm{e}
+\end{equation}
+the weighted least squares estimations are:
+\begin{align}
+&\hat{\bm{x}} = (\bm{A}^T \bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
+&\hat{\bm{y}} = \bm{A}\hat{\bm{x}} = \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}\bm{y}\\
+&\hat{\bm{e}} = \bm{y} - \hat{\bm{y}} = [\bm{I} - \bm{A}(\bm{A}^T\bm{P}\bm{A})^{-1}\bm{A}^T\bm{P}]\bm{y}
+\end{align}

@@ -1,91 +1,109 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{allen1998crop}
-Richard~G Allen, Luis~S Pereira, Dirk Raes, Martin Smith, et~al.
+\bibitem[Allen et~al., 1998]{allen1998crop}
+Allen, R.~G., Pereira, L.~S., Raes, D., Smith, M., et~al. (1998).
 \newblock Crop evapotranspiration-guidelines for computing crop water
   requirements-fao irrigation and drainage paper 56.
-\newblock {\em Fao, Rome}, 300(9):D05109, 1998.
+\newblock {\em Fao, Rome}, 300(9):D05109.
 
-\bibitem{chen2002global}
-Mingyue Chen, Pingping Xie, John~E Janowiak, and Phillip~A Arkin.
+\bibitem[Chen et~al., 2002]{chen2002global}
+Chen, M., Xie, P., Janowiak, J.~E., and Arkin, P.~A. (2002).
 \newblock Global land precipitation: A 50-yr monthly analysis based on gauge
   observations.
-\newblock {\em Journal of Hydrometeorology}, 3(3):249--266, 2002.
+\newblock {\em Journal of Hydrometeorology}, 3(3):249--266.
 
-\bibitem{han1995viscoelastic}
-Dazhong Han and John Wahr.
+\bibitem[Evans, 1996]{evans1996effects}
+Evans, T.~E. (1996).
+\newblock The effects of changes in the world hydrological cycle on
+  availability of water resources.
+\newblock {\em Global Climate Change and Agricultural Production: Direct and
+  Indirect Effects of Changing Hydrological, Pedological and Plant
+  Physiological Processes}, pages 15--48.
+
+\bibitem[Ghassemi et~al., 1995]{ghassemi1995salinization}
+Ghassemi, F., Jakeman, A., and Nix, H. (1995).
+\newblock Salinization of land and water resources.
+\newblock {\em CAB International, Wallingford, UK}.
+
+\bibitem[Gleick, 1993]{gleick1993water}
+Gleick, P.~H. (1993).
+\newblock Water in crisis.
+\newblock {\em Pacific Institute for Studies in Dev., Environment \& Security.
+  Stockholm Env. Institute, Oxford Univ. Press. 473p}, 9.
+
+\bibitem[Han and Wahr, 1995]{han1995viscoelastic}
+Han, D. and Wahr, J. (1995).
 \newblock The viscoelastic relaxation of a realistically stratified earth, and
   a further analysis of postglacial rebound.
-\newblock {\em Geophysical Journal International}, 120(2):287--311, 1995.
+\newblock {\em Geophysical Journal International}, 120(2):287--311.
 
-\bibitem{hersbach2020era5}
-Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, Andr{\'a}s
-  Hor{\'a}nyi, Joaqu{\'\i}n Mu{\~n}oz-Sabater, Julien Nicolas, Carole Peubey,
-  Raluca Radu, Dinand Schepers, et~al.
+\bibitem[Hersbach et~al., 2020]{hersbach2020era5}
+Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Hor{\'a}nyi, A.,
+  Mu{\~n}oz-Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D.,
+  et~al. (2020).
 \newblock The era5 global reanalysis.
 \newblock {\em Quarterly Journal of the Royal Meteorological Society},
-  146(730):1999--2049, 2020.
+  146(730):1999--2049.
 
-\bibitem{kalnay1996ncep}
-Eugenia Kalnay, Masao Kanamitsu, Robert Kistler, William Collins, Dennis
-  Deaven, Lev Gandin, Mark Iredell, Suranjana Saha, Glenn White, John Woollen,
-  et~al.
+\bibitem[Kalnay et~al., 1996]{kalnay1996ncep}
+Kalnay, E., Kanamitsu, M., Kistler, R., Collins, W., Deaven, D., Gandin, L.,
+  Iredell, M., Saha, S., White, G., Woollen, J., et~al. (1996).
 \newblock The ncep/ncar 40-year reanalysis project.
 \newblock {\em Bulletin of the American meteorological Society},
-  77(3):437--472, 1996.
+  77(3):437--472.
 
-\bibitem{Obriver}
-Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
+\bibitem[Liliya Konstantinovna~Malik, ]{Obriver}
+Liliya Konstantinovna~Malik, Lewis~Owen, P. P.~M.
 \newblock Ob river.
 
-\bibitem{gracecomponent}
+\bibitem[NASA, ]{gracecomponent}
 NASA.
 \newblock Grace mission.
 \newblock \url{https://www.nasa.gov/mission_pages/Grace/spacecraft/index.html}.
 
-\bibitem{revenga1998watersheds}
-C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
-  Abramovitz.
+\bibitem[Revenga et~al., 1998]{revenga1998watersheds}
+Revenga, C., Institute, W.~R., Murray, S., Hammond, A., and Abramovitz, J.
+  (1998).
 \newblock {\em Watersheds of the World: Ecological Value and Vulnerability}.
-\newblock World Resources Institute report. World Resources Institute, 1998.
+\newblock World Resources Institute report. World Resources Institute.
 
-\bibitem{save2016high}
-Himanshu Save, Srinivas Bettadpur, and Byron~D Tapley.
+\bibitem[Save et~al., 2016]{save2016high}
+Save, H., Bettadpur, S., and Tapley, B.~D. (2016).
 \newblock High-resolution csr grace rl05 mascons.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
-  121(10):7547--7569, 2016.
+  121(10):7547--7569.
 
-\bibitem{tourian2013quantile}
-MJ~Tourian, N~Sneeuw, and A~B{\'a}rdossy.
+\bibitem[Tourian et~al., 2013]{tourian2013quantile}
+Tourian, M., Sneeuw, N., and B{\'a}rdossy, A. (2013).
 \newblock A quantile function approach to discharge estimation from satellite
   altimetry (envisat).
-\newblock {\em Water Resources Research}, 49(7):4174--4186, 2013.
+\newblock {\em Water Resources Research}, 49(7):4174--4186.
 
-\bibitem{wahr1998time}
-John Wahr, Mery Molenaar, and Frank Bryan.
+\bibitem[Wahr et~al., 1998]{wahr1998time}
+Wahr, J., Molenaar, M., and Bryan, F. (1998).
 \newblock Time variability of the earth's gravity field: Hydrological and
   oceanic effects and their possible detection using grace.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
-  103(B12):30205--30229, 1998.
+  103(B12):30205--30229.
 
-\bibitem{watkins2015improved}
-Michael~M Watkins, David~N Wiese, Dah-Ning Yuan, Carmen Boening, and Felix~W
-  Landerer.
+\bibitem[Watkins et~al., 2015]{watkins2015improved}
+Watkins, M.~M., Wiese, D.~N., Yuan, D.-N., Boening, C., and Landerer, F.~W.
+  (2015).
 \newblock Improved methods for observing earth's time variable mass
   distribution with grace using spherical cap mascons.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
-  120(4):2648--2671, 2015.
+  120(4):2648--2671.
 
-\bibitem{xie2010cpc}
-Pingping Xie, M~Chen, and W~Shi.
+\bibitem[Xie et~al., 2010]{xie2010cpc}
+Xie, P., Chen, M., and Shi, W. (2010).
 \newblock Cpc unified gauge-based analysis of global daily precipitation.
 \newblock In {\em Preprints, 24th Conf. on Hydrology, Atlanta, GA, Amer.
-  Meteor. Soc}, volume~2, 2010.
+  Meteor. Soc}, volume~2.
 
-\bibitem{xie2007gauge}
-Pingping Xie, Mingyue Chen, Song Yang, Akiyo Yatagai, Tadahiro Hayasaka,
-  Yoshihiro Fukushima, and Changming Liu.
+\bibitem[Xie et~al., 2007]{xie2007gauge}
+Xie, P., Chen, M., Yang, S., Yatagai, A., Hayasaka, T., Fukushima, Y., and Liu,
+  C. (2007).
 \newblock A gauge-based analysis of daily precipitation over east asia.
-\newblock {\em Journal of Hydrometeorology}, 8(3):607--626, 2007.
+\newblock {\em Journal of Hydrometeorology}, 8(3):607--626.
 
 \end{thebibliography}

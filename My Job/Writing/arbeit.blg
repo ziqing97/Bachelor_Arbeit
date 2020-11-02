@@ -1,49 +1,50 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: arbeit.aux
-The style file: plain.bst
+The style file: apalike.bst
 Database file #1: literatur/bib.bib
-Warning--empty journal in Obriver
 Warning--empty year in Obriver
-You've used 14 entries,
-            2118 wiz_defined-function locations,
-            588 strings with 6993 characters,
-and the built_in function-call counts, 5564 in all, are:
-= -- 518
-> -- 360
-< -- 1
-+ -- 147
-- -- 128
-* -- 477
-:= -- 961
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 102
-chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 153
-empty$ -- 371
-format.name$ -- 128
-if$ -- 1091
-int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 72
-num.names$ -- 28
-pop$ -- 99
+Warning--empty journal in Obriver
+Warning--empty year in gracecomponent
+You've used 17 entries,
+            1935 wiz_defined-function locations,
+            577 strings with 7284 characters,
+and the built_in function-call counts, 7483 in all, are:
+= -- 711
+> -- 392
+< -- 7
++ -- 150
+- -- 138
+* -- 680
+:= -- 1324
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 150
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 242
+empty$ -- 471
+format.name$ -- 157
+if$ -- 1415
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 87
+num.names$ -- 51
+pop$ -- 133
 preamble$ -- 1
-purify$ -- 89
+purify$ -- 151
 quote$ -- 0
-skip$ -- 99
+skip$ -- 181
 stack$ -- 0
-substring$ -- 354
-swap$ -- 15
-text.length$ -- 1
+substring$ -- 519
+swap$ -- 23
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
-warning$ -- 2
-while$ -- 47
-width$ -- 16
-write$ -- 150
-(There were 2 warnings)
+type$ -- 100
+warning$ -- 3
+while$ -- 56
+width$ -- 0
+write$ -- 216
+(There were 3 warnings)
