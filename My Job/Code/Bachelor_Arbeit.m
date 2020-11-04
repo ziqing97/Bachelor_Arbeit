@@ -299,7 +299,7 @@ end
 for i = 1:12
     for j = 1:len
         mean_month = mean(Pre(j,i:12:end));
-        std = sqrt(sum((Pre(j,i:12:end) - mean_month).^2)/(len - 1));
+        std = sqrt(sum((Pre(j,i:12:end) - mean_month).^2)/(18 - 1));
         st(j,i:12:end) = std;
     end
 end
@@ -373,7 +373,7 @@ st = zeros(len,204);
 for i = 1:12
     for j = 1:len
         mean_month = mean(ET(j,i:12:end));
-        std = sqrt(sum((ET(j,i:12:end) - mean_month).^2)/(len - 1));
+        std = sqrt(sum((ET(j,i:12:end) - mean_month).^2)/(18 - 1));
         st(j,i:12:end) = std;
     end
 end
@@ -805,21 +805,21 @@ TABLE_UC(2,3) = uc_Pre_3;
 TABLE_UC(3,1) = uc_ET_1;
 TABLE_UC(3,2) = uc_ET_2;
 TABLE_UC(3,3) = uc_ET_3;
-TABLE_UC(4,1) = 4.16;
-TABLE_UC(4,2) = 4.16;
-TABLE_UC(4,3) = 4.16;
+TABLE_UC(4,1) = uc_R_1;
+TABLE_UC(4,2) = uc_R_2;
+TABLE_UC(4,3) = uc_R_3;
 TABLE_UC(5,1) = 0;
-TABLE_UC(5,2) = sqrt(uc_TWSA_2^2 + uc_TWSA_1^2)/2;
-TABLE_UC(5,3) = sqrt(uc_TWSA_2^2 + uc_TWSA_3^2)/2;
+TABLE_UC(5,2) = sqrt(uc_TWSA_2^2 + uc_TWSA_1^2);
+TABLE_UC(5,3) = sqrt(uc_TWSA_1^2 + uc_TWSA_3^2);
 TABLE_UC(6,1) = 0;
-TABLE_UC(6,2) = sqrt(uc_Pre_2^2 + uc_Pre_1^2)/2;
-TABLE_UC(6,3) = sqrt(uc_Pre_2^2 + uc_Pre_3^2)/2;
+TABLE_UC(6,2) = sqrt(uc_Pre_2^2 + uc_Pre_1^2);
+TABLE_UC(6,3) = sqrt(uc_Pre_1^2 + uc_Pre_3^2);
 TABLE_UC(7,1) = 0;
-TABLE_UC(7,2) = sqrt(uc_ET_2^2 + uc_ET_1^2)/2;
-TABLE_UC(7,3) = sqrt(uc_ET_2^2 + uc_ET_3^2)/2;
+TABLE_UC(7,2) = sqrt(uc_ET_2^2 + uc_ET_1^2);
+TABLE_UC(7,3) = sqrt(uc_ET_1^2 + uc_ET_3^2);
 TABLE_UC(8,1) = 0;
-TABLE_UC(8,2) = sqrt(4.16^2 + 4.16^2)/2;
-TABLE_UC(8,3) = sqrt(4.16^2 + 4.16^2)/2;
+TABLE_UC(8,2) = sqrt(uc_R_1^2 + uc_R_2^2);
+TABLE_UC(8,3) = sqrt(uc_R_1^2 + uc_R_3^2);
 TABLE_UC(9,1) = 0;
-TABLE_UC(9,2) = sqrt(TABLE_UC(6,2)^2+TABLE_UC(5,2)^2+TABLE_UC(7,2)^2+TABLE_UC(8,2)^2)/4;
-TABLE_UC(9,3) = sqrt(TABLE_UC(6,3)^2+TABLE_UC(5,3)^2+TABLE_UC(7,3)^2+TABLE_UC(8,3)^2)/4;
+TABLE_UC(9,2) = sqrt(TABLE_UC(6,2)^2+TABLE_UC(5,2)^2+TABLE_UC(7,2)^2+TABLE_UC(8,2)^2);
+TABLE_UC(9,3) = sqrt(TABLE_UC(6,3)^2+TABLE_UC(5,3)^2+TABLE_UC(7,3)^2+TABLE_UC(8,3)^2);

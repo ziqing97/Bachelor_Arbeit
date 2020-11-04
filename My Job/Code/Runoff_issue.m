@@ -118,12 +118,10 @@ change_time(1) = datenum(2003,1,15);
 change_time(2) = datenum(2013,1,15);
 change_time(3) = datenum(2015,12,15);
 change_time(4) = datenum(2019,12,15);
-figure
-Dis_final_filled = Dis_final_filled(13:end,:);
-hold on 
+Dis_final_filled = Dis_final_filled(1:end,:);
+
 id = zeros(1,4);
 time_lookup = datenum(Dis_final_filled(:,1),Dis_final_filled(:,2),15);
-
 id(1) = find(time_lookup == change_time(1));
 id(2) = find(time_lookup == change_time(2));
 id(3) = find(time_lookup == change_time(3));
@@ -131,18 +129,21 @@ id(4) = find(time_lookup == change_time(4));
 R_1 = mean(Dis_final_filled(id(1):id(2)-1,4),'omitnan');
 R_2 = mean(Dis_final_filled(id(2):id(3),4),'omitnan');
 R_3 = mean(Dis_final_filled(id(3)+1:id(4),4),'omitnan');
-h = plot(Dis_final_filled(:,3), Dis_final_filled(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+figure
+hold on 
+h = plot(Dis_final_filled(:,3), Dis_final_filled(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
+datetick
 pbaspect([3 1 1])
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('Discharge [mm/month]','fontsize',20)
-plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-ylim([0,50])
-datetick
+set(gca,'fontsize',20)
+ylabel('Discharge [mm/month]','fontsize',24)
+plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+ylim([0,40])
+
 ax = gca;
 set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
 set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
@@ -178,4 +179,12 @@ hold on
 plot(Envisat0x2Dseries_P1_110_B0_WO0_SR1000.TS_final(:,1),Envisat0x2Dseries_P1_110_B0_WO0_SR1000.TS_final(:,2))
 datetick
 
-
+st = zeros(1,204);
+for i = 1:12
+    mean_month = mean(Dis_final_filled(i:12:end,4),'omitnan');
+    std = sqrt(sum((Dis_final_filled(i:12:end,4) - mean_month).^2,'omitnan')/(18 - 1)) * ones(17,1);
+    st(i:12:end) = std;
+end
+uc_R_1 = caluc(st(id(1):id(2)-1));
+uc_R_2 = caluc(st(id(2):id(3)));
+uc_R_3 = caluc(st(id(3)+1:id(4)));

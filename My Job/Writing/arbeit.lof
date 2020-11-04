@@ -19,15 +19,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces TWSA generated from different data centers (top) generate one summarized TWSA time series (bottom) from Jan.2003 to Dec.2019}}{31}{figure.5.1}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces the derivation of TWSA (top) and the abrupt change in the moving average (bottom)}}{32}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces mean value of dS/dt and RMSE in 3 periods}}{32}{figure.5.3}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces mean value of dS/dt and RMSE in 3 periods}}{33}{figure.5.3}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces spatial TWS change of Ob river basin in each period}}{33}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces all precipitation datasets (top) are summarized into one time series, the mean precipitation with RMSE in 3 periods are calculated (bottom)}}{34}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces spatial change of precipitation in Ob river basin using different datasets in June of 2003}}{35}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces all evapotranspiration datasets (top) are summarized into one time series, the mean precipitation with RMSE in 3 periods are calculated (bottom)}}{36}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces spatial change of evapotranspiration in Ob river basin using different datasets in June of 2003}}{37}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Runoff datasets, the black bold time series is the in-situ runoff}}{38}{figure.5.9}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces CDF of differences}}{39}{figure.5.10}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces water level time series and the location of virtual station for different space mission}}{40}{figure.5.11}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces runoff timeseries calculated from water level (top) and the mean value in 3 periods(bottom) }}{41}{figure.5.12}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces spatial change of precipitation in Ob river basin using different datasets in June of 2003}}{34}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces all evapotranspiration datasets (top) are summarized into one time series, the mean precipitation with RMSE in 3 periods are calculated (bottom)}}{35}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces spatial change of evapotranspiration in Ob river basin using different datasets in June of 2003}}{36}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Runoff datasets, the black bold time series is the in-situ runoff}}{37}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces CDF of differences}}{38}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces water level time series and the location of virtual station for different space mission}}{39}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces runoff timeseries calculated from water level (top) and the mean value in 3 periods, the red points are unusually high and to be ignored(bottom)}}{40}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces runoff time series and mean value in 3 periods after 2 unusual months are ignored}}{40}{figure.5.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
