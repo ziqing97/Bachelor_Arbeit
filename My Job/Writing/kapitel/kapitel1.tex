@@ -4,7 +4,7 @@ Water is one of the most important ingredient of life; it regulates climate and 
 The hydrology cycle (\autoref{fig:hydrologic cycle}) includes 3 major compartments: evaporation, precipitation and runoff. The water evaporates from the oceans and the land surface as vapor to become part of the atmosphere along with water from evapotranspiration
 
 transpiration, which is water transpired from plants and evaporated from the soil and the cooler temperature causes the vapor into clouds. The clouds fall out of the sky as precipitation, which includes rain, snow and ice. Most precipitation falls back into the oceans or onto land. Precipitated water may be intercepted by vegetation, become overland flow over the ground surface, flow through the soil as subsurface flow and discharge into streams as surface runoff. The process can be simplified as:
-\begin{equation}
+\begin{equation}\label{equa:waterbalence}
 	 Pre - ET - R = \frac{dS}{dt}
 \end{equation}
 where
@@ -62,18 +62,18 @@ The GRACE mission ended in the October 2017. GRACE-FO (\autoref{fig:gracefo}), w
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{TWSA} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
-	\caption{Trends in TWS (in centimetres per year) obtained on the basis of GRACE observations from April 2002 to March 2016. The cause of the trend in each outlined study region is briefly explained and colour-coded by category. The trend map was smoothed with a 150 km radius Gaussian filter for the purpose of visualization; however, all calculations were performed at the native $3^{\circ}$ resolution of the data product.} 
+	\includegraphics[width=0.9\textwidth]{TWSA} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
+	\caption{Trends in TWS (in centimetres per year) obtained on the basis of GRACE observations from April 2002 to March 2016. The cause of the trend in each outlined study region is briefly explained and colour-coded by category. The trend map was smoothed with a 150 km radius Gaussian filter for the purpose of visualization; however, all calculations were performed at the native $3^{\circ}$ resolution of the data product. \cite{rodell2018emerging}} 
 	\label{fig:TWSA}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Obbasin} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\caption{Total water storage change from Apr.2002 to May.2020 in Ob river basin} 
 	\label{fig:Obbasin}
 \end{figure}
 \section{Motivation}
-In hydrology, most variables are observed in time series, including Total Water Storage Anomaly (TWSA). In the hydrological cycle, this should reflect seasonal behavior and is in long term relatively stable. However, it was shown that since 2002 the TWSA of many big basins has increased (\autoref{fig:TWSA} \cite{rodell2018emerging}). One important basin of them is Ob basin in west Siberia (\autoref{fig:Obbasin}). How did this trend happen is a very interesting topic. Through the analysis of the trend of the time series, it is possible to further understand the changes that have taken place before and future changes can also be predicted based on the stationary analysis.
+In hydrology, most variables are observed in time series, including Total Water Storage Anomaly (TWSA). In the hydrological cycle, this should reflect seasonal behavior and is in long term relatively stable. However, it was shown that since the launch of GRACE the TWSA of many areas has increased (\autoref{fig:TWSA}). As can be seen, this happened in East central China, Central Norch America, Central and Western Brazil etc.\cite{rodell2018emerging}.  One important area of them is Ob river basin in west Siberia (\autoref{fig:Obbasin}). As can be seen, the total water storage has different trends during different time period. Since Ob is the major river in Russia and one of the greatest rivers of Asia, the total water storage change in this area would be very interesting and important. Some questions can be answered here: when did this positive trend started? What is the major reason for this tendency? In this work, we are researching the answer to those questions. 
 \section{Objective}
 In this work this positive trend in total water storage of Ob river basin will discussed. The time series of total water storage change will be generated with data from GRACE and GRACE-FO mission. Then, the changing points of the trend will be determinated and thus the time interval of this change can be found. At last, by analyzing the precipitation, evapotranspiration and runoff from different data centers in this period
  the reason for this change can hopefully be discovered. 

@@ -74,6 +74,7 @@ pbaspect([1 1 1])
 xlabel('difference (mm/month)')
 ylabel('F(difference)')
 
+
 figure
 R_insitu = R_insitu_OB(553:end,:);
 plot(R_insitu(:,4),datenum(R_insitu(:,1),R_insitu(:,2),R_insitu(:,3)),'color',[0 0 0]./255,'Linewidth',3)
@@ -113,14 +114,16 @@ p2.Color = [0 0 0]./255;
 addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
 addpath(genpath('E:\Studium\altmany-export_fig-d7671fe'))
 load('Dis_final_filled_Ob.mat')
-change_time(1) = datenum(2003,10,15);
-change_time(2) = datenum(2012,10,15);
-change_time(3) = datenum(2015,9,15);
-change_time(4) = datenum(2019,9,15);
+change_time(1) = datenum(2003,1,15);
+change_time(2) = datenum(2013,1,15);
+change_time(3) = datenum(2015,12,15);
+change_time(4) = datenum(2019,12,15);
 figure
+Dis_final_filled = Dis_final_filled(13:end,:);
 hold on 
 id = zeros(1,4);
 time_lookup = datenum(Dis_final_filled(:,1),Dis_final_filled(:,2),15);
+
 id(1) = find(time_lookup == change_time(1));
 id(2) = find(time_lookup == change_time(2));
 id(3) = find(time_lookup == change_time(3));
@@ -130,9 +133,6 @@ R_2 = mean(Dis_final_filled(id(2):id(3),4),'omitnan');
 R_3 = mean(Dis_final_filled(id(3)+1:id(4),4),'omitnan');
 h = plot(Dis_final_filled(:,3), Dis_final_filled(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
 pbaspect([3 1 1])
-ax = gca;
-set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
-set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
 set(gca,'fontsize',16)
@@ -143,6 +143,9 @@ plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./25
 plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
 ylim([0,50])
 datetick
+ax = gca;
+set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
+set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
 
 pd1 = makedist('Normal','mu',stats1.mean,'sigma',stats1.std);
 pd2 = makedist('Normal','mu',stats2.mean,'sigma',stats2.std);

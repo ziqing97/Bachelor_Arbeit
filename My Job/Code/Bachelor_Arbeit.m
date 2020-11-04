@@ -152,36 +152,39 @@ TWSA_all(:,3) = JPL_OB(:,1);
 TWSA_all(:,4) = TWSA;
 TWSA_all(:,5) = uc_twsa;
 figure
-TWSA1 = TWSA_all(1:183,:);
-TWSA2 = TWSA_all(195:end,:);
+TWSA1 = TWSA_all(10:183,:);
+TWSA2 = TWSA_all(195:213,:);
 for y=2002:2020
     plot(datenum(y,1,1)*ones(361,1),[-180:180]',':','color',[64 64 64]./255)
     hold on
 end
-% ts_min1 = TWSA1(:,4) - TWSA1(:,5);
-% ts_max1 = TWSA1(:,4) + TWSA1(:,5);
-% patch1 = fill([TWSA1(:,3)' fliplr(TWSA1(:,3)')], [ts_min1' fliplr(ts_max1')],[96 96 96]./255);
-% hold on
-% ts_min2 = TWSA2(:,4) - TWSA2(:,5);
-% ts_max2 = TWSA2(:,4) + TWSA2(:,5);
-% patch2 = fill([TWSA2(:,3)' fliplr(TWSA2(:,3)')], [ts_min2' fliplr(ts_max2')],[96 96 96]./255);
-% ax = gca;
-% set(patch1, 'edgecolor', 'none');
-% set(patch1, 'FaceAlpha', 0.5);
-% set(patch2, 'edgecolor', 'none');
-% set(patch2, 'FaceAlpha', 0.5);
-h = plot(TWSA_all(1:end,3), TWSA_all(1:end,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+ts_min1 = TWSA1(:,4) - TWSA1(:,5);
+ts_max1 = TWSA1(:,4) + TWSA1(:,5);
+patch1 = fill([TWSA1(:,3)' fliplr(TWSA1(:,3)')], [ts_min1' fliplr(ts_max1')],[51 153 255]./255);
+hold on
+ts_min2 = TWSA2(:,4) - TWSA2(:,5);
+ts_max2 = TWSA2(:,4) + TWSA2(:,5);
+patch2 = fill([TWSA2(:,3)' fliplr(TWSA2(:,3)')], [ts_min2' fliplr(ts_max2')],[51 153 255]./255);
+ax = gca;
+set(patch1, 'edgecolor', 'none');
+set(patch1, 'FaceAlpha', 0.5);
+set(patch2, 'edgecolor', 'none');
+set(patch2, 'FaceAlpha', 0.5);
+h = plot(TWSA_all(10:213,3), TWSA_all(10:213,4), 'color', [0 0 255]./255, 'LineWidth', 5);
 pbaspect([3 1 1])
 datetick
-ylim([-150,180])
+ylim([-120,180])
 % xlim([TWSA_all(1,3)-365,TWSA_all(end,3)+365])
 % set(ax,'xtick',datenum(TWSA_all(1,1):1:TWSA_all(end,1),7,1))
 % set(ax,'xticklabel',TWSA_all(1,1):1:TWSA_all(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('equivalent water height Ob','fontsize',20)
-% legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',20)
+set(gca,'fontsize',20)
+ylabel('TWSA (mm)','fontsize',24)
+ax = gca;
+set(ax,'xtick',datenum(TWSA_all(1,1):1:TWSA_all(end,1),1,1))
+set(ax,'xticklabel',TWSA_all(1,1):1:TWSA_all(end,1))
+legend([patch1 h],{'Uncertainty','Equivalent Water Height'},'Orientation','horizontal','fontsize',20)
 
 dSdt = zeros(216,5);
 dSdt(:,1) = TWSA_all(2:end-1,1);
@@ -195,36 +198,47 @@ for i = 1 : 216
 end
 dSdt = dSdt(9:212,:);
 dSdt1 = dSdt(1:173,:);
-Precipitation = dSdt(187:end,:);
+dSdt2 = dSdt(187:end,:);
 figure
-for y=2002:2020
-    plot(datenum(y,1,1)*ones(361,1),[-180:180]',':','color',[64 64 64]./255)
-    hold on
-end
+% for y=2002:2020
+%     plot(datenum(y,1,1)*ones(361,1),[-180:180]',':','color',[255 0 0]./255)
+%     hold on
+% end
 ts_min1 = dSdt1(:,4) - dSdt1(:,5);
 ts_max1 = dSdt1(:,4) + dSdt1(:,5);
-patch1 = fill([dSdt1(:,3)' fliplr(dSdt1(:,3)')], [ts_min1' fliplr(ts_max1')],[96 96 96]./255);
+patch1 = fill([dSdt1(:,3)' fliplr(dSdt1(:,3)')], [ts_min1' fliplr(ts_max1')],[51 153 255]./255);
 hold on
-ts_min2 = Precipitation(:,4) - Precipitation(:,5);
-ts_max2 = Precipitation(:,4) + Precipitation(:,5);
-patch2 = fill([Precipitation(:,3)' fliplr(Precipitation(:,3)')], [ts_min2' fliplr(ts_max2')],[96 96 96]./255);
+ts_min2 = dSdt2(:,4) - dSdt2(:,5);
+ts_max2 = dSdt2(:,4) + dSdt2(:,5);
+patch2 = fill([dSdt2(:,3)' fliplr(dSdt2(:,3)')], [ts_min2' fliplr(ts_max2')],[51 153 255]./255);
 ax = gca;
 set(patch1, 'edgecolor', 'none');
 set(patch1, 'FaceAlpha', 0.5);
 set(patch2, 'edgecolor', 'none');
 set(patch2, 'FaceAlpha', 0.5);
-h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
+patch1 = fill([dSdt1(:,3)' fliplr(dSdt1(:,3)')], [ts_min1' fliplr(ts_max1')],[51 153 255]./255);
+patch2 = fill([dSdt2(:,3)' fliplr(dSdt2(:,3)')], [ts_min2' fliplr(ts_max2')],[51 153 255]./255);
+ax = gca;
+set(patch1, 'edgecolor', 'none');
+set(patch1, 'FaceAlpha', 0.5);
+set(patch2, 'edgecolor', 'none');
+set(patch2, 'FaceAlpha', 0.5);
+h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
 pbaspect([3 1 1])
 datetick
-ylim([-50,70])
+ylim([-60,70])
 xlim([dSdt(1,3)-365,dSdt(end,3)+365])
 set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('dS/dt [mm/month]','fontsize',20)
+set(gca,'fontsize',20)
+ylabel('dS/dt [mm/month]','fontsize',24)
+set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),1,1))
+set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 legend([patch1 h],{'Uncertainty','dS/dt'},'Orientation','horizontal','fontsize',20)
+
 
 % plot(CSR.TWSA(:,1),TWSA*1000,'linewidth',1.5)
 % datetick("x")
@@ -247,32 +261,29 @@ mean_dSdt(1:6) = NaN;
 mean_dSdt(end-5:end) = NaN;
 figure
 [TF,S] = ischange(mean_dSdt,'mean','MaxNumChanges',2);
-plot(dSdt(:,3),mean_dSdt, 'color', [0 0 53]./255, 'LineWidth', 2)
-
+plot(dSdt(:,3),mean_dSdt, 'color', [0 0 255]./255, 'LineWidth', 5)
+datetick
 hold on
-
-ax = gca;
 pbaspect([3 1 1])
-set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
-set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('movmean of dS/dt [mm/month]','fontsize',18)
+set(gca,'fontsize',20)
+ylabel('movmean of dS/dt [mm/month]','fontsize',24)
 ylim([-6,8])
-xlim([dSdt(1,3)-365,dSdt(end,3)+365])
 id = find(TF == 1);
 mean1 = nanmean(dSdt(1:id(1)-1,4));
 mean2 = nanmean(dSdt(id(1):id(2),4));
 mean3 = nanmean(dSdt(id(2)+1:end,4));
 change_point = datetime(dSdt(id,3),'ConvertFrom','datenum');
-plot(dSdt(id(1),3)*ones(length([mean1:0.1:mean2]),1),[mean1:0.1:mean2]',':','color',[0 0 255]./255,'LineWidth', 2)
+plot(dSdt(id(1),3)*ones(length([mean1:0.1:mean2]),1),[mean1:0.1:mean2]','-','color',[0 0 0]./255,'LineWidth', 5)
 hold on 
-plot(dSdt(id(2),3)*ones(length([mean3:0.1:mean2]),1),[mean3:0.1:mean2]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(1:0.1:id(1),3),mean1*ones(length(dSdt(1:0.1:id(1),3)),1),':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(id(1):0.1:id(2),3),mean2*ones(length(dSdt(id(1):0.1:id(2),3)),1),':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(id(2)+1:0.1:end,3),mean3*ones(length(dSdt(id(2)+1:0.1:end,3)),1),':','color',[0 0 255]./255,'LineWidth', 2)
-datetick
+plot(dSdt(id(2),3)*ones(length([mean3:0.1:mean2]),1),[mean3:0.1:mean2]','-','color',[0 0 0]./255,'LineWidth', 5)
+plot(dSdt(1:0.1:id(1),3),mean1*ones(length(dSdt(1:0.1:id(1),3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
+plot(dSdt(id(1):0.1:id(2),3),mean2*ones(length(dSdt(id(1):0.1:id(2),3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
+plot(dSdt(id(2):0.1:end,3),mean3*ones(length(dSdt(id(2):0.1:end,3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
+ax = gca;
+set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
+set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 
 
 %% Dealing with the Precipitation 
@@ -493,8 +504,7 @@ change_time(3) = datenum(2015,12,15);
 change_time(4) = datenum(2019,12,15);
 
 % TWSA
-figure
-hold on 
+
 id = zeros(1,4);
 id(1) = find(dSdt(:,3) == change_time(1));
 id(2) = find(dSdt(:,3) == change_time(2));
@@ -502,36 +512,38 @@ id(3) = find(dSdt(:,3) == change_time(3));
 id(4) = find(dSdt(:,3) == change_time(4));
 TWSA_1 = mean(dSdt(id(1):id(2)-1,4),'omitnan');
 TWSA_2 = mean(dSdt(id(2):id(3),4),'omitnan');
-TWSA_3 = mean(dSdt(id(3)+1:id(4),4),'omitnan');
+% TWSA_3 = mean(dSdt(id(3)+1:id(4),4),'omitnan');
 uc_TWSA_1 = caluc(dSdt(id(1):id(2)-1,5));
 uc_TWSA_2 = caluc(dSdt(id(2):id(3),5));
 uc_TWSA_3 = caluc(dSdt(id(3)+1:id(4),5));
-ts_min1 = dSdt1(:,4) - dSdt1(:,5);
-ts_max1 = dSdt1(:,4) + dSdt1(:,5);
-patch1 = fill([dSdt1(:,3)' fliplr(dSdt1(:,3)')], [ts_min1' fliplr(ts_max1')],[96 96 96]./255);
-hold on
-ts_min2 = Precipitation(:,4) - Precipitation(:,5);
-ts_max2 = Precipitation(:,4) + Precipitation(:,5);
-patch2 = fill([Precipitation(:,3)' fliplr(Precipitation(:,3)')], [ts_min2' fliplr(ts_max2')],[96 96 96]./255);
+
+figure
+hold on 
+h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
+patch1 = fill([dSdt1(:,3)' fliplr(dSdt1(:,3)')], [ts_min1' fliplr(ts_max1')],[51 153 255]./255);
+patch2 = fill([dSdt2(:,3)' fliplr(dSdt2(:,3)')], [ts_min2' fliplr(ts_max2')],[51 153 255]./255);
 ax = gca;
 set(patch1, 'edgecolor', 'none');
 set(patch1, 'FaceAlpha', 0.5);
 set(patch2, 'edgecolor', 'none');
 set(patch2, 'FaceAlpha', 0.5);
-h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+h = plot(dSdt(:,3), dSdt(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
 pbaspect([3 1 1])
-set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),1,1))
+datetick
+ylim([-60,70])
+xlim([dSdt(1,3)-365,dSdt(end,3)+365])
+set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('dS/dt [mm/month]','fontsize',20)
-plot(dSdt(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(dSdt(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-ylim([-50,60])
-datetick
+set(gca,'fontsize',20)
+ylabel('dS/dt [mm/month]','fontsize',24)
+set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),1,1))
+set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))
+% plot(dSdt(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+% plot(dSdt(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+% plot(dSdt(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+% plot(dSdt(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 TWSA_3 = -0.79645;
 
 % Pre
@@ -573,22 +585,23 @@ uc_Pre_3 = sqrt(sum(Precipitation(id(3)+1:id(4),5).^2))/length(Precipitation(id(
 hold on
 ts_min = Precipitation(:,4) - Precipitation(:,5);
 ts_max = Precipitation(:,4) + Precipitation(:,5);
-patch = fill([Precipitation(:,3)' fliplr(Precipitation(:,3)')], [ts_min' fliplr(ts_max')],[96 96 96]./255);
+patch = fill([Precipitation(:,3)' fliplr(Precipitation(:,3)')], [ts_min' fliplr(ts_max')],[51 153 255]./255);
+datetick
 ax = gca;
 set(patch, 'edgecolor', 'none');
 set(patch, 'FaceAlpha', 0.5);
-h = plot(Precipitation(:,3), Precipitation(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+h = plot(Precipitation(:,3), Precipitation(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
 pbaspect([3 1 1])
 set(ax,'xtick',datenum(Precipitation(1,1):1:Precipitation(end,1),1,1))
 set(ax,'xticklabel',Precipitation(1,1):1:Precipitation(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',16)
-ylabel('Precipitation [mm/month]','fontsize',16)
-plot(Precipitation(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Precipitation(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Precipitation(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Precipitation(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+set(gca,'fontsize',20)
+ylabel('Precipitation [mm/month]','fontsize',24)
+plot(Precipitation(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Precipitation(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Precipitation(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Precipitation(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 ylim([0,100])
 
 
@@ -612,9 +625,8 @@ set(gcf,'color','w')
 set(gca,'fontsize',16)
 ylim([-10,160])
 
-
-
 figure
+hold on
 id = [0,0,0,0];
 id(1) = find(Evatranspiration(:,3) == change_time(1));
 id(2) = find(Evatranspiration(:,3) == change_time(2));
@@ -626,26 +638,27 @@ ET_3 = mean(Evatranspiration(id(3)+1:id(4),4),'omitnan');
 uc_ET_1 = sqrt(sum(Evatranspiration(id(1):id(2)-1,5).^2))/length(Evatranspiration(id(1):id(2)-1,5));
 uc_ET_2 = sqrt(sum(Evatranspiration(id(2):id(3),5).^2))/length(Evatranspiration(id(2):id(3),5));
 uc_ET_3 = sqrt(sum(Evatranspiration(id(3)+1:id(4),5).^2))/length(Evatranspiration(id(3)+1:id(4),5));
-hold on
 ts_min = Evatranspiration(:,4) - Evatranspiration(:,5);
 ts_max = Evatranspiration(:,4) + Evatranspiration(:,5);
-patch = fill([Evatranspiration(:,3)' fliplr(Evatranspiration(:,3)')], [ts_min' fliplr(ts_max')],[96 96 96]./255);
+patch = fill([Evatranspiration(:,3)' fliplr(Evatranspiration(:,3)')], [ts_min' fliplr(ts_max')],[51 153 255]./255);
+datetick
 ax = gca;
 set(patch, 'edgecolor', 'none');
 set(patch, 'FaceAlpha', 0.5);
-h = plot(Evatranspiration(:,3), Evatranspiration(:,4), 'color', [0 0 53]./255, 'LineWidth', 2);
+h = plot(Evatranspiration(:,3), Evatranspiration(:,4), 'color', [0 0 255]./255, 'LineWidth', 5);
 pbaspect([3 1 1])
 set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
 set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
-set(gca,'fontsize',14)
-ylabel('Evatranspiration [mm/month]','fontsize',20)
-plot(Evatranspiration(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Evatranspiration(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
+set(gca,'fontsize',20)
+ylabel('Evapotranspiration [mm/month]','fontsize',24)
+plot(Evatranspiration(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Evatranspiration(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Evatranspiration(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Evatranspiration(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 ylim([-10,140])
+
 
 
 % Runoff
@@ -696,18 +709,22 @@ ylim([-10,140])
 %
 figure
 hold on
-plot(CSR.TWSA(:,1),CSR.TWSA(:,2)*1000,'linewidth',1.5);
-plot(GFZ.TWSA(:,1),GFZ.TWSA(:,2)*1000,'linewidth',1.5);
-plot(ITSG.TWSA(:,1),ITSG.TWSA(:,2)*1000,'linewidth',1.5);
-plot(JPL.TWSA(:,1),JPL.TWSA(:,2)*1000,'linewidth',1.5);
+plot(CSR.TWSA(10:213,1),CSR.TWSA(10:213,2)*1000,'linewidth',1.5);
+plot(GFZ.TWSA(10:213,1),GFZ.TWSA(10:213,2)*1000,'linewidth',1.5);
+plot(ITSG.TWSA(10:213,1),ITSG.TWSA(10:213,2)*1000,'linewidth',1.5);
+plot(JPL.TWSA(10:213,1),JPL.TWSA(10:213,2)*1000,'linewidth',1.5);
 pbaspect([3 1 1])
 datetick("x")
 legend("CSR","GFZ","ITSG","JPL",'Orientation','horizontal','fontsize',15)
 set(gcf,'color','w')
-ylabel("equivalent water height (mm)",'fontsize',20)
+ylabel("TWSA (mm)",'fontsize',20)
 set(gca,'YGrid','on')
 set(gca,'fontsize',16)
 ylim([-150,220])
+ax = gca;
+set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
+set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
+
 
 
 % % RMSE 2002 - 2010
@@ -724,23 +741,24 @@ id(4) = find(r_date == change_time(4));
 R_1 = mean(Dis_final_filled(id(1):id(2)-1,4),'omitnan');
 R_2 = mean(Dis_final_filled(id(2):id(3),4),'omitnan');
 R_3 = mean(Dis_final_filled(id(3)+1:id(4),4),'omitnan');
-plot(Dis_final_filled(:,3),Dis_final_filled(:,4), 'color', [0 0 0]./255, 'LineWidth', 2)
+
+figure 
 hold on
+h = plot(Dis_final_filled(13:end,3), Dis_final_filled(13:end,4), 'color', [0 0 255]./255, 'LineWidth', 5);
+datetick
 ax = gca;
+pbaspect([3 1 1])
 set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))
 set(ax,'xticklabel',Dis_final_filled(1,1):1:Dis_final_filled(end,1))
 set(gca,'YGrid','on')
 set(gcf,'color','w')
 set(gca,'fontsize',20)
-ylabel('Runoff [mm/month]','fontsize',20)
-plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 255]./255,'LineWidth', 2)
-pbaspect([3 1 1])
+ylabel('Runoff [mm/month]','fontsize',24)
+plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
+plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 ylim([0,50])
-datetick
-
 
 ewh1 = TWSA_all(19:126,4);
 ewh2 = TWSA_all(127:162,4);

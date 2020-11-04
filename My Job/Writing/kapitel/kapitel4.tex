@@ -82,17 +82,17 @@ The derivation of the TWSA would be calculated using central difference:
 = & \frac{dS(t+\Delta t) - dS(t-\Delta t)}{2 \Delta t}
 \end{align}
 where $\Delta t$ is one month. 
-\subsection{Validation of model-based estimations}
+\subsection{Validation of model-based estimations}\label{sec:error}
 The method used in \autoref{sec:Gaussmarkov} also works for precipitation, evapotranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
 We assume that the precipitation and evapotranspiration are normal distributed during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evapotranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
 \begin{gather}
 \sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
 \end{gather}
 where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evapotranspiration in other eleven months. 
-\subsection{Finding changing point}
+\subsection{Finding changing point}\label{sec:changpoint}
 The changing points can be found using moving average (MA). In statistics, a moving average is a calculation used to analyze data points by creating a series of averages of different subsets of the full data set. The reason for calculating the moving average is to help smooth out the data by creating a constantly updated average data. In MatLab, this could be down with \textit{movmean} function. The size of subsets is 12 in this thesis because of the number of months in one year.\\\\
 After that, a moving average time series is generated. By computing the abrupt changes in the mean of the this new series, the sudden change of the time series can be founded. This can be achieved using MatLab function \textit{ischange}. 
-\section{Estimating the quality of runoff datasets}
+\section{Estimating the quality of runoff datasets}\label{sec:runoffdata}
 It was mentioned in \autoref{sec:runoff} that the in-situ runoff data is existing til 2010, which allows us to select the better model to do the analyze. A simple way to do that is to calculate the RMSE (Root Mean Square Error)
 \begin{equation*}
 	RMSE = \sqrt{\frac{\sum_{t=1}^T (R(t)_{insitu} - R(t)_{model})^2}{T}}
@@ -142,4 +142,4 @@ In principle, the obtained relationship can be used as look-up table implying th
 	\caption{EstimatEd water level from Envisat and available runoff for Ob river (top) and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}
 	\label{fig:wltodischarge}
 \end{figure}\\\\
-By repeating this process to Saral and Sentinel missions we can generate an whole runoff time series from 2002 to 2020. (note there is a gap between Envisat and Saral) 
+By repeating this process to SARAL and Sentinel missions we can generate an whole runoff time series from 2002 to 2020. (note there is a gap between Envisat and SARAL) 
