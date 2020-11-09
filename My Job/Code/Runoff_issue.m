@@ -1,5 +1,5 @@
 addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
-addpath(genpath('E:\Studium\altmany-export_fig-d7671fe'))
+addpath(genpath('E:\Studium\0-Matlab Tools\altmany-export_fig-d7671fe'))
 load("ERA5_R_OB.mat")
 load("HTESSEL_R_OB.mat")
 load("LISFLOOD_R_OB.mat")
@@ -76,7 +76,7 @@ ylabel('F(difference)')
 
 
 figure
-R_insitu = R_insitu_OB(553:end,:);
+R_insitu = R_insitu_OB(1:end,:);
 plot(R_insitu(:,4),datenum(R_insitu(:,1),R_insitu(:,2),R_insitu(:,3)),'color',[0 0 0]./255,'Linewidth',3)
 datetick('y')
 pbaspect([1 3 1])
@@ -137,12 +137,12 @@ pbaspect([3 1 1])
 set(gca,'YGrid','on')
 set(gcf,'color','w')
 set(gca,'fontsize',20)
-ylabel('Discharge [mm/month]','fontsize',24)
+ylabel('Runoff [mm/month]','fontsize',24)
 plot(Dis_final_filled(id(1),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 plot(Dis_final_filled(id(2),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 plot(Dis_final_filled(id(3),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
 plot(Dis_final_filled(id(4),3)*ones(361,1),[-180:180]',':','color',[0 0 0]./255,'LineWidth', 5)
-ylim([0,40])
+ylim([0,50])
 
 ax = gca;
 set(ax,'xtick',datenum(Dis_final_filled(1,1):1:Dis_final_filled(end,1),1,1))

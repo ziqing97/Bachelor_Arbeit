@@ -1,5 +1,8 @@
 \begin{thebibliography}{10}
 
+\bibitem{graceoverview}
+Overview - monthly mass grids.
+
 \bibitem{allen1998crop}
 Richard~G Allen, Luis~S Pereira, Dirk Raes, Martin Smith, et~al.
 \newblock Crop evapotranspiration-guidelines for computing crop water
@@ -12,6 +15,11 @@ Mingyue Chen, Pingping Xie, John~E Janowiak, and Phillip~A Arkin.
   observations.
 \newblock {\em Journal of Hydrometeorology}, 3(3):249--266, 2002.
 
+\bibitem{permafrost}
+heather Doyle.
+\newblock What is permafrost.
+\newblock 2020.
+
 \bibitem{evans1996effects}
 Terry~E Evans.
 \newblock The effects of changes in the world hydrological cycle on
@@ -19,6 +27,12 @@ Terry~E Evans.
 \newblock {\em Global Climate Change and Agricultural Production: Direct and
   Indirect Effects of Changing Hydrological, Pedological and Plant
   Physiological Processes}, pages 15--48, 1996.
+
+\bibitem{frey2009impacts}
+Karen~E Frey and James~W McClelland.
+\newblock Impacts of permafrost degradation on arctic river biogeochemistry.
+\newblock {\em Hydrological Processes: An International Journal},
+  23(1):169--182, 2009.
 
 \bibitem{ghassemi1995salinization}
 F~Ghassemi, AJ~Jakeman, and HA~Nix.
@@ -53,21 +67,27 @@ Eugenia Kalnay, Masao Kanamitsu, Robert Kistler, William Collins, Dennis
 \newblock {\em Bulletin of the American meteorological Society},
   77(3):437--472, 1996.
 
+\bibitem{kidd2001satellite}
+Chris Kidd.
+\newblock Satellite rainfall climatology: A review.
+\newblock {\em International Journal of Climatology: A Journal of the Royal
+  Meteorological Society}, 21(9):1041--1066, 2001.
+
 \bibitem{Obriver}
 Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
 \newblock Ob river.
-
-\bibitem{10.1175/JHM-D-13-0157.1}
-Christof Lorenz, Harald Kunstmann, Balaji Devaraju, Mohammad~J. Tourian, Nico
-  Sneeuw, and Johannes Riegger.
-\newblock {Large-Scale Runoff from Landmasses: A Global Assessment of the
-  Closure of the Hydrological and Atmospheric Water Balances*}.
-\newblock {\em Journal of Hydrometeorology}, 15(6):2111--2139, 12 2014.
 
 \bibitem{gracecomponent}
 NASA.
 \newblock Grace mission.
 \newblock \url{https://www.nasa.gov/mission_pages/Grace/spacecraft/index.html}.
+
+\bibitem{oguntunde2004evapotranspiration}
+Philip~Gbenro Oguntunde.
+\newblock {\em Evapotranspiration and complimentarity relations in the water
+  balance of the Volta Basin: Field measurements and GIS-based regional
+  estimates}.
+\newblock Cuvillier, 2004.
 
 \bibitem{peel2007updated}
 Murray~C Peel, Brian~L Finlayson, and Thomas~A McMahon.
@@ -91,6 +111,19 @@ Himanshu Save, Srinivas Bettadpur, and Byron~D Tapley.
 \newblock High-resolution csr grace rl05 mascons.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
   121(10):7547--7569, 2016.
+
+\bibitem{sun2018review}
+Qiaohong Sun, Chiyuan Miao, Qingyun Duan, Hamed Ashouri, Soroosh Sorooshian,
+  and Kuo-Lin Hsu.
+\newblock A review of global precipitation data sets: Data sources, estimation,
+  and intercomparisons.
+\newblock {\em Reviews of Geophysics}, 56(1):79--107, 2018.
+
+\bibitem{tapley2004grace}
+Byron~D Tapley, Srinivas Bettadpur, John~C Ries, Paul~F Thompson, and Michael~M
+  Watkins.
+\newblock Grace measurements of mass variability in the earth system.
+\newblock {\em Science}, 305(5683):503--505, 2004.
 
 \bibitem{tourian2013quantile}
 MJ~Tourian, N~Sneeuw, and A~B{\'a}rdossy.
@@ -124,5 +157,12 @@ Pingping Xie, Mingyue Chen, Song Yang, Akiyo Yatagai, Tadahiro Hayasaka,
   Yoshihiro Fukushima, and Changming Liu.
 \newblock A gauge-based analysis of daily precipitation over east asia.
 \newblock {\em Journal of Hydrometeorology}, 8(3):607--626, 2007.
+
+\bibitem{young2020conceptual}
+Nathan~Lee Young, J-M Lemieux, Hugo Delottier, Richard Fortier, and Philippe
+  Fortier.
+\newblock A conceptual model for anticipating the impact of landscape evolution
+  on groundwater recharge in degrading permafrost environments.
+\newblock {\em Geophysical Research Letters}, page e2020GL087695, 2020.
 
 \end{thebibliography}

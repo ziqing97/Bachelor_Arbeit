@@ -1,6 +1,6 @@
 clc
 close all
-clear all
+% clear all
 
 % path of the data
 addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))

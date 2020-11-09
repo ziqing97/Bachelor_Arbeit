@@ -1,3 +1,127 @@
-\chapter[Anhang]{}
-
-Und das hier ist noch der Anhang...
+\chapter{Estimating TWS from GRACE SH}\label{shmethod}
+The shape of the geoid, i.e. the distance between the reference ellipsoid and the geoid surface $N$, can be expanded in a sum of spherical harmonics.
+\begin{equation}
+N(\theta, \lambda) = R \sum_{l=0}^{\infty} \sum_{m=0}^{l} \tilde{P}_{lm}(\cos \theta)(\tilde{C}_{lm} \cos m\lambda + \tilde{S}_{lm}\sin m\lambda)
+\end{equation}
+where
+\begin{table}[htbp]
+	\begin{tabular}{ll}	
+		$N(\theta, \lambda)$	&  geoid height at a point with the spherical coordinates $\theta$,$\lambda$\\ 
+		$R$	&  radius of the Earth\\ 
+		$\tilde{P}_{lm}$	&  normalized associated Legendre functions of degree $l$ and order $m$\\ 
+		$\tilde{C}_{lm}$,$\tilde{S}_{lm}$	&  normalized Stokes coefficients\\ 
+	\end{tabular}
+\end{table}
+The time-dependent change in the geoid heights $\Delta N$ is reflected by the difference between the spherical harmonic coefficients $\tilde{C}_{lm}$,$\tilde{S}_{lm}$. In this case, the equation can be written as:
+\begin{equation}
+\Delta N(\theta, \lambda) = R \sum_{l=0}^{\infty} \sum_{m=0}^{l} \tilde{P}_{lm}(\cos \theta)(\Delta \tilde{C}_{lm} \cos m\lambda + \Delta \tilde{S}_{lm}\sin m\lambda)
+\end{equation}
+By assuming that $\Delta N(\theta, \lambda;t) \neq 0$, it is clear that there had to be a change in the Earth's gravity field caused by mass fluctuations in, on and above the Earth's surface. This change is denoted as a change in the Earth's density distribution. In\cite{wahr1998time}, it was found that there is a connection between this quantity and its representation in spherical harmonic coefficients.
+\begin{equation}
+\begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix} = \frac{3}{4\pi R \rho_{ave}(2l+1)} \int \int \Delta \rho(r,\theta,\lambda;t) \tilde{P}_{lm}(\cos \theta) \times (\frac{r}{R})^{l+2} \begin{Bmatrix}
+\cos m\lambda \\
+\sin m\lambda
+\end{Bmatrix} \sin\theta d\theta d\lambda
+\end{equation}
+where $r$ is the distance of the computation point from the center of the Earth and $\rho_{ave}$ is the average density of the Earth. However, an accurate determination of $\Delta \rho(r,\theta,\lambda;t)$ is nearly impossible, because it requires prior knowledge about the inner density distribution of the Earth. But all short periodic mass variations can be assumed to happen only in a thin layer on the Earth's surface, which can be detected by GRACE satellites. The thickness is mostly determined by the thickness of the atmosphere and is of the order of 10 to 15 \ut{km} \cite{wahr1998time}. \\\\
+The change in this thick layer is called surface density $\Delta \rho_{S}$, which can be defined as the radial integral of $\Delta \rho$ through this layer and since the layer is thick enough, it can be assumed that $r \approx R$, so the equation can be simplified as
+\begin{equation}
+\begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix}_{\text{surf mass}} = \frac{3}{4\pi R \rho_{ave}(2l+1)} \int \int \Delta \rho(\theta,\lambda;t) \tilde{P}_{lm}(\cos \theta)  
+\begin{Bmatrix}
+\cos m\lambda \\
+\sin m\lambda
+\end{Bmatrix} \sin\theta d\theta d\lambda
+\end{equation}
+This equation now connects the density redistribution in this thin layer with the spherical harmonic coefficients. Thus, it describes the contribution to the geoid from the direct gravitational attraction of the surface mass \cite{wahr1998time}. The mass fluctuations on the surface also deform the underlying Earth, which implicates a change in the gravitational potential, and thus a change in the geoid shape, as well. This effect is considered by the so called $Love\ number\ k_{l}$, which were derived from\cite{han1995viscoelastic}. The contribution from the deformed solid earth may then be written as
+\begin{equation}
+\begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix}_{\text{solid Earth}} = \frac{3k_{l}}{4\pi R \rho_{ave}(2l+1)} \int \int \Delta \rho(\theta,\lambda;t) \tilde{P}_{lm}(\cos \theta) 
+\begin{Bmatrix}
+\cos m\lambda \\
+\sin m\lambda
+\end{Bmatrix} \sin\theta d\theta d\lambda
+\end{equation}
+The total geoid change is obtained by adding (3.4) and (3.5)
+\begin{equation}
+\begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix} = \begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix}_{\text{surf Earth}} + \begin{Bmatrix}
+\Delta \tilde{C}_{lm}(t)\\
+\Delta \tilde{S}_{lm}(t)
+\end{Bmatrix}_{\text{solid Earth}}
+\end{equation}
+Inserting (3.6) into (3.2) leads to the so called \textit{isotropic transfer coefficients}, which define the quantity of a spherical harmonic series expansion. In the case of a surface mass density, they are defined as 
+\begin{equation}
+\Lambda_{l} = \frac{R\rho_{ave}}{3} \frac{2l+1}{1+k_{l}}
+\end{equation} 
+Then an expression for the surface mass density in terms of the spherical harmonic coefficients can be written as
+\begin{equation}
+\Delta \rho_{S}(\theta,\lambda) = \frac{R \rho_{ave}}{3} \sum_{l=0}^{\infty} \frac{2l+1}{1+k_{l}} \sum_{m=0}^{l} \tilde{P}_{lm} (\cos \theta) (\Delta \tilde{C} \cos m \lambda + \Delta \tilde{S} \sin m \lambda)
+\end{equation}
+The gravity field change can be assumed as the change of the thin layer of water on the Earth's surface. The relation between the water equivalent heights and the surface mass density is
+\begin{equation}
+h_{W}(\theta,\lambda) = \frac{\Delta \rho_{S}(\theta,\lambda)}{\rho_{W}}
+\end{equation}
+where $\rho_{W}$ is the average density of water and thus
+\begin{equation}
+h_{W}(\theta,\lambda;t) = \frac{R \rho_{ave}}{3\rho_{W}} \sum_{l=0}^{\infty} \frac{2l+1}{1+k_{l}} \sum_{m=0}^{l} \tilde{P}_{lm} (\cos \theta) (\Delta \tilde{C} \cos m \lambda + \Delta \tilde{S} \sin m \lambda)
+\end{equation}
+For simplicity, this formula can be written as 
+\begin{equation}
+h_{W}(\theta,\lambda;t) = \sum_{l=0}^{\infty} \Lambda_{l} \sum_{m=0}^{l} \tilde{Y}_{lm}(\theta,\lambda) \Delta \tilde{K}_{lm}(t)
+\end{equation}
+where 
+\begin{itemize}
+	\item $\Lambda_{l} = \frac{R \rho_{ave}}{3 \rho w} \frac{2l+1}{1+k_{l}}$: isotropic spectral transfer coefficients
+	\item $\tilde{Y}_{lm}(\theta,\lambda) = \tilde{P}_{lm}(\cos \theta)(\cos m\lambda \quad \sin m \lambda)^{T}$: normalized surface spherical harmonics
+	\item $ \Delta \tilde{K}_{lm}(t) = (\Delta \tilde{C}_{lm} \quad \Delta \tilde{S}_{lm})^{T}$: normalized Stokes coefficients
+\end{itemize}
+The associated Legendre functions are given by
+\begin{equation}
+\tilde{P}_{n,m}(t) = \sqrt{(2-\delta_{m0})(2n+1)\frac{(n-m)!}{(n+m)!}}\sqrt{1-t^2}^{m}\frac{d^{n+m}}{dt^{n+m}}\frac{1}{2^n n!}(t^2 - 1)^n
+\end{equation}
+where $n$ is degree, $m$ is order and $t= \cos \theta$ is a substitution. The Legendre functions can be calculated by the recursion.
+\begin{gather}
+\tilde{P}_{0,0}(t) = 1 \\
+\tilde{P}_{m,m}(t) = W_{m,m}\sin \theta \tilde{P}_{m-1,n-1}(t-1) \quad  \text{for $m > 0$ and $m =n$} \\
+\tilde{P}_{n,m} = W_{n,m}[\cos \theta \tilde{P}_{n-1,m}(t) - \frac{1}{W_{n-1,m}} \tilde{P}_{n-2,m}(t)] \quad \text{for $m \neq n$}
+\end{gather}       
+with the factors
+\begin{equation}
+W_{n,m} = \begin{cases}
+\sqrt{3} & \text{for $n = 1$ and $m = {0,1}$}\\
+\sqrt{\frac{2n+1}{2n}} & \text{if $n=m$ and $n>1$} \\
+\sqrt{\frac{(2n+1)(2n-1)}{(n+m)(n-m)}} & \text{$n>1$ and $m \neq n$}
+\end{cases}
+\end{equation}                   
+and the convention $\tilde{P}_{n,m}(t) = 0$ for  $m>n$. This algorithm is shown to be stable until degree $n \approx 1800$. In this thesis they are up to 96. \\\\
+It is obvious that only $\Delta \tilde{K}_{lm}$ is time dependent while $\Lambda_{l}$ and $\tilde{Y}_{lm}(\theta,\lambda)$ are constant in time, by using the methods of forwards and backward-differences a rate of mass variations in terms of water equivalent heights can be obtained.
+\begin{equation}
+\dot{h}_{W}(\theta,\lambda;t) = \sum_{l=0}^{\infty} \Lambda_{l} \sum_{m=0}^{l} \tilde{Y}_{lm}(\theta,\lambda) \Delta \dot{\tilde{K}}_{lm}(t)
+\end{equation}
+This computation of the area weighted rate of change of water equivalent heights ofr one particular region $\chi$, defined by a set of $k$ grid cell centers $(\theta_{i}, \lambda_{i}),j=1,2,3\cdots,k$, can be done according to
+\begin{equation}
+\dot{h}_{W}(\chi;t) = \sum_{j=1}^{k}\ \frac{a(\theta_{i},\lambda_{i})}{a(\chi)} sum_{l=0}^{\infty} \Lambda_{l} \sum_{m=0}^{l} \tilde{Y}_{lm}(\theta_{i},\lambda_{i}) \Delta \dot{\tilde{K}}_{lm}(t)
+\end{equation}
+\begin{table}[htbp]
+	\begin{tabular}{ll}
+		$\dot{h}_{W}(\chi;t)$	&  rate of mass change in catchment $\chi$\\ 
+		$k$	&  number of date points in the catchment\\ 
+		$a(\theta_{i},\lambda_{i})$	&  area of the grid cell $j$\\ 
+		$a(\chi)$	&  total area of the catchment $\chi$\\ 
+	\end{tabular}
+\end{table}
+In this thesis, the size of the cell is $0.5^{\circ} \times 0.5^{\circ}$, which means there are $360 \times 720$ cells.
+With the help of the \textit{shbundle}, \textit{EWHbundle} and the basin mask from the Institute of Geodesy (GIS), University of Stuttgart, this process can easily be done and the equivalent water heights of Ob area between 2002 and 2020 are acquirable. 
