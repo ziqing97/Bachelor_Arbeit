@@ -20,6 +20,11 @@ heather Doyle.
 \newblock What is permafrost.
 \newblock 2020.
 
+\bibitem{ghassemi1995salinization}
+H.~E. Dregne.
+\newblock Salinization of land and water resources.
+\newblock {\em Soil Science}, 161(2):137--138, feb 1996.
+
 \bibitem{evans1996effects}
 Terry~E Evans.
 \newblock The effects of changes in the world hydrological cycle on
@@ -29,15 +34,9 @@ Terry~E Evans.
   Physiological Processes}, pages 15--48, 1996.
 
 \bibitem{frey2009impacts}
-Karen~E Frey and James~W McClelland.
+Karen~E. Frey and James~W. McClelland.
 \newblock Impacts of permafrost degradation on arctic river biogeochemistry.
-\newblock {\em Hydrological Processes: An International Journal},
-  23(1):169--182, 2009.
-
-\bibitem{ghassemi1995salinization}
-F~Ghassemi, AJ~Jakeman, and HA~Nix.
-\newblock Salinization of land and water resources.
-\newblock {\em CAB International, Wallingford, UK}, 1995.
+\newblock {\em Hydrological Processes}, 23(1):169--182, jan 2009.
 
 \bibitem{gleick1993water}
 Peter~H Gleick.
@@ -49,7 +48,7 @@ Peter~H Gleick.
 Dazhong Han and John Wahr.
 \newblock The viscoelastic relaxation of a realistically stratified earth, and
   a further analysis of postglacial rebound.
-\newblock {\em Geophysical Journal International}, 120(2):287--311, 1995.
+\newblock {\em Geophysical Journal International}, 120(2):287--311, feb 1995.
 
 \bibitem{hersbach2020era5}
 Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, Andr{\'a}s
@@ -68,14 +67,20 @@ Eugenia Kalnay, Masao Kanamitsu, Robert Kistler, William Collins, Dennis
   77(3):437--472, 1996.
 
 \bibitem{kidd2001satellite}
-Chris Kidd.
-\newblock Satellite rainfall climatology: A review.
-\newblock {\em International Journal of Climatology: A Journal of the Royal
-  Meteorological Society}, 21(9):1041--1066, 2001.
+C.~Kidd.
+\newblock Satellite rainfall climatology: a review.
+\newblock {\em International Journal of Climatology}, 21(9):1041--1066, 2001.
 
 \bibitem{Obriver}
 Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
 \newblock Ob river.
+
+\bibitem{lorenz2014large}
+Christof Lorenz, Harald Kunstmann, Balaji Devaraju, Mohammad~J Tourian, Nico
+  Sneeuw, and Johannes Riegger.
+\newblock Large-scale runoff from landmasses: a global assessment of the
+  closure of the hydrological and atmospheric water balances.
+\newblock {\em Journal of Hydrometeorology}, 15(6):2111--2139, 2014.
 
 \bibitem{gracecomponent}
 NASA.
@@ -90,9 +95,10 @@ Philip~Gbenro Oguntunde.
 \newblock Cuvillier, 2004.
 
 \bibitem{peel2007updated}
-Murray~C Peel, Brian~L Finlayson, and Thomas~A McMahon.
-\newblock Updated world map of the k{\"o}ppen-geiger climate classification.
-\newblock 2007.
+M.~C. Peel, B.~L. Finlayson, and T.~A. McMahon.
+\newblock Updated world map of the koeppen-geiger climate classification.
+\newblock {\em Hydrology and Earth System Sciences}, 11(5):1633--1644, oct
+  2007.
 
 \bibitem{revenga1998watersheds}
 C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
@@ -101,35 +107,34 @@ C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
 \newblock World Resources Institute report. World Resources Institute, 1998.
 
 \bibitem{rodell2018emerging}
-Matthew Rodell, JS~Famiglietti, DN~Wiese, JT~Reager, HK~Beaudoing, Felix~W
-  Landerer, and M-H Lo.
+M.~Rodell, J.~S. Famiglietti, D.~N. Wiese, J.~T. Reager, H.~K. Beaudoing, F.~W.
+  Landerer, and M.-H. Lo.
 \newblock Emerging trends in global freshwater availability.
-\newblock {\em Nature}, 557(7707):651--659, 2018.
+\newblock {\em Nature}, 557(7707):651--659, may 2018.
 
 \bibitem{save2016high}
-Himanshu Save, Srinivas Bettadpur, and Byron~D Tapley.
-\newblock High-resolution csr grace rl05 mascons.
+Himanshu Save, Srinivas Bettadpur, and Byron~D. Tapley.
+\newblock High-resolution {CSR} {GRACE} {RL}05 mascons.
 \newblock {\em Journal of Geophysical Research: Solid Earth},
-  121(10):7547--7569, 2016.
+  121(10):7547--7569, oct 2016.
 
 \bibitem{sun2018review}
 Qiaohong Sun, Chiyuan Miao, Qingyun Duan, Hamed Ashouri, Soroosh Sorooshian,
   and Kuo-Lin Hsu.
 \newblock A review of global precipitation data sets: Data sources, estimation,
   and intercomparisons.
-\newblock {\em Reviews of Geophysics}, 56(1):79--107, 2018.
+\newblock {\em Reviews of Geophysics}, 56(1):79--107, jan 2018.
 
 \bibitem{tapley2004grace}
-Byron~D Tapley, Srinivas Bettadpur, John~C Ries, Paul~F Thompson, and Michael~M
-  Watkins.
-\newblock Grace measurements of mass variability in the earth system.
-\newblock {\em Science}, 305(5683):503--505, 2004.
+B.~D. Tapley.
+\newblock {GRACE} measurements of mass variability in the earth system.
+\newblock {\em Science}, 305(5683):503--505, jul 2004.
 
 \bibitem{tourian2013quantile}
-MJ~Tourian, N~Sneeuw, and A~B{\'a}rdossy.
+M.~J. Tourian, N.~Sneeuw, and A.~B{\'{a}}rdossy.
 \newblock A quantile function approach to discharge estimation from satellite
-  altimetry (envisat).
-\newblock {\em Water Resources Research}, 49(7):4174--4186, 2013.
+  altimetry ({ENVISAT}).
+\newblock {\em Water Resources Research}, 49(7):4174--4186, jul 2013.
 
 \bibitem{wahr1998time}
 John Wahr, Mery Molenaar, and Frank Bryan.
@@ -156,13 +161,12 @@ Pingping Xie, M~Chen, and W~Shi.
 Pingping Xie, Mingyue Chen, Song Yang, Akiyo Yatagai, Tadahiro Hayasaka,
   Yoshihiro Fukushima, and Changming Liu.
 \newblock A gauge-based analysis of daily precipitation over east asia.
-\newblock {\em Journal of Hydrometeorology}, 8(3):607--626, 2007.
+\newblock {\em Journal of Hydrometeorology}, 8(3):607--626, jun 2007.
 
 \bibitem{young2020conceptual}
-Nathan~Lee Young, J-M Lemieux, Hugo Delottier, Richard Fortier, and Philippe
-  Fortier.
+N.~L. Young, J.-M. Lemieux, H.~Delottier, R.~Fortier, and P.~Fortier.
 \newblock A conceptual model for anticipating the impact of landscape evolution
   on groundwater recharge in degrading permafrost environments.
-\newblock {\em Geophysical Research Letters}, page e2020GL087695, 2020.
+\newblock {\em Geophysical Research Letters}, 47(11), jun 2020.
 
 \end{thebibliography}

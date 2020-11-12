@@ -3,11 +3,6 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: arbeit.aux
 The style file: plain.bst
 Database file #1: literatur/bib.bib
-I was expecting a `,' or a `}'---line 93 of file literatur/bib.bib
- :  
- :  publisher = {NASA}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in graceoverview
 Warning--empty author in graceoverview
 Warning--empty journal in graceoverview
@@ -15,46 +10,45 @@ Warning--empty year in graceoverview
 Warning--empty journal in permafrost
 Warning--empty journal in Obriver
 Warning--empty year in Obriver
-Warning--empty journal in peel2007updated
-You've used 27 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            659 strings with 9405 characters,
-and the built_in function-call counts, 9864 in all, are:
-= -- 941
-> -- 572
-< -- 3
-+ -- 235
+            676 strings with 9597 characters,
+and the built_in function-call counts, 10094 in all, are:
+= -- 960
+> -- 573
+< -- 2
++ -- 236
 - -- 200
-* -- 772
-:= -- 1669
-add.period$ -- 79
-call.type$ -- 27
-change.case$ -- 176
+* -- 844
+:= -- 1722
+add.period$ -- 82
+call.type$ -- 28
+change.case$ -- 179
 chr.to.int$ -- 0
 cite$ -- 35
-duplicate$ -- 326
-empty$ -- 677
+duplicate$ -- 311
+empty$ -- 713
 format.name$ -- 200
-if$ -- 1981
+if$ -- 2000
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 28
-newline$ -- 135
-num.names$ -- 52
-pop$ -- 176
+int.to.str$ -- 28
+missing$ -- 29
+newline$ -- 140
+num.names$ -- 54
+pop$ -- 168
 preamble$ -- 1
-purify$ -- 151
+purify$ -- 153
 quote$ -- 0
-skip$ -- 237
+skip$ -- 207
 stack$ -- 0
-substring$ -- 596
-swap$ -- 59
-text.length$ -- 3
+substring$ -- 662
+swap$ -- 34
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
-warning$ -- 8
-while$ -- 84
-width$ -- 29
-write$ -- 281
-(There was 1 error message)
+type$ -- 108
+warning$ -- 7
+while$ -- 91
+width$ -- 30
+write$ -- 295
+(There were 7 warnings)

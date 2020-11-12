@@ -1,5 +1,6 @@
 addpath(genpath('E:\Studium\6-BA\Bachelor_Arbeit\My Job\Data_Analyse\Hydro'))
 addpath(genpath('E:\Studium\0-Matlab Tools\altmany-export_fig-d7671fe'))
+close all
 load("ERA5_R_OB.mat")
 load("HTESSEL_R_OB.mat")
 load("LISFLOOD_R_OB.mat")
@@ -153,14 +154,16 @@ pd2 = makedist('Normal','mu',stats2.mean,'sigma',stats2.std);
 F1 = cdf(pd1,K1(:,4));
 F2 = cdf(pd2,K2(:,4));
 F1 = [K1(:,4),F1];
+F1 = unique(F1,'rows');
 F2 = [K2(:,4),F2];
 F1 = sort(F1);
 F2 = sort(F2);
 FF1 = griddedInterpolant(F1(:,2),F1(:,1));
 FF2 = griddedInterpolant(F2(:,2),F2(:,1));
-tt = 0:0.001:1;
-TT1 = FF1(tt)';
-TT2 = FF2(tt)';
+tt1 = linspace(0.167,0.998,1000);
+tt2 = linspace(0.167,0.998,1000);
+TT1 = FF1(tt1)';
+TT2 = FF2(tt2)';
 figure
 plot(TT2,TT1,'color',[0 0 0]./255,'LineWidth', 2)
 ax = gca;

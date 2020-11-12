@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  9 NOV 2020 01:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  12 NOV 2020 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,6 +910,9 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(f:/texlive/texlive/2019/texmf-dist/tex/latex/doi/doi.sty
+Package: doi 2018/09/09 handle doi numbers
+)
 (f:/texlive/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 
@@ -925,10 +928,10 @@ LaTeX Info: Redefining \citenum on input line 708.
 )
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `sectioning' that is an alias of element
-(scrkbase)             `disposition' on input line 55.
+(scrkbase)             `disposition' on input line 56.
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `pagehead' that is an alias of element
-(scrkbase)             `pageheadfoot' on input line 58.
+(scrkbase)             `pageheadfoot' on input line 59.
  (f:/texlive/texlive/2019/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2020/01/24 v3.29 KOMA-Script package (page head and foot)
 
@@ -1282,12 +1285,12 @@ File: bilder/gracefo.jpg Graphic file (type jpg)
 <use bilder/gracefo.jpg>
 Package pdftex.def Info: bilder/gracefo.jpg  used on input line 58.
 (pdftex.def)             Requested size: 318.66951pt x 200.77382pt.
-<bilder/TWSA.png, id=300, 687.56876pt x 422.57875pt>
+<bilder/TWSA.png, id=300, 896.59969pt x 508.14844pt>
 File: bilder/TWSA.png Graphic file (type png)
 <use bilder/TWSA.png>
 Package pdftex.def Info: bilder/TWSA.png  used on input line 64.
-(pdftex.def)             Requested size: 409.71695pt x 251.80823pt.
-<bilder/Obbasin.png, id=303, 1194.71344pt x 400.49625pt>
+(pdftex.def)             Requested size: 409.71695pt x 232.20811pt.
+<bilder/Obbasin.png, id=304, 1194.71344pt x 400.49625pt>
 File: bilder/Obbasin.png Graphic file (type png)
 <use bilder/Obbasin.png>
 Package pdftex.def Info: bilder/Obbasin.png  used on input line 70.
@@ -1323,10 +1326,9 @@ fier (name{figure.1.5}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Study Area} <./bilder/TWSA.png (PNG copy)> <./bilder/Obbasin.png (
-PNG copy)>]
+            {Study Area} <./bilder/TWSA.png> <./bilder/Obbasin.png (PNG copy)>]
 chapter 2.
-<bilder/Obbasin_area.png, id=321, 602.25pt x 602.25pt>
+<bilder/Obbasin_area.png, id=324, 602.25pt x 602.25pt>
 File: bilder/Obbasin_area.png Graphic file (type png)
 <use bilder/Obbasin_area.png>
 Package pdftex.def Info: bilder/Obbasin_area.png  used on input line 5.
@@ -1362,7 +1364,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.13 \section
              {Climate} <./bilder/Obbasin_area.png>]
-<bilder/climate.jpg, id=336, 681.29532pt x 445.665pt>
+<bilder/climate.jpg, id=337, 681.29532pt x 445.665pt>
 File: bilder/climate.jpg Graphic file (type jpg)
 <use bilder/climate.jpg>
 Package pdftex.def Info: bilder/climate.jpg  used on input line 18.
@@ -1391,7 +1393,7 @@ Underfull \hbox (badness 1527) in paragraph at lines 5--7
  off with iden-ti-cal GRACE
  []
 
-<bilder/mascon.png, id=363, 508.90125pt x 502.87875pt>
+<bilder/mascon.png, id=364, 508.90125pt x 502.87875pt>
 File: bilder/mascon.png Graphic file (type png)
 <use bilder/mascon.png>
 Package pdftex.def Info: bilder/mascon.png  used on input line 16.
@@ -1448,7 +1450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--80
                                                   \fi \fi 
 l.82 \paragraph
                {optiaonal Simplified Surface Energy Balance (SSEBop)}]
-<bilder/salekhard.jpg, id=421, 1085.55562pt x 529.22719pt>
+<bilder/salekhard.jpg, id=422, 1085.55562pt x 529.22719pt>
 File: bilder/salekhard.jpg Graphic file (type jpg)
 <use bilder/salekhard.jpg>
 Package pdftex.def Info: bilder/salekhard.jpg  used on input line 110.
@@ -1541,31 +1543,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
-<bilder/leftinsitu.png, id=489, 246.9225pt x 618.05907pt>
+<bilder/leftinsitu.png, id=490, 246.9225pt x 618.05907pt>
 File: bilder/leftinsitu.png Graphic file (type png)
 <use bilder/leftinsitu.png>
 Package pdftex.def Info: bilder/leftinsitu.png  used on input line 117.
 (pdftex.def)             Requested size: 81.94214pt x 205.10124pt.
-<bilder/rightwl.png, id=490, 242.40562pt x 618.05907pt>
+<bilder/rightwl.png, id=491, 242.40562pt x 618.05907pt>
 File: bilder/rightwl.png Graphic file (type png)
 <use bilder/rightwl.png>
 Package pdftex.def Info: bilder/rightwl.png  used on input line 121.
 (pdftex.def)             Requested size: 81.94214pt x 208.93016pt.
-<bilder/cdfleft.png, id=491, 660.21657pt x 651.18282pt>
+<bilder/cdfleft.png, id=492, 660.21657pt x 651.18282pt>
 File: bilder/cdfleft.png Graphic file (type png)
 <use bilder/cdfleft.png>
 Package pdftex.def Info: bilder/cdfleft.png  used on input line 125.
 (pdftex.def)             Requested size: 143.4003pt x 141.43239pt.
-<bilder/cdfright.png, id=492, 654.94687pt x 651.18282pt>
+<bilder/cdfright.png, id=493, 654.94687pt x 651.18282pt>
 File: bilder/cdfright.png Graphic file (type png)
 <use bilder/cdfright.png>
 Package pdftex.def Info: bilder/cdfright.png  used on input line 129.
 (pdftex.def)             Requested size: 143.4003pt x 142.57506pt.
-<bilder/cdfcombine.png, id=493, 645.16031pt x 651.18282pt>
+<bilder/cdfcombine.png, id=494, 645.91313pt x 651.18282pt>
 File: bilder/cdfcombine.png Graphic file (type png)
 <use bilder/cdfcombine.png>
 Package pdftex.def Info: bilder/cdfcombine.png  used on input line 133.
-(pdftex.def)             Requested size: 143.4003pt x 144.73122pt.
+(pdftex.def)             Requested size: 143.4003pt x 144.5623pt.
 ) (./kapitel/kapitel5.tex
 Underfull \hbox (badness 10000) in paragraph at lines 111--1
 
@@ -1590,42 +1592,42 @@ l.1 \chapter
 
 ]
 chapter 5.
-<bilder/TWSAall.png, id=513, 1178.15157pt x 395.97937pt>
+<bilder/TWSAall.png, id=514, 1178.15157pt x 395.97937pt>
 File: bilder/TWSAall.png Graphic file (type png)
 <use bilder/TWSAall.png>
 Package pdftex.def Info: bilder/TWSAall.png  used on input line 7.
 (pdftex.def)             Requested size: 386.9603pt x 130.0573pt.
-<bilder/EWH.png, id=514, 1215.03937pt x 400.49625pt>
+<bilder/EWH.png, id=515, 1215.03937pt x 400.49625pt>
 File: bilder/EWH.png Graphic file (type png)
 <use bilder/EWH.png>
 Package pdftex.def Info: bilder/EWH.png  used on input line 11.
 (pdftex.def)             Requested size: 386.9603pt x 127.54419pt.
-<bilder/dSdt.png, id=517, 1182.66844pt x 400.49625pt>
+<bilder/dSdt.png, id=518, 1182.66844pt x 400.49625pt>
 File: bilder/dSdt.png Graphic file (type png)
 <use bilder/dSdt.png>
 Package pdftex.def Info: bilder/dSdt.png  used on input line 20.
 (pdftex.def)             Requested size: 318.66951pt x 107.90932pt.
-<bilder/dSdtmovmean.png, id=518, 1171.37625pt x 407.27156pt>
+<bilder/dSdtmovmean.png, id=519, 1171.37625pt x 407.27156pt>
 File: bilder/dSdtmovmean.png Graphic file (type png)
 <use bilder/dSdtmovmean.png>
 Package pdftex.def Info: bilder/dSdtmovmean.png  used on input line 24.
 (pdftex.def)             Requested size: 318.66951pt x 110.79752pt.
-<bilder/dSdtwithnum.png, id=520, 1182.66844pt x 402.75468pt>
+<bilder/dSdtwithnum.png, id=521, 1182.66844pt x 402.75468pt>
 File: bilder/dSdtwithnum.png Graphic file (type png)
 <use bilder/dSdtwithnum.png>
 Package pdftex.def Info: bilder/dSdtwithnum.png  used on input line 32.
 (pdftex.def)             Requested size: 318.66951pt x 108.51782pt.
-<bilder/trend1.pdf, id=522, 342.27875pt x 298.11375pt>
+<bilder/trend1.pdf, id=523, 342.27875pt x 298.11375pt>
 File: bilder/trend1.pdf Graphic file (type pdf)
 <use bilder/trend1.pdf>
 Package pdftex.def Info: bilder/trend1.pdf  used on input line 40.
 (pdftex.def)             Requested size: 136.57463pt x 118.95226pt.
-<bilder/trend2.pdf, id=523, 342.27875pt x 298.11375pt>
+<bilder/trend2.pdf, id=524, 342.27875pt x 298.11375pt>
 File: bilder/trend2.pdf Graphic file (type pdf)
 <use bilder/trend2.pdf>
 Package pdftex.def Info: bilder/trend2.pdf  used on input line 44.
 (pdftex.def)             Requested size: 136.57463pt x 118.95226pt.
-<bilder/trend3.pdf, id=524, 342.27875pt x 298.11375pt>
+<bilder/trend3.pdf, id=525, 342.27875pt x 298.11375pt>
 File: bilder/trend3.pdf Graphic file (type pdf)
 <use bilder/trend3.pdf>
 Package pdftex.def Info: bilder/trend3.pdf  used on input line 48.
@@ -1638,18 +1640,18 @@ Package pdftex.def Info: bilder/trend3.pdf  used on input line 48.
 l.53 \section
              {Precipitation} <./bilder/TWSAall.png (PNG copy)> <./bilder/EWH.pn
 g (PNG copy)>]
-<bilder/precenter.png, id=531, 948.54375pt x 326.72063pt>
+<bilder/precenter.png, id=532, 948.54375pt x 326.72063pt>
 File: bilder/precenter.png Graphic file (type png)
 <use bilder/precenter.png>
 Package pdftex.def Info: bilder/precenter.png  used on input line 58.
 (pdftex.def)             Requested size: 368.74275pt x 127.01172pt.
-<bilder/precipitationwithnumber.png, id=532, 1190.19656pt x 407.27156pt>
+<bilder/precipitationwithnumber.png, id=533, 1190.19656pt x 407.27156pt>
 File: bilder/precipitationwithnumber.png Graphic file (type png)
 <use bilder/precipitationwithnumber.png>
 Package pdftex.def Info: bilder/precipitationwithnumber.png  used on input line
  62.
 (pdftex.def)             Requested size: 368.74275pt x 126.1783pt.
-<bilder/Pre_spatial_June2003.pdf, id=533, 344.28625pt x 297.11pt>
+<bilder/Pre_spatial_June2003.pdf, id=534, 344.28625pt x 297.11pt>
 File: bilder/Pre_spatial_June2003.pdf Graphic file (type pdf)
 <use bilder/Pre_spatial_June2003.pdf>
 Package pdftex.def Info: bilder/Pre_spatial_June2003.pdf  used on input line 69
@@ -1697,17 +1699,17 @@ l.76 \section
              {Evapotranspiration} <./bilder/trend1.pdf> <./bilder/trend2.pdf> <
 ./bilder/trend3.pdf> <./bilder/precenter.png (PNG copy)> <./bilder/precipitatio
 nwithnumber.png (PNG copy)>]
-<bilder/etcenter.png, id=704, 948.54375pt x 326.72063pt>
+<bilder/etcenter.png, id=705, 948.54375pt x 326.72063pt>
 File: bilder/etcenter.png Graphic file (type png)
 <use bilder/etcenter.png>
 Package pdftex.def Info: bilder/etcenter.png  used on input line 81.
 (pdftex.def)             Requested size: 368.74275pt x 127.01172pt.
-<bilder/etall.png, id=705, 1187.18532pt x 407.27156pt>
+<bilder/etall.png, id=706, 1187.18532pt x 407.27156pt>
 File: bilder/etall.png Graphic file (type png)
 <use bilder/etall.png>
 Package pdftex.def Info: bilder/etall.png  used on input line 85.
 (pdftex.def)             Requested size: 368.74275pt x 126.50145pt.
-<bilder/ET_spatial_June2003.pdf, id=707, 344.28625pt x 297.11pt>
+<bilder/ET_spatial_June2003.pdf, id=708, 344.28625pt x 297.11pt>
 File: bilder/ET_spatial_June2003.pdf Graphic file (type pdf)
 <use bilder/ET_spatial_June2003.pdf>
 Package pdftex.def Info: bilder/ET_spatial_June2003.pdf  used on input line 93.
@@ -1739,12 +1741,12 @@ e{figure.5.8}) has been already used, duplicate ignored
 l.97 \clearpage
                 <./bilder/etcenter.png (PNG copy)> <./bilder/etall.png (PNG cop
 y)> <./bilder/ET_spatial_June2003.pdf>]
-<bilder/runoffcenter.png, id=753, 1192.455pt x 451.6875pt>
+<bilder/runoffcenter.png, id=754, 1192.455pt x 451.6875pt>
 File: bilder/runoffcenter.png Graphic file (type png)
 <use bilder/runoffcenter.png>
 Package pdftex.def Info: bilder/runoffcenter.png  used on input line 103.
 (pdftex.def)             Requested size: 409.71695pt x 155.19138pt.
-<bilder/rcdf.png, id=755, 646.66594pt x 658.71094pt>
+<bilder/rcdf.png, id=756, 646.66594pt x 658.71094pt>
 File: bilder/rcdf.png Graphic file (type png)
 <use bilder/rcdf.png>
 Package pdftex.def Info: bilder/rcdf.png  used on input line 129.
@@ -1754,32 +1756,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--133
 
  []
 
-<bilder/Envisat_Ob.pdf, id=763, 358.33875pt x 288.07625pt>
+<bilder/Envisat_Ob.pdf, id=764, 358.33875pt x 288.07625pt>
 File: bilder/Envisat_Ob.pdf Graphic file (type pdf)
 <use bilder/Envisat_Ob.pdf>
 Package pdftex.def Info: bilder/Envisat_Ob.pdf  used on input line 140.
 (pdftex.def)             Requested size: 254.93657pt x 204.95314pt.
-<bilder/Saral_Ob.pdf, id=764, 360.34625pt x 288.07625pt>
+<bilder/Saral_Ob.pdf, id=765, 360.34625pt x 288.07625pt>
 File: bilder/Saral_Ob.pdf Graphic file (type pdf)
 <use bilder/Saral_Ob.pdf>
 Package pdftex.def Info: bilder/Saral_Ob.pdf  used on input line 144.
 (pdftex.def)             Requested size: 254.93657pt x 203.80586pt.
-<bilder/Sentinels_Ob.pdf, id=765, 365.365pt x 288.07625pt>
+<bilder/Sentinels_Ob.pdf, id=766, 365.365pt x 288.07625pt>
 File: bilder/Sentinels_Ob.pdf Graphic file (type pdf)
 <use bilder/Sentinels_Ob.pdf>
 Package pdftex.def Info: bilder/Sentinels_Ob.pdf  used on input line 148.
 (pdftex.def)             Requested size: 254.93657pt x 201.01021pt.
-<bilder/Dis_Ob.pdf, id=766, 371.3875pt x 165.61874pt>
+<bilder/Dis_Ob.pdf, id=767, 371.3875pt x 165.61874pt>
 File: bilder/Dis_Ob.pdf Graphic file (type pdf)
 <use bilder/Dis_Ob.pdf>
 Package pdftex.def Info: bilder/Dis_Ob.pdf  used on input line 157.
 (pdftex.def)             Requested size: 409.71695pt x 182.71692pt.
-<bilder/runnumber.png, id=767, 949.29657pt x 362.10281pt>
+<bilder/runnumber.png, id=768, 949.29657pt x 362.10281pt>
 File: bilder/runnumber.png Graphic file (type png)
 <use bilder/runnumber.png>
 Package pdftex.def Info: bilder/runnumber.png  used on input line 161.
 (pdftex.def)             Requested size: 409.71695pt x 156.28131pt.
-<bilder/runoffnumber1.png, id=768, 1175.89313pt x 444.91219pt>
+<bilder/runoffnumber1.png, id=769, 1175.89313pt x 444.91219pt>
 File: bilder/runoffnumber1.png Graphic file (type png)
 <use bilder/runoffnumber1.png>
 Package pdftex.def Info: bilder/runoffnumber1.png  used on input line 168.
@@ -1857,13 +1859,18 @@ l.1 \chapter
             {Conclusion and outlook}]
 chapter 6.
 
-Underfull \hbox (badness 1168) in paragraph at lines 3--5
+Underfull \hbox (badness 1168) in paragraph at lines 3--6
 \T1/ppl/m/n/10.95 and GRACE-FO mis-sion de-ter-mined, pre-cip-i-ta-tion and eva
 p-o-tran-spi-ra-tion are ob-tained
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
@@ -1871,18 +1878,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
 
 ] (./arbeit.bbl
-Underfull \hbox (badness 6236) in paragraph at lines 81--84
-[]\T1/ppl/m/n/10.95 NASA.  Grace mis-sion.  []$\T1/pcr/m/n/10.95 https : / / ww
-w . nasa . gov / mission _ pages / Grace /
+Underfull \hbox (badness 1072) in paragraph at lines 79--84
+[]\T1/ppl/m/n/10.95 Christof Lorenz, Har-ald Kun-st-mann, Bal-aji De-varaju, Mo
+-ham-mad J Tourian, Nico
  []
 
 [13
 
 
 ]
-Underfull \hbox (badness 1275) in paragraph at lines 123--127
-\T1/ppl/m/n/10.95 Watkins.  Grace mea-sure-ments of mass vari-abil-ity in the e
-arth sys-tem.  \T1/ppl/m/it/10.95 Sci-ence\T1/ppl/m/n/10.95 ,
+Underfull \hbox (badness 6236) in paragraph at lines 86--89
+[]\T1/ppl/m/n/10.95 NASA.  Grace mis-sion.  []$\T1/pcr/m/n/10.95 https : / / ww
+w . nasa . gov / mission _ pages / Grace /
  []
 
 ) (./extras/anhang.tex [14]
@@ -1912,10 +1919,10 @@ Package rerunfilecheck Info: File `arbeit.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 14843 strings out of 492162
- 238676 string characters out of 6125271
- 466872 words of memory out of 5000000
- 18624 multiletter control sequences out of 15000+600000
+ 14862 strings out of 492162
+ 239037 string characters out of 6125271
+ 466111 words of memory out of 5000000
+ 18638 multiletter control sequences out of 15000+600000
  53705 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,18n,84p,10123b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1932,10 +1939,10 @@ type1/urw/palatino/uplb8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/u
 rw/palatino/uplbi8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/urw/pal
 atino/uplr8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/urw/palatino/u
 plri8a.pfb>
-Output written on arbeit.pdf (54 pages, 6893143 bytes).
+Output written on arbeit.pdf (54 pages, 7438377 bytes).
 PDF statistics:
- 1082 PDF objects out of 1200 (max. 8388607)
- 767 compressed objects within 8 object streams
- 209 named destinations out of 1000 (max. 500000)
+ 1084 PDF objects out of 1200 (max. 8388607)
+ 768 compressed objects within 8 object streams
+ 210 named destinations out of 1000 (max. 500000)
  513 words of extra memory for PDF output out of 10000 (max. 10000000)
 
