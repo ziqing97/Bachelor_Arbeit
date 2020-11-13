@@ -13,6 +13,7 @@ load("SURFEX_TRIP_R_OB.mat")
 load("W3RA_R_OB.mat")
 load("WaterGAP3_R_OB.mat")
 load("R_insitu_OB.mat")
+load("QQ.mat")
 
 load('Envisat0x2Dseries_P1_110_B0_WO0_SR1000.mat')
 load('Envisat0x2Dseries_P2_110_B0_WO0_SR1000.mat')
@@ -158,14 +159,30 @@ F1 = unique(F1,'rows');
 F2 = [K2(:,4),F2];
 F1 = sort(F1);
 F2 = sort(F2);
-FF1 = griddedInterpolant(F1(:,2),F1(:,1));
-FF2 = griddedInterpolant(F2(:,2),F2(:,1));
-tt1 = linspace(0.167,0.998,1000);
-tt2 = linspace(0.167,0.998,1000);
-TT1 = FF1(tt1)';
-TT2 = FF2(tt2)';
+idF1 = zeros(80,1);
+for i = 1:80
+    compare = abs(F1(:,2)-F2(i,2));
+    minimal = min(compare);
+    idF1(i) = find((compare == minimal));
+end
+F1 = F1(idF1,:);
+F1 = F1(11:end,:);
+F2 = F2(11:end,:);
+% FF1 = griddedInterpolant(F1(:,2),F1(:,1),'nearest');
+% FF2 = griddedInterpolant(F2(:,2),F2(:,1),'nearest');
+% tt1 = linspace(0.167,0.998,100);
+% tt2 = linspace(0.167,0.998,100);
+% TT1 = FF1(tt1)';
+% TT2 = FF2(tt2)';
 figure
-plot(TT2,TT1,'color',[0 0 0]./255,'LineWidth', 2)
+% p = polyfit(F2(:,1),F1(:,1),3);
+% f = polyval(p,F2(:,1));
+% plot(F2(:,1),F1(:,1),'o',F2(:,1),f,'-');
+p = polyfit(QQ(:,1),QQ(:,2),2);
+f = polyval(p,QQ(:,1));
+plot(QQ(:,1),QQ(:,2),'o');
+hold on
+plot(QQ(:,1),f,'Linewidth',2,'color',[0 0 0]./255)
 ax = gca;
 set(gca,'YGrid','on')
 set(gca,'XGrid','on')
@@ -174,8 +191,8 @@ set(gca,'fontsize',22)
 pbaspect([1 1 1])
 xlabel('water level (m)','fontsize',20)
 ylabel('monthly discharge (mm/month)','fontsize',20)
-xlim([min(TT2),max(TT2)]);
-ylim([min(TT1),max(TT1)]);
+xlim([0,6]);
+ylim([0,40]);
 
 figure
 hold on
