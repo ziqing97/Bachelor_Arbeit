@@ -388,7 +388,7 @@ for i = 1:204
     uc_et_all(i) = sqrt(sum(st(:,i).^2))/len;
 end
 
-% plot
+
 % figure
 % hold on
 % plot(date_ET,ET_all);
@@ -442,17 +442,17 @@ datasets{12,1} = "In-situ";
 
 figure
 hold on 
-plot(datenum(HTESSEL_R_OB(253:end,1),HTESSEL_R_OB(253:end,2),15),HTESSEL_R_OB(253:end,3))
-plot(datenum(LISFLOOD_R_OB(253:end,1),LISFLOOD_R_OB(253:end,2),15),LISFLOOD_R_OB(253:end,3))
-plot(datenum(ORCHIDEE_R_OB(253:end,1),ORCHIDEE_R_OB(253:end,2),15),ORCHIDEE_R_OB(253:end,3))
-plot(datenum(PCRGLOBWB_R_OB(253:end,1),PCRGLOBWB_R_OB(253:end,2),15),PCRGLOBWB_R_OB(253:end,3))
-plot(datenum(R_GLDAS_CLSM_OB(:,1),R_GLDAS_CLSM_OB(:,2),15),R_GLDAS_CLSM_OB(:,3))
-plot(datenum(R_GLDAS_NOAH_OB(:,1),R_GLDAS_NOAH_OB(:,2),15),R_GLDAS_NOAH_OB(:,3))
-plot(datenum(R_GLDAS_VIC_OB(:,1),R_GLDAS_VIC_OB(:,2),15),R_GLDAS_VIC_OB(:,3))
-plot(datenum(SURFEX_TRIP_R_OB(253:end,1),SURFEX_TRIP_R_OB(253:end,2),15),SURFEX_TRIP_R_OB(253:end,3))
-plot(datenum(W3RA_R_OB(253:end,1),W3RA_R_OB(253:end,2),15),W3RA_R_OB(253:end,3))
-plot(datenum(WaterGAP3_R_OB(253:end,1),WaterGAP3_R_OB(253:end,2),15),WaterGAP3_R_OB(253:end,3))
-plot(datenum(ERA5_R_OB(253:end,1),ERA5_R_OB(253:end,2),15),ERA5_R_OB(253:end,3))
+plot(datenum(HTESSEL_R_OB(253:end,1),HTESSEL_R_OB(253:end,2),15),HTESSEL_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(LISFLOOD_R_OB(253:end,1),LISFLOOD_R_OB(253:end,2),15),LISFLOOD_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(ORCHIDEE_R_OB(253:end,1),ORCHIDEE_R_OB(253:end,2),15),ORCHIDEE_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(PCRGLOBWB_R_OB(253:end,1),PCRGLOBWB_R_OB(253:end,2),15),PCRGLOBWB_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(R_GLDAS_CLSM_OB(:,1),R_GLDAS_CLSM_OB(:,2),15),R_GLDAS_CLSM_OB(:,3), 'LineWidth', 0.7)
+plot(datenum(R_GLDAS_NOAH_OB(:,1),R_GLDAS_NOAH_OB(:,2),15),R_GLDAS_NOAH_OB(:,3), 'LineWidth', 0.7)
+plot(datenum(R_GLDAS_VIC_OB(:,1),R_GLDAS_VIC_OB(:,2),15),R_GLDAS_VIC_OB(:,3), 'LineWidth', 0.7)
+plot(datenum(SURFEX_TRIP_R_OB(253:end,1),SURFEX_TRIP_R_OB(253:end,2),15),SURFEX_TRIP_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(W3RA_R_OB(253:end,1),W3RA_R_OB(253:end,2),15),W3RA_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(WaterGAP3_R_OB(253:end,1),WaterGAP3_R_OB(253:end,2),15),WaterGAP3_R_OB(253:end,3), 'LineWidth', 0.7)
+plot(datenum(ERA5_R_OB(253:end,1),ERA5_R_OB(253:end,2),15),ERA5_R_OB(253:end,3), 'LineWidth', 0.7)
 plot(datenum(R_insitu_OB(553:end,1),R_insitu_OB(553:end,2),R_insitu_OB(553:end,3)),R_insitu_OB(553:end,4),'color',[0 0 0]./255,'LineWidth', 3)
 ax = gca;
 
@@ -555,7 +555,7 @@ hold on
 Pre_legend ={'','','','','','','','',''};
 for i = 1:9
     Pre_legend(i) = {Pre_Datasets(i).Dataset};
-    plot(date_Pre(13:end),Pre(i,13:end));
+    plot(date_Pre(13:end),Pre(i,13:end), 'LineWidth', 0.1);
 end
 pbaspect([3 1 1])
 datetick
@@ -709,13 +709,16 @@ ylim([-10,140])
 %
 figure
 hold on
+ideq0 = (EWH_mascon_CSR_OB(:,3)==0);
+EWH_mascon_CSR_OB(ideq0,3) = NaN;
 plot(CSR.TWSA(10:213,1),CSR.TWSA(10:213,2)*1000,'linewidth',1.5);
 plot(GFZ.TWSA(10:213,1),GFZ.TWSA(10:213,2)*1000,'linewidth',1.5);
 plot(ITSG.TWSA(10:213,1),ITSG.TWSA(10:213,2)*1000,'linewidth',1.5);
 plot(JPL.TWSA(10:213,1),JPL.TWSA(10:213,2)*1000,'linewidth',1.5);
+plot(datenum(EWH_mascon_CSR_OB(:,1),EWH_mascon_CSR_OB(:,2),15),EWH_mascon_CSR_OB(:,3)*10,'linewidth',1.5);
 pbaspect([3 1 1])
 datetick("x")
-legend("CSR","GFZ","ITSG","JPL",'Orientation','horizontal','fontsize',15)
+legend("CSR","GFZ","ITSG","JPL","CSR mascon",'Orientation','horizontal','fontsize',15)
 set(gcf,'color','w')
 ylabel("TWSA (mm)",'fontsize',20)
 set(gca,'YGrid','on')
@@ -725,6 +728,7 @@ ax = gca;
 set(ax,'xtick',datenum(Evatranspiration(1,1):1:Evatranspiration(end,1),1,1))
 set(ax,'xticklabel',Evatranspiration(1,1):1:Evatranspiration(end,1))
 
+plot(datenum(EWH_mascon_CSR_OB(:,1),EWH_mascon_CSR_OB(:,2),15),EWH_mascon_CSR_OB(:,3)*10,'linewidth',1.5);
 
 
 % % RMSE 2002 - 2010
