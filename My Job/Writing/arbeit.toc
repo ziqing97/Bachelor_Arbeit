@@ -34,10 +34,11 @@
 \contentsline {paragraph}{\nonumberline optiaonal Simplified Surface Energy Balance (SSEBop)}{16}{section*.15}%
 \contentsline {section}{\numberline {3.4}Runoff}{16}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Global datasets}{16}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Water level height}{16}{subsection.3.4.2}%
-\contentsline {paragraph}{\nonumberline Envisat}{18}{section*.16}%
-\contentsline {paragraph}{\nonumberline SARAL}{18}{section*.17}%
-\contentsline {paragraph}{\nonumberline Sentinel-3}{18}{section*.18}%
+\contentsline {subsection}{\numberline {3.4.2}Determination from other component}{16}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Water level height}{17}{subsection.3.4.3}%
+\contentsline {paragraph}{\nonumberline Envisat}{17}{section*.16}%
+\contentsline {paragraph}{\nonumberline SARAL}{19}{section*.17}%
+\contentsline {paragraph}{\nonumberline Sentinel-3}{19}{section*.18}%
 \contentsline {chapter}{\numberline {4}Method}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Estimating hydrological component from datasets}{21}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Adjustment using Gauss-Markov model}{22}{subsection.4.1.1}%
@@ -50,7 +51,7 @@
 \contentsline {section}{\numberline {5.4}Runoff}{32}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Runoff from global datasets}{32}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Estimating runoff using quantile function and satellite altimetry}{33}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Discussion about the quality}{36}{section.5.5}%
+\contentsline {section}{\numberline {5.5}Discussion of the quality}{36}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Conclusion and outlook}{37}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Conclusion}{37}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Outlook}{37}{section.6.2}%
