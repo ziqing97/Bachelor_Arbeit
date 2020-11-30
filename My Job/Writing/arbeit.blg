@@ -12,16 +12,16 @@ Warning--empty journal in Obriver
 Warning--empty year in Obriver
 You've used 28 entries,
             2118 wiz_defined-function locations,
-            676 strings with 9597 characters,
-and the built_in function-call counts, 10094 in all, are:
-= -- 960
+            677 strings with 9654 characters,
+and the built_in function-call counts, 10103 in all, are:
+= -- 962
 > -- 573
 < -- 2
 + -- 236
 - -- 200
 * -- 844
-:= -- 1722
-add.period$ -- 82
+:= -- 1724
+add.period$ -- 83
 call.type$ -- 28
 change.case$ -- 179
 chr.to.int$ -- 0
@@ -29,13 +29,13 @@ cite$ -- 35
 duplicate$ -- 311
 empty$ -- 713
 format.name$ -- 200
-if$ -- 2000
+if$ -- 2002
 int.to.chr$ -- 0
 int.to.str$ -- 28
 missing$ -- 29
-newline$ -- 140
+newline$ -- 141
 num.names$ -- 54
-pop$ -- 168
+pop$ -- 167
 preamble$ -- 1
 purify$ -- 153
 quote$ -- 0
@@ -50,5 +50,5 @@ type$ -- 108
 warning$ -- 7
 while$ -- 91
 width$ -- 30
-write$ -- 295
+write$ -- 297
 (There were 7 warnings)

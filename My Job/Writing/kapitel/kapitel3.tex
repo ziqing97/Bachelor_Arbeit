@@ -1,9 +1,9 @@
-
+\selectlanguage{ngerman}
 \chapter{Data}
 \section{GRACE and GRACE-FO}
 \subsection{Spherical harmonics}
 The variations in the gravity field impacts on both GRACE satellites at different times, such deviations cause a change in the inter-satellite range, which is measured with very high accuracy from the K-band measurement unit. The measured inter-satellite range can be transformed into changes in teh Earth's gravity field, which is described with the Stokes coefficients $\tilde{C}_{lm}$ and $\tilde{S}_{lm}$.\\\\
-There is only one Earth gravity field and all centers start off with identical GRACE Level-1 observations, but deriving month-to-month gravity field variations from GRACE observations requires a complex inversion of relative ranging observations between the two formation-flying GRACE spacecraft, in combination with precise orbit determination via GPS and various corrections for spacecraft accelerations not related to gravity changes. Many parameter choices and solution strategies are possible, and have been explored by different data centers. In this thesis the solutions from JPL, CSR, GFZ and ITSG are used, which allows the calculation of gravity filed and equivalent water height anomaly. \autoref{shmethod} shows the method of estimating TWS from GRACE spherical harmonics: 
+There is only one Earth gravity field and all centers start off with identical GRACE Level-1 observations, but deriving month-to-month gravity field variations from GRACE observations requires a complex inversion of relative ranging observations between the two formation-flying GRACE spacecraft, in combination with precise orbit determination via GPS and various corrections for spacecraft accelerations not related to gravity changes. Many parameter choices and solution strategies are possible, and have been explored by different data centers. In this thesis the solutions from JPL, CSR, GFZ and ITSG are used, which allows the calculation of gravity filed and equivalent water height anomaly. These Level-2 data would be processed with the tools \textit{shbundle} and \textit{EWHbundle} developed by Geod"atisches Institut to get the equivalent water height, which represents the total water storage. \autoref{shmethod} shows the method of estimating TWS from GRACE spherical harmonics: 
 \begin{equation}
 h_{W}(\theta,\lambda;t) = \frac{R \rho_{ave}}{3\rho_{W}} \sum_{l=0}^{\infty} \frac{2l+1}{1+k_{l}} \sum_{m=0}^{l} \tilde{P}_{lm} (\cos \theta) (\Delta \tilde{C} \cos m \lambda + \Delta \tilde{S} \sin m \lambda)
 \end{equation}
@@ -17,8 +17,8 @@ This mascon solutions have no stripe errors and capture all the signals ovserved
 	\caption{The distribution of 40,962 geodesic grid tiles over the Earth used as a basis function for estimation of mass
 		anomalies from GRACE for CSR mascon solutions. (top) Global view, (bottom left) South Pole view, and (bottom right) North Pole view \cite{save2016high}} 
 	\label{fig:mascon}
-\end{figure}
-In this thesis the mascon solution from CSR are compared with the results from spherical harmonic solutions.
+\end{figure}\\
+In this thesis the mascon solution from CSR are compared with the results from spherical harmonic solutions and used to generate the spatial behaviour of TWS.
 \newpage
 \section{Precipitation}
 Gauge observations are typically used to measure precipitation directly at the Earth's surface \cite{kidd2001satellite}. Various large-scale climate data sets at different spatiotemporal scales have been developed from station (in situ) observations. These different types of precipitation data product have proved useful across a wide range of fields of research \cite{sun2018review}.

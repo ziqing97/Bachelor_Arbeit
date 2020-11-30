@@ -281,6 +281,7 @@ plot(dSdt(id(2),3)*ones(length([mean3:0.1:mean2]),1),[mean3:0.1:mean2]','-','col
 plot(dSdt(1:0.1:id(1),3),mean1*ones(length(dSdt(1:0.1:id(1),3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
 plot(dSdt(id(1):0.1:id(2),3),mean2*ones(length(dSdt(id(1):0.1:id(2),3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
 plot(dSdt(id(2):0.1:end,3),mean3*ones(length(dSdt(id(2):0.1:end,3)),1),'-','color',[0 0 0]./255,'LineWidth', 5)
+
 ax = gca;
 set(ax,'xtick',datenum(dSdt(1,1):1:dSdt(end,1),7,1))
 set(ax,'xticklabel',dSdt(1,1):1:dSdt(end,1))

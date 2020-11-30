@@ -89,9 +89,9 @@ We assume that the precipitation and evapotranspiration are normal distributed d
 \end{gather}
 where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evapotranspiration in other eleven months. \\\\
 The changing points can be found using moving average (MA). In statistics, a moving average is a calculation used to analyze data points by creating a series of averages of different subsets of the full data set. The reason for calculating the moving average is to help smooth out the data by creating a constantly updated average data. In MatLab, this could be down with \textit{movmean} function. The size of subsets is 12 in this thesis because of the number of months in one year.\\\\
-After moving average time series the abrupt changes in the mean of the this new series, the sudden change of the time series can be found. This can be achieved using MatLab function \textit{ischange}, which enables user to find the abrupt changes of the a vector in mean value, variance or sloe and intercept. 
+After moving average time series we are interested in looking for the abrupt changing point in the timeseries. By achieving that there are a several ways. For example, we can find the points where there is a abrupt change in the mean, variance or slope and intercept of the corresponding elements of the series. In this work, the abrupt changes in mean are enough. This can be achieved using MatLab function \textit{ischange}, we can choose to set different maximum number of change points. We have tried to set this number from 2 to 4, in each case, only 2 changing points can be found.
 \section{Estimating the quality of runoff datasets}\label{sec:runoffdata}
-It was mentioned in \autoref{sec:runoff} that the in-situ runoff data existed til 2010, which allows us to estimate the quality of the data models. First, we calculate the diFference between the model and the in-situ data.
+It was mentioned in \autoref{sec:runoff} that the in-situ runoff data existed til 2010, which allows us to estimate the quality of the data models. First, we calculate the difference between the model and the in-situ data.
 \begin{equation}
 	d(t) = R(t)_{insitu} - R(t)_{model}
 \end{equation}
@@ -109,7 +109,7 @@ By achieving the function $T$ between the quantile functions, we can get the fun
 \begin{equation}
 	Q_R = T(Q_W) \Longrightarrow X_R = T(X_W)
 \end{equation}
-In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve is achieved by fitting a quadratic curve over the obtained statistical relationship. \autoref{fig:wltodischarge} showed an example of achieving the runoff using water level data from Envisat. 
+In principle, the obtained relationship can be used as look-up table implying the desired rating curve. However, as this study aims to compare the statistical and empirical rating curves, a similar way of approximation for both is needed. In this thesis, the simple quadratic estimation is used for modeling the rating curve. Thus, the statistical rating curve is achieved by fitting a quadratic curve over the obtained statistical relationship. This method operates directly on time series and eliminate the time coordinates. \autoref{fig:wltodischarge} shows an example of achieving the runoff using water level data from Envisat, we can see that the time interval of insitu Runoff and water level are not identical. 
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[t]{0.45\textwidth}

@@ -11,6 +11,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces River Basins Ob http://www.geologypage.com/2014/03/ob-river.html}}{7}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Asia Map of Koeppen-Geiger climate classification \cite {peel2007updated}}}{9}{figure.2.2}%
+\babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The distribution of 40,962 geodesic grid tiles over the Earth used as a basis function for estimation of mass anomalies from GRACE for CSR mascon solutions. (top) Global view, (bottom left) South Pole view, and (bottom right) North Pole view \cite {save2016high}}}{12}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces various of data combinations are used to estimate the runoff, there are 3 metrics (PBIAS, correlation and NSE wrt. GRDC) to judge the quality of these combinations for Ob basin}}{18}{figure.3.2}%
