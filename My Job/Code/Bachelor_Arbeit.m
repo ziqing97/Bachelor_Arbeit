@@ -260,7 +260,7 @@ mean_dSdt = movmean(dSdt(:,4),12);
 mean_dSdt(1:6) = NaN; 
 mean_dSdt(end-5:end) = NaN;
 figure
-[TF,S] = ischange(mean_dSdt,'mean','MaxNumChanges',2);
+[TF,S] = ischange(mean_dSdt,'mean','Threshold',200);
 plot(dSdt(:,3),mean_dSdt, 'color', [0 0 255]./255, 'LineWidth', 5)
 datetick
 hold on

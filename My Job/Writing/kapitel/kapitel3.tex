@@ -1,9 +1,15 @@
-\selectlanguage{ngerman}
 \chapter{Data}
 \section{GRACE and GRACE-FO}
 \subsection{Spherical harmonics}
 The variations in the gravity field impacts on both GRACE satellites at different times, such deviations cause a change in the inter-satellite range, which is measured with very high accuracy from the K-band measurement unit. The measured inter-satellite range can be transformed into changes in teh Earth's gravity field, which is described with the Stokes coefficients $\tilde{C}_{lm}$ and $\tilde{S}_{lm}$.\\\\
-There is only one Earth gravity field and all centers start off with identical GRACE Level-1 observations, but deriving month-to-month gravity field variations from GRACE observations requires a complex inversion of relative ranging observations between the two formation-flying GRACE spacecraft, in combination with precise orbit determination via GPS and various corrections for spacecraft accelerations not related to gravity changes. Many parameter choices and solution strategies are possible, and have been explored by different data centers. In this thesis the solutions from JPL, CSR, GFZ and ITSG are used, which allows the calculation of gravity filed and equivalent water height anomaly. These Level-2 data would be processed with the tools \textit{shbundle} and \textit{EWHbundle} developed by Geod"atisches Institut to get the equivalent water height, which represents the total water storage. \autoref{shmethod} shows the method of estimating TWS from GRACE spherical harmonics: 
+There is only one Earth gravity field and all centers start off with identical GRACE Level-1 observations, but deriving month-to-month gravity field variations from GRACE observations requires a complex inversion of relative ranging observations between the two formation-flying GRACE spacecraft, in combination with precise orbit determination via GPS and various corrections for spacecraft accelerations not related to gravity changes. Many parameter choices and solution strategies are possible, and have been explored by different data centers. In this thesis the solutions from JPL, CSR, GFZ and ITSG are used, which allows the calculation of gravity filed and equivalent water height anomaly. These Level-2 data would be processed with the tools \textit{shbundle} and \textit{EWHbundle} developed by Geod{\"a}tisches Institut to get the equivalent water height, which represents the total water storage. These tools deal with the GRACE data with using following methods:
+\begin{itemize}
+	\item Degree one mass coefficients ($C_{10}$, $C_{11}$ and $S_{11}$) are calculated from the oceanic component since these Stokes coefficients vanish in the Earth's center of mass frame used by GRACE. \cite{swenson2008estimating}
+	\item According to \cite{cheng2013deceleration} the degree two coefficient $C_{20}$ estimated from GRACE and from satellite laser ranging (SLR) are slightly different and the results from SLR are more accurate. Therefor, these coefficients are replaced with the estimations from SLR. 
+	\item The coefficients correlations are determined using the correlated-Error filter provided by \cite{swenson2006post} along with the Gaussian filter with radius of 400 km.
+	\item The filtering of the signals damages the them via attenuation and leakage. A so called "data driven method" introduced in \cite{vishwakarma2017data} is proposed to repair the signal damage comprehensively.
+\end{itemize}
+\autoref{shmethod} shows the basic process of estimating TWS from GRACE spherical harmonics: 
 \begin{equation}
 h_{W}(\theta,\lambda;t) = \frac{R \rho_{ave}}{3\rho_{W}} \sum_{l=0}^{\infty} \frac{2l+1}{1+k_{l}} \sum_{m=0}^{l} \tilde{P}_{lm} (\cos \theta) (\Delta \tilde{C} \cos m \lambda + \Delta \tilde{S} \sin m \lambda)
 \end{equation}
@@ -120,7 +126,7 @@ Runoff can be calculated using terrestrial water balance \autoref{equa:waterbale
 		\centering
 		\includegraphics[width=1\textwidth]{Ob3} % Datei in "bilder/" bei LaTeX: eps, bei PDFLaTeX: jpg (o.ä.) 
 	\end{minipage}
-	\caption{various of data combinations are used to estimate the runoff, there are 3 metrics (PBIAS, correlation and NSE wrt. GRDC) to judge the quality of these combinations for Ob basin}
+	\caption{various of data combinations are used to estimate the runoff, there are 3 metrics (PBIAS, correlation and NSE wrt. GRDC) to judge the quality of these combinations for Ob basin, the x-axis are the combinations of different datasets}
 	\label{fig:judgerunoff}
 \end{figure}\\\\
 In addition, the altimetry measurement using satellite is also taken into consideration since the station for in-situ discharge(Salekhard)(\autoref{fig:Salekhard}) is known. 

@@ -1,173 +1,289 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{33}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{graceoverview}
+\bibitem[gra()]{graceoverview}
 Overview - monthly mass grids.
+\newblock URL \url{https://grace.jpl.nasa.gov/data/monthly-mass-grids/}.
 \newblock \url{https://grace.jpl.nasa.gov/data/monthly-mass-grids/}.
 
-\bibitem{allen1998crop}
+\bibitem[Allen et~al.(1998)Allen, Pereira, Raes, Smith, et~al.]{allen1998crop}
 Richard~G Allen, Luis~S Pereira, Dirk Raes, Martin Smith, et~al.
 \newblock Crop evapotranspiration-guidelines for computing crop water
   requirements-fao irrigation and drainage paper 56.
-\newblock {\em Fao, Rome}, 300(9):D05109, 1998.
+\newblock \emph{Fao, Rome}, 300\penalty0 (9):\penalty0 D05109, 1998.
 
-\bibitem{chen2002global}
+\bibitem[Chen et~al.(2002)Chen, Xie, Janowiak, and Arkin]{chen2002global}
 Mingyue Chen, Pingping Xie, John~E Janowiak, and Phillip~A Arkin.
 \newblock Global land precipitation: A 50-yr monthly analysis based on gauge
   observations.
-\newblock {\em Journal of Hydrometeorology}, 3(3):249--266, 2002.
+\newblock \emph{Journal of Hydrometeorology}, 3\penalty0 (3):\penalty0
+  249--266, 2002.
+\newblock \doi{10.1175/1525-7541(2002)003<0249:glpaym>2.0.co;2}.
+\newblock URL
+  \url{https://doi.org/10.1175/1525-7541(2002)003<0249:glpaym>2.0.co;2}.
 
-\bibitem{permafrost}
+\bibitem[Cheng et~al.(2013)Cheng, Tapley, and Ries]{cheng2013deceleration}
+Minkang Cheng, Byron~D Tapley, and John~C Ries.
+\newblock Deceleration in the earth's oblateness.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 118\penalty0
+  (2):\penalty0 740--747, 2013.
+\newblock \doi{10.1002/jgrb.50058}.
+\newblock URL \url{https://doi.org/10.1002/jgrb.50058}.
+
+\bibitem[Doyle(2020)]{permafrost}
 heather Doyle.
 \newblock What is permafrost.
 \newblock 2020.
+\newblock URL \url{https://climatekids.nasa.gov/permafrost/}.
 
-\bibitem{ghassemi1995salinization}
+\bibitem[Dregne(1996)]{ghassemi1995salinization}
 H.~E. Dregne.
 \newblock Salinization of land and water resources.
-\newblock {\em Soil Science}, 161(2):137--138, feb 1996.
+\newblock \emph{Soil Science}, 161\penalty0 (2):\penalty0 137--138, feb 1996.
+\newblock \doi{10.1097/00010694-199602000-00010}.
+\newblock URL \url{https://doi.org/10.1097%2F00010694-199602000-00010}.
 
-\bibitem{evans1996effects}
+\bibitem[Evans(1996)]{evans1996effects}
 Terry~E Evans.
 \newblock The effects of changes in the world hydrological cycle on
   availability of water resources.
-\newblock {\em Global Climate Change and Agricultural Production: Direct and
+\newblock \emph{Global Climate Change and Agricultural Production: Direct and
   Indirect Effects of Changing Hydrological, Pedological and Plant
   Physiological Processes}, pages 15--48, 1996.
 
-\bibitem{frey2009impacts}
+\bibitem[Frey and McClelland(2009)]{frey2009impacts}
 Karen~E. Frey and James~W. McClelland.
 \newblock Impacts of permafrost degradation on arctic river biogeochemistry.
-\newblock {\em Hydrological Processes}, 23(1):169--182, jan 2009.
+\newblock \emph{Hydrological Processes}, 23\penalty0 (1):\penalty0 169--182,
+  jan 2009.
+\newblock \doi{10.1002/hyp.7196}.
+\newblock URL \url{https://doi.org/10.1002/hyp.7196}.
 
-\bibitem{gleick1993water}
+\bibitem[Gleick(1993)]{gleick1993water}
 Peter~H Gleick.
 \newblock Water in crisis.
-\newblock {\em Pacific Institute for Studies in Dev., Environment \& Security.
+\newblock \emph{Pacific Institute for Studies in Dev., Environment \& Security.
   Stockholm Env. Institute, Oxford Univ. Press. 473p}, 9, 1993.
+\newblock \doi{10.1890/1051-0761(1998)008[0571:wicpts]2.0.co;2}.
+\newblock URL
+  \url{https://doi.org/10.1890/1051-0761(1998)008[0571:wicpts]2.0.co;2}.
 
-\bibitem{han1995viscoelastic}
+\bibitem[Han and Wahr(1995)]{han1995viscoelastic}
 Dazhong Han and John Wahr.
 \newblock The viscoelastic relaxation of a realistically stratified earth, and
   a further analysis of postglacial rebound.
-\newblock {\em Geophysical Journal International}, 120(2):287--311, feb 1995.
+\newblock \emph{Geophysical Journal International}, 120\penalty0 (2):\penalty0
+  287--311, feb 1995.
+\newblock \doi{10.1111/j.1365-246x.1995.tb01819.x}.
+\newblock URL \url{https://doi.org/10.1111%2Fj.1365-246x.1995.tb01819.x}.
 
-\bibitem{hersbach2020era5}
+\bibitem[Hersbach et~al.(2020)Hersbach, Bell, Berrisford, Hirahara,
+  Hor{\'a}nyi, Mu{\~n}oz-Sabater, Nicolas, Peubey, Radu, Schepers,
+  et~al.]{hersbach2020era5}
 Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, Andr{\'a}s
   Hor{\'a}nyi, Joaqu{\'\i}n Mu{\~n}oz-Sabater, Julien Nicolas, Carole Peubey,
   Raluca Radu, Dinand Schepers, et~al.
 \newblock The era5 global reanalysis.
-\newblock {\em Quarterly Journal of the Royal Meteorological Society},
-  146(730):1999--2049, 2020.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  146\penalty0 (730):\penalty0 1999--2049, 2020.
+\newblock \doi{10.1002/qj.3803}.
+\newblock URL \url{https://doi.org/10.1002/qj.3803}.
 
-\bibitem{kalnay1996ncep}
+\bibitem[Kalnay et~al.(1996)Kalnay, Kanamitsu, Kistler, Collins, Deaven,
+  Gandin, Iredell, Saha, White, Woollen, et~al.]{kalnay1996ncep}
 Eugenia Kalnay, Masao Kanamitsu, Robert Kistler, William Collins, Dennis
   Deaven, Lev Gandin, Mark Iredell, Suranjana Saha, Glenn White, John Woollen,
   et~al.
 \newblock The ncep/ncar 40-year reanalysis project.
-\newblock {\em Bulletin of the American meteorological Society},
-  77(3):437--472, 1996.
+\newblock \emph{Bulletin of the American meteorological Society}, 77\penalty0
+  (3):\penalty0 437--472, 1996.
+\newblock \doi{10.1175/1520-0477(1996)077<0437:TNYRP>2.0.CO;2}.
+\newblock URL
+  \url{https://doi.org/10.1175/1520-0477(1996)077<0437:TNYRP>2.0.CO;2}.
 
-\bibitem{kidd2001satellite}
+\bibitem[Kidd(2001)]{kidd2001satellite}
 C.~Kidd.
 \newblock Satellite rainfall climatology: a review.
-\newblock {\em International Journal of Climatology}, 21(9):1041--1066, 2001.
+\newblock \emph{International Journal of Climatology}, 21\penalty0
+  (9):\penalty0 1041--1066, 2001.
+\newblock \doi{10.1002/joc.635}.
+\newblock URL \url{https://doi.org/10.1002/joc.635}.
 
-\bibitem{Obriver}
+\bibitem[Killick et~al.(2012)Killick, Fearnhead, and
+  Eckley]{killick2012optimal}
+Rebecca Killick, Paul Fearnhead, and Idris~A Eckley.
+\newblock Optimal detection of changepoints with a linear computational cost.
+\newblock \emph{Journal of the American Statistical Association}, 107\penalty0
+  (500):\penalty0 1590--1598, 2012.
+\newblock \doi{10.1080/01621459.2012.737745}.
+\newblock URL \url{https://doi.org/10.1080/01621459.2012.737745}.
+
+\bibitem[Liliya Konstantinovna~Malik()]{Obriver}
 Philip P.~Micklin Liliya Konstantinovna~Malik, Lewis~Owen.
 \newblock Ob river.
 
-\bibitem{lorenz2014large}
+\bibitem[Lorenz et~al.(2014)Lorenz, Kunstmann, Devaraju, Tourian, Sneeuw, and
+  Riegger]{lorenz2014large}
 Christof Lorenz, Harald Kunstmann, Balaji Devaraju, Mohammad~J Tourian, Nico
   Sneeuw, and Johannes Riegger.
 \newblock Large-scale runoff from landmasses: a global assessment of the
   closure of the hydrological and atmospheric water balances.
-\newblock {\em Journal of Hydrometeorology}, 15(6):2111--2139, 2014.
+\newblock \emph{Journal of Hydrometeorology}, 15\penalty0 (6):\penalty0
+  2111--2139, 2014.
+\newblock \doi{10.1175/JHM-D-13-0157.1}.
+\newblock URL \url{https://doi.org/10.1175/JHM-D-13-0157.1}.
 
-\bibitem{gracecomponent}
+\bibitem[NASA()]{gracecomponent}
 NASA.
 \newblock Grace mission.
 \newblock \url{https://www.nasa.gov/mission_pages/Grace/spacecraft/index.html}.
 
-\bibitem{oguntunde2004evapotranspiration}
+\bibitem[Oguntunde(2004)]{oguntunde2004evapotranspiration}
 Philip~Gbenro Oguntunde.
-\newblock {\em Evapotranspiration and complimentarity relations in the water
+\newblock \emph{Evapotranspiration and complimentarity relations in the water
   balance of the Volta Basin: Field measurements and GIS-based regional
   estimates}.
 \newblock Cuvillier, 2004.
 
-\bibitem{peel2007updated}
+\bibitem[Peel et~al.(2007)Peel, Finlayson, and McMahon]{peel2007updated}
 M.~C. Peel, B.~L. Finlayson, and T.~A. McMahon.
 \newblock Updated world map of the koeppen-geiger climate classification.
-\newblock {\em Hydrology and Earth System Sciences}, 11(5):1633--1644, oct
-  2007.
+\newblock \emph{Hydrology and Earth System Sciences}, 11\penalty0 (5):\penalty0
+  1633--1644, oct 2007.
+\newblock \doi{10.5194/hess-11-1633-2007}.
+\newblock URL \url{https://doi.org/10.5194/hess-11-1633-2007}.
 
-\bibitem{revenga1998watersheds}
+\bibitem[Revenga et~al.(1998)Revenga, Institute, Murray, Hammond, and
+  Abramovitz]{revenga1998watersheds}
 C.~Revenga, World~Resources Institute, S.~Murray, A.~Hammond, and J.N.
   Abramovitz.
-\newblock {\em Watersheds of the World: Ecological Value and Vulnerability}.
+\newblock \emph{Watersheds of the World: Ecological Value and Vulnerability}.
 \newblock World Resources Institute report. World Resources Institute, 1998.
+\newblock ISBN 9781569732540.
+\newblock URL \url{https://books.google.de/books?id=WGwYAAAAIAAJ}.
 
-\bibitem{rodell2018emerging}
+\bibitem[Rodell et~al.(2018)Rodell, Famiglietti, Wiese, Reager, Beaudoing,
+  Landerer, and Lo]{rodell2018emerging}
 M.~Rodell, J.~S. Famiglietti, D.~N. Wiese, J.~T. Reager, H.~K. Beaudoing, F.~W.
   Landerer, and M.-H. Lo.
 \newblock Emerging trends in global freshwater availability.
-\newblock {\em Nature}, 557(7707):651--659, may 2018.
+\newblock \emph{Nature}, 557\penalty0 (7707):\penalty0 651--659, may 2018.
+\newblock \doi{10.1038/s41586-018-0123-1}.
+\newblock URL \url{https://doi.org/10.1038/s41586-018-0123-1}.
 
-\bibitem{save2016high}
+\bibitem[Save et~al.(2016)Save, Bettadpur, and Tapley]{save2016high}
 Himanshu Save, Srinivas Bettadpur, and Byron~D. Tapley.
 \newblock High-resolution {CSR} {GRACE} {RL}05 mascons.
-\newblock {\em Journal of Geophysical Research: Solid Earth},
-  121(10):7547--7569, oct 2016.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 121\penalty0
+  (10):\penalty0 7547--7569, oct 2016.
+\newblock \doi{10.1002/2016jb013007}.
+\newblock URL \url{https://doi.org/10.1002/2016jb013007}.
 
-\bibitem{sun2018review}
+\bibitem[Sun et~al.(2018)Sun, Miao, Duan, Ashouri, Sorooshian, and
+  Hsu]{sun2018review}
 Qiaohong Sun, Chiyuan Miao, Qingyun Duan, Hamed Ashouri, Soroosh Sorooshian,
   and Kuo-Lin Hsu.
 \newblock A review of global precipitation data sets: Data sources, estimation,
   and intercomparisons.
-\newblock {\em Reviews of Geophysics}, 56(1):79--107, jan 2018.
+\newblock \emph{Reviews of Geophysics}, 56\penalty0 (1):\penalty0 79--107, jan
+  2018.
+\newblock \doi{10.1002/2017rg000574}.
+\newblock URL \url{https://doi.org/10.1002/2017rg000574}.
 
-\bibitem{tapley2004grace}
+\bibitem[Swenson and Wahr(2006)]{swenson2006post}
+Sean Swenson and John Wahr.
+\newblock Post-processing removal of correlated errors in grace data.
+\newblock \emph{Geophysical Research Letters}, 33\penalty0 (8), 2006.
+\newblock \doi{10.1029/2005GL025285}.
+\newblock URL \url{https://doi.org/10.1029/2005GL025285}.
+
+\bibitem[Swenson et~al.(2008)Swenson, Chambers, and
+  Wahr]{swenson2008estimating}
+Sean Swenson, Don Chambers, and John Wahr.
+\newblock Estimating geocenter variations from a combination of grace and ocean
+  model output.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 113\penalty0
+  (B8), 2008.
+\newblock \doi{10.1029/2007JB005338}.
+\newblock URL \url{https://doi.org/10.1029/2007JB005338}.
+
+\bibitem[Tapley(2004)]{tapley2004grace}
 B.~D. Tapley.
 \newblock {GRACE} measurements of mass variability in the earth system.
-\newblock {\em Science}, 305(5683):503--505, jul 2004.
+\newblock \emph{Science}, 305\penalty0 (5683):\penalty0 503--505, jul 2004.
+\newblock \doi{10.1126/science.1099192}.
+\newblock URL \url{https://doi.org/10.1126/science.1099192}.
 
-\bibitem{tourian2013quantile}
+\bibitem[Tourian et~al.(2013)Tourian, Sneeuw, and
+  B{\'{a}}rdossy]{tourian2013quantile}
 M.~J. Tourian, N.~Sneeuw, and A.~B{\'{a}}rdossy.
 \newblock A quantile function approach to discharge estimation from satellite
   altimetry ({ENVISAT}).
-\newblock {\em Water Resources Research}, 49(7):4174--4186, jul 2013.
+\newblock \emph{Water Resources Research}, 49\penalty0 (7):\penalty0
+  4174--4186, jul 2013.
+\newblock \doi{10.1002/wrcr.20348}.
+\newblock URL \url{https://doi.org/10.1002/wrcr.20348}.
 
-\bibitem{wahr1998time}
+\bibitem[Vishwakarma et~al.(2017)Vishwakarma, Horwath, Devaraju, Groh, and
+  Sneeuw]{vishwakarma2017data}
+Bramha~Dutt Vishwakarma, Martin Horwath, Balaji Devaraju, Andreas Groh, and
+  Nico Sneeuw.
+\newblock A data-driven approach for repairing the hydrological catchment
+  signal damage due to filtering of grace products.
+\newblock \emph{Water Resources Research}, 53\penalty0 (11):\penalty0
+  9824--9844, 2017.
+\newblock \doi{10.1002/2017WR021150}.
+\newblock URL \url{https://doi.org/10.1002/2017WR021150}.
+
+\bibitem[Wahr et~al.(1998)Wahr, Molenaar, and Bryan]{wahr1998time}
 John Wahr, Mery Molenaar, and Frank Bryan.
 \newblock Time variability of the earth's gravity field: Hydrological and
   oceanic effects and their possible detection using grace.
-\newblock {\em Journal of Geophysical Research: Solid Earth},
-  103(B12):30205--30229, 1998.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 103\penalty0
+  (B12):\penalty0 30205--30229, 1998.
+\newblock \doi{10.1029/98JB02844}.
+\newblock URL \url{http://dx.doi.org/10.1029/98JB02844}.
 
-\bibitem{watkins2015improved}
+\bibitem[Watkins et~al.(2015)Watkins, Wiese, Yuan, Boening, and
+  Landerer]{watkins2015improved}
 Michael~M Watkins, David~N Wiese, Dah-Ning Yuan, Carmen Boening, and Felix~W
   Landerer.
 \newblock Improved methods for observing earth's time variable mass
   distribution with grace using spherical cap mascons.
-\newblock {\em Journal of Geophysical Research: Solid Earth},
-  120(4):2648--2671, 2015.
+\newblock \emph{Journal of Geophysical Research: Solid Earth}, 120\penalty0
+  (4):\penalty0 2648--2671, 2015.
+\newblock \doi{10.1002/2014jb011547}.
+\newblock URL \url{https://doi.org/10.1002/2014jb011547}.
 
-\bibitem{xie2010cpc}
-Pingping Xie, M~Chen, and W~Shi.
-\newblock Cpc unified gauge-based analysis of global daily precipitation.
-\newblock In {\em Preprints, 24th Conf. on Hydrology, Atlanta, GA, Amer.
-  Meteor. Soc}, volume~2, 2010.
-
-\bibitem{xie2007gauge}
+\bibitem[Xie et~al.(2007)Xie, Chen, Yang, Yatagai, Hayasaka, Fukushima, and
+  Liu]{xie2007gauge}
 Pingping Xie, Mingyue Chen, Song Yang, Akiyo Yatagai, Tadahiro Hayasaka,
   Yoshihiro Fukushima, and Changming Liu.
 \newblock A gauge-based analysis of daily precipitation over east asia.
-\newblock {\em Journal of Hydrometeorology}, 8(3):607--626, jun 2007.
+\newblock \emph{Journal of Hydrometeorology}, 8\penalty0 (3):\penalty0
+  607--626, jun 2007.
+\newblock \doi{10.1175/jhm583.1}.
+\newblock URL \url{https://doi.org/10.1175%2Fjhm583.1}.
 
-\bibitem{young2020conceptual}
+\bibitem[Xie et~al.(2010)Xie, Chen, and Shi]{xie2010cpc}
+Pingping Xie, M~Chen, and W~Shi.
+\newblock Cpc unified gauge-based analysis of global daily precipitation.
+\newblock In \emph{Preprints, 24th Conf. on Hydrology, Atlanta, GA, Amer.
+  Meteor. Soc}, volume~2, 2010.
+\newblock URL
+  \url{https://ams.confex.com/ams/90annual/techprogram/paper_163676.htm}.
+
+\bibitem[Young et~al.(2020)Young, Lemieux, Delottier, Fortier, and
+  Fortier]{young2020conceptual}
 N.~L. Young, J.-M. Lemieux, H.~Delottier, R.~Fortier, and P.~Fortier.
 \newblock A conceptual model for anticipating the impact of landscape evolution
   on groundwater recharge in degrading permafrost environments.
-\newblock {\em Geophysical Research Letters}, 47(11), jun 2020.
+\newblock \emph{Geophysical Research Letters}, 47\penalty0 (11), jun 2020.
+\newblock \doi{10.1029/2020gl087695}.
+\newblock URL \url{https://doi.org/10.1029/2020gl087695}.
 
 \end{thebibliography}

@@ -15,31 +15,30 @@
 \contentsline {section}{\numberline {2.3}Hydrology}{9}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Permafrost}{9}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Human use}{10}{section.2.5}%
-\babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {3}Data}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}GRACE and GRACE-FO}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Spherical harmonics}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Mass concentration}{11}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Mass concentration}{12}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Precipitation}{13}{section.3.2}%
 \contentsline {paragraph}{\nonumberline Precipitation reconstruction over land (PREC/L)}{13}{section*.5}%
-\contentsline {paragraph}{\nonumberline CPC unified gauge-based analysis of global daily precipitation}{13}{section*.6}%
+\contentsline {paragraph}{\nonumberline CPC unified gauge-based analysis of global daily precipitation}{14}{section*.6}%
 \contentsline {paragraph}{\nonumberline Global Precipitation Climatology Project (GPCP)}{14}{section*.7}%
 \contentsline {paragraph}{\nonumberline CPC Merged Analysis of Precipitation (CMAP)}{14}{section*.8}%
 \contentsline {paragraph}{\nonumberline Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks - Climate Data Record(PERSIANN-CDR)}{14}{section*.9}%
 \contentsline {paragraph}{\nonumberline NCEP/NCAR Reanalysis 1\&2}{14}{section*.10}%
-\contentsline {paragraph}{\nonumberline ERA5}{14}{section*.11}%
+\contentsline {paragraph}{\nonumberline ERA5}{15}{section*.11}%
 \contentsline {paragraph}{\nonumberline Modern-Era Retrospective analysis for research and Applications, version 2 (MERRA-2)}{15}{section*.12}%
 \contentsline {section}{\numberline {3.3}Evapotranspiration}{15}{section.3.3}%
 \contentsline {paragraph}{\nonumberline The Global Land Data Assimilation System (GLDAS)}{15}{section*.13}%
-\contentsline {paragraph}{\nonumberline Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS)}{15}{section*.14}%
+\contentsline {paragraph}{\nonumberline Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS)}{16}{section*.14}%
 \contentsline {paragraph}{\nonumberline optiaonal Simplified Surface Energy Balance (SSEBop)}{16}{section*.15}%
 \contentsline {section}{\numberline {3.4}Runoff}{16}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Global datasets}{16}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Determination from other component}{16}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Water level height}{17}{subsection.3.4.3}%
-\contentsline {paragraph}{\nonumberline Envisat}{17}{section*.16}%
+\contentsline {subsection}{\numberline {3.4.2}Determination from other component}{17}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Water level height}{19}{subsection.3.4.3}%
+\contentsline {paragraph}{\nonumberline Envisat}{19}{section*.16}%
 \contentsline {paragraph}{\nonumberline SARAL}{19}{section*.17}%
-\contentsline {paragraph}{\nonumberline Sentinel-3}{19}{section*.18}%
+\contentsline {paragraph}{\nonumberline Sentinel-3}{20}{section*.18}%
 \contentsline {chapter}{\numberline {4}Method}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Estimating hydrological component from datasets}{21}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Adjustment using Gauss-Markov model}{22}{subsection.4.1.1}%

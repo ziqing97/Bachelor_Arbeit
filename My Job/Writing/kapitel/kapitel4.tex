@@ -85,11 +85,19 @@ where $\Delta t$ is one month.
 The method used in \autoref{sec:Gaussmarkov} also works for precipitation, evapotranspiration and runoff. However, the uncertainties of these time series were unknown. Therefor, it's necessary to get the uncertainty before the adjustment. \\\\
 We assume that the precipitation and evapotranspiration are normal distributed during 2002 to 2020 (though it is not the case). Under this assumption, the precipitation and evapotranspiration in the same month every year can be regarded as a constant with random errors. We then can use the standard deviation as the uncertainty.
 \begin{gather}
-\sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})}{n-1}}
+\sigma_{Pre_{Jan}} = \sqrt{\frac{\sum_{i=1}^{n} (Pre(i)_{Jan} - \bar{Pre}_{Jan})^2}{n-1}}
 \end{gather}
 where $\sigma_{Pre_{Jan}}$ is the standard deviation of the Precipitation in January, $Pre(i)_{Jan}$ is the precipitation in January in different years and $\bar{Pre}_{Jan}$ is the mean of all the precipitation in January. With the same method we are able to obtain the uncertai nty for precipitation and evapotranspiration in other eleven months. \\\\
 The changing points can be found using moving average (MA). In statistics, a moving average is a calculation used to analyze data points by creating a series of averages of different subsets of the full data set. The reason for calculating the moving average is to help smooth out the data by creating a constantly updated average data. In MatLab, this could be down with \textit{movmean} function. The size of subsets is 12 in this thesis because of the number of months in one year.\\\\
-After moving average time series we are interested in looking for the abrupt changing point in the timeseries. By achieving that there are a several ways. For example, we can find the points where there is a abrupt change in the mean, variance or slope and intercept of the corresponding elements of the series. In this work, the abrupt changes in mean are enough. This can be achieved using MatLab function \textit{ischange}, we can choose to set different maximum number of change points. We have tried to set this number from 2 to 4, in each case, only 2 changing points can be found.
+After moving average time series we are interested in looking for the abrupt changing point in the timeseries. This Time series can be split into two segments $C_1$ and $C_2$ such that: \cite{killick2012optimal}
+\begin{equation}
+	C(A_1) + C(A_2) + \cdots C(A_k) + k \tau < C(A)
+\end{equation}
+$\tau$ is the threshold value and $C$ is the cost function. In this work we define this function as:
+\begin{equation}
+	C(x) = N \cdot mean(\bm{x})
+\end{equation}
+where $\bm{x}$ is a segment of timeseries and N is the length of it. If we choose 200 as the threshold, we are able to get two abrupt points. This process could be down using Matlab Function \textit{ischange}. 
 \section{Estimating the quality of runoff datasets}\label{sec:runoffdata}
 It was mentioned in \autoref{sec:runoff} that the in-situ runoff data existed til 2010, which allows us to estimate the quality of the data models. First, we calculate the difference between the model and the in-situ data.
 \begin{equation}

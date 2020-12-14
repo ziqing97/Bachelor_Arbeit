@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  30 NOV 2020 04:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.2)  14 DEC 2020 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1097,7 +1097,12 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 
 
 ]
-(./extras/abstract.tex) [5] [6
+(./extras/abstract.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--22
+
+ []
+
+[5] [6
 
 
 ] (./extras/content.tex (./arbeit.toc
@@ -1147,7 +1152,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 ]
-Overfull \hbox (7.36888pt too wide) detected at line 59
+Overfull \hbox (7.36888pt too wide) detected at line 58
  \T1/ppl/b/n/10.95 XVII
  []
 
@@ -1221,7 +1226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-<bilder/water-cycle-natural.jpg, id=261, 2163.08125pt x 1505.625pt>
+<bilder/water-cycle-natural.jpg, id=262, 2163.08125pt x 1505.625pt>
 File: bilder/water-cycle-natural.jpg Graphic file (type jpg)
 <use bilder/water-cycle-natural.jpg>
 Package pdftex.def Info: bilder/water-cycle-natural.jpg  used on input line 20.
@@ -1257,7 +1262,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 l.33 \section
              {Observation from satellite gravimetry} <./bilder/water-cycle-natu
 ral.jpg>]
-<bilder/GRACE_Component.jpg, id=291, 675.52374pt x 404.51125pt>
+<bilder/GRACE_Component.jpg, id=292, 675.52374pt x 404.51125pt>
 File: bilder/GRACE_Component.jpg Graphic file (type jpg)
 <use bilder/GRACE_Component.jpg>
 Package pdftex.def Info: bilder/GRACE_Component.jpg  used on input line 40.
@@ -1285,17 +1290,17 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
  [3]
-<bilder/gracefo.jpg, id=302, 401.5pt x 252.945pt>
+<bilder/gracefo.jpg, id=303, 401.5pt x 252.945pt>
 File: bilder/gracefo.jpg Graphic file (type jpg)
 <use bilder/gracefo.jpg>
 Package pdftex.def Info: bilder/gracefo.jpg  used on input line 58.
 (pdftex.def)             Requested size: 318.66951pt x 200.77382pt.
-<bilder/TWSA.png, id=305, 896.59969pt x 508.14844pt>
+<bilder/TWSA.png, id=306, 896.59969pt x 508.14844pt>
 File: bilder/TWSA.png Graphic file (type png)
 <use bilder/TWSA.png>
 Package pdftex.def Info: bilder/TWSA.png  used on input line 64.
 (pdftex.def)             Requested size: 409.71695pt x 232.20811pt.
-<bilder/Obbasin.png, id=309, 1194.71344pt x 400.49625pt>
+<bilder/Obbasin.png, id=310, 1194.71344pt x 400.49625pt>
 File: bilder/Obbasin.png Graphic file (type png)
 <use bilder/Obbasin.png>
 Package pdftex.def Info: bilder/Obbasin.png  used on input line 70.
@@ -1333,7 +1338,7 @@ fier (name{figure.1.5}) has been already used, duplicate ignored
 l.1 \chapter
             {Study Area} <./bilder/TWSA.png> <./bilder/Obbasin.png (PNG copy)>]
 chapter 2.
-<bilder/Obbasin_area.png, id=329, 602.25pt x 602.25pt>
+<bilder/Obbasin_area.png, id=330, 602.25pt x 602.25pt>
 File: bilder/Obbasin_area.png Graphic file (type png)
 <use bilder/Obbasin_area.png>
 Package pdftex.def Info: bilder/Obbasin_area.png  used on input line 5.
@@ -1369,7 +1374,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.13 \section
              {Climate} <./bilder/Obbasin_area.png>]
-<bilder/climate.jpg, id=342, 681.29532pt x 445.665pt>
+<bilder/climate.jpg, id=343, 681.29532pt x 445.665pt>
 File: bilder/climate.jpg Graphic file (type jpg)
 <use bilder/climate.jpg>
 Package pdftex.def Info: bilder/climate.jpg  used on input line 18.
@@ -1384,129 +1389,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--22
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2 \chapter
+l.1 \chapter
             {Data} <./bilder/climate.JPG>] [10]
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--7
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 5--7
-\T1/ppl/m/n/10.95 There is on-ly one Earth gra-vi-ty field and all cen-ters sta
-rt off with iden-ti-cal GRACE
- []
-
-<bilder/mascon.png, id=369, 508.90125pt x 502.87875pt>
-File: bilder/mascon.png Graphic file (type png)
-<use bilder/mascon.png>
-Package pdftex.def Info: bilder/mascon.png  used on input line 16.
-(pdftex.def)             Requested size: 227.62207pt x 224.92749pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--22
-
+Underfull \hbox (badness 1527) in paragraph at lines 4--6
+\T1/ppl/m/n/10.95 There is only one Earth grav-ity field and all cen-ters start
+ off with iden-ti-cal GRACE
  []
 
 [11
 
 
-] [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3
-.1}) has been already used, duplicate ignored
+]
+<bilder/mascon.png, id=382, 508.90125pt x 502.87875pt>
+File: bilder/mascon.png Graphic file (type png)
+<use bilder/mascon.png>
+Package pdftex.def Info: bilder/mascon.png  used on input line 22.
+(pdftex.def)             Requested size: 227.62207pt x 224.92749pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.22 \newpage
-              <./bilder/mascon.png>]
-Overfull \hbox (40.47655pt too wide) in paragraph at lines 27--40
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
+
+ []
+
+[12]
+Overfull \hbox (40.47655pt too wide) in paragraph at lines 33--46
  [][] 
  []
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.51 \paragraph
+               {CPC unified gauge-based analysis of global daily precipitation}
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.51 \paragraph
+               {CPC unified gauge-based analysis of global daily precipitation}
+ <./bilder/mascon.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+ []
+
+
+Overfull \hbox (32.3627pt too wide) in paragraph at lines 70--80
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 92--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--114
+
+ []
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.49 \paragraph
-               {CPC Merged Analysis of Precipitation (CMAP)}]
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-
- []
-
-[14]
-Overfull \hbox (32.3627pt too wide) in paragraph at lines 64--74
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-[15pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.82 \paragraph
-               {optiaonal Simplified Surface Energy Balance (SSEBop)}]
-Underfull \hbox (badness 10000) in paragraph at lines 86--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--108
-
- []
-
-<bilder/Ob1.png, id=429, 688.07062pt x 179.92218pt>
+l.114 \subsection
+                 {Determination from other component}]
+<bilder/Ob1.png, id=443, 688.07062pt x 179.92218pt>
 File: bilder/Ob1.png Graphic file (type png)
 <use bilder/Ob1.png>
-Package pdftex.def Info: bilder/Ob1.png  used on input line 113.
+Package pdftex.def Info: bilder/Ob1.png  used on input line 119.
 (pdftex.def)             Requested size: 364.1967pt x 95.23201pt.
-<bilder/Ob2.png, id=430, 654.19406pt x 134.00063pt>
+<bilder/Ob2.png, id=444, 654.19406pt x 134.00063pt>
 File: bilder/Ob2.png Graphic file (type png)
 <use bilder/Ob2.png>
-Package pdftex.def Info: bilder/Ob2.png  used on input line 117.
+Package pdftex.def Info: bilder/Ob2.png  used on input line 123.
 (pdftex.def)             Requested size: 386.9603pt x 79.26208pt.
-<bilder/Ob3.png, id=431, 657.2053pt x 130.23656pt>
+<bilder/Ob3.png, id=445, 657.2053pt x 130.23656pt>
 File: bilder/Ob3.png Graphic file (type png)
 <use bilder/Ob3.png>
-Package pdftex.def Info: bilder/Ob3.png  used on input line 121.
+Package pdftex.def Info: bilder/Ob3.png  used on input line 127.
 (pdftex.def)             Requested size: 386.9603pt x 76.68388pt.
-<bilder/salekhard.jpg, id=433, 1085.55562pt x 529.22719pt>
+<bilder/salekhard.jpg, id=447, 1085.55562pt x 529.22719pt>
 File: bilder/salekhard.jpg Graphic file (type jpg)
 <use bilder/salekhard.jpg>
-Package pdftex.def Info: bilder/salekhard.jpg  used on input line 129.
+Package pdftex.def Info: bilder/salekhard.jpg  used on input line 135.
 (pdftex.def)             Requested size: 409.71695pt x 199.74368pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--133
+Underfull \hbox (badness 10000) in paragraph at lines 115--139
 
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 109--133
-\T1/ppl/m/n/10.95 In ad-di-ti-on, the al-time-try mea-su-re-ment using sa-tel-l
-i-te is al-so ta-ken in-to con-si-de-ra-ti-on
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
-
+Underfull \hbox (badness 1237) in paragraph at lines 115--139
+\T1/ppl/m/n/10.95 In ad-di-tion, the al-time-try mea-sure-ment us-ing satel-lit
+e is also taken into con-sid-er-a-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
@@ -1515,25 +1519,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.140 \paragraph
-                {SARAL}] [18pdfTeX warning (ext4): destination with the same id
-entifier (name{figure.3.2}) has been already used, duplicate ignored
+l.143  \paragraph
+                 {Envisat}] [18pdfTeX warning (ext4): destination with the same
+ identifier (name{figure.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.140 \paragraph
-                {SARAL}pdfTeX warning (ext4): destination with the same identif
-ier (name{figure.3.3}) has been already used, duplicate ignored
+l.143  \paragraph
+                 {Envisat}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.140 \paragraph
-                {SARAL} <./bilder/ob1.png> <./bilder/ob2.png> <./bilder/ob3.png
-> <./bilder/salekhard.jpg>] [19]) (./kapitel/kapitel4.tex [20
+l.143  \paragraph
+                 {Envisat} <./bilder/ob1.png> <./bilder/ob2.png> <./bilder/ob3.
+png> <./bilder/salekhard.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
+ []
 
-
-]
+[19] [20]) (./kapitel/kapitel4.tex
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--19
@@ -1550,7 +1555,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[21] [22]
+[21
+
+
+
+] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 83--87
 
  []
@@ -1566,96 +1575,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--93
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
-<bilder/leftinsitu.png, id=505, 246.9225pt x 618.05907pt>
+<bilder/leftinsitu.png, id=519, 246.9225pt x 618.05907pt>
 File: bilder/leftinsitu.png Graphic file (type png)
 <use bilder/leftinsitu.png>
-Package pdftex.def Info: bilder/leftinsitu.png  used on input line 117.
+Package pdftex.def Info: bilder/leftinsitu.png  used on input line 125.
 (pdftex.def)             Requested size: 81.94214pt x 205.10124pt.
-<bilder/rightwl.png, id=506, 242.40562pt x 618.05907pt>
+<bilder/rightwl.png, id=520, 242.40562pt x 618.05907pt>
 File: bilder/rightwl.png Graphic file (type png)
 <use bilder/rightwl.png>
-Package pdftex.def Info: bilder/rightwl.png  used on input line 121.
+Package pdftex.def Info: bilder/rightwl.png  used on input line 129.
 (pdftex.def)             Requested size: 81.94214pt x 208.93016pt.
-<bilder/cdfleft.png, id=507, 660.21657pt x 651.18282pt>
+<bilder/cdfleft.png, id=521, 660.21657pt x 651.18282pt>
 File: bilder/cdfleft.png Graphic file (type png)
 <use bilder/cdfleft.png>
-Package pdftex.def Info: bilder/cdfleft.png  used on input line 125.
+Package pdftex.def Info: bilder/cdfleft.png  used on input line 133.
 (pdftex.def)             Requested size: 143.4003pt x 141.43239pt.
-<bilder/cdfright.png, id=508, 654.94687pt x 651.18282pt>
+<bilder/cdfright.png, id=522, 654.94687pt x 651.18282pt>
 File: bilder/cdfright.png Graphic file (type png)
 <use bilder/cdfright.png>
-Package pdftex.def Info: bilder/cdfright.png  used on input line 129.
+Package pdftex.def Info: bilder/cdfright.png  used on input line 137.
 (pdftex.def)             Requested size: 143.4003pt x 142.57506pt.
-<bilder/cdfcombine.png, id=509, 649.67719pt x 657.2053pt>
+<bilder/cdfcombine.png, id=523, 649.67719pt x 657.2053pt>
 File: bilder/cdfcombine.png Graphic file (type png)
 <use bilder/cdfcombine.png>
-Package pdftex.def Info: bilder/cdfcombine.png  used on input line 133.
+Package pdftex.def Info: bilder/cdfcombine.png  used on input line 141.
 (pdftex.def)             Requested size: 143.4003pt x 145.05693pt.
 ) (./kapitel/kapitel5.tex
-Underfull \hbox (badness 10000) in paragraph at lines 111--1
+Underfull \hbox (badness 10000) in paragraph at lines 119--1
 
  []
 
-[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.4.1}) has been already used, duplicate ignored
+
+Underfull \hbox (badness 1038) in paragraph at lines 119--1
+\T1/ppl/m/n/10.95 By re-peat-ing this pro-cess to SARAL and Sen-tinel mis-sions
+ we can gen-er-ate an whole
+ []
+
+[24] [25] [26pdfTeX warning (ext4): destination with the same identifier (name{
+figure.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
             {Result} <./bilder/leftinsitu.png (PNG copy)> <./bilder/rightwl.png
  (PNG copy)> <./bilder/cdfleft.png (PNG copy)> <./bilder/cdfright.png (PNG copy
-)> <./bilder/cdfcombine.png (PNG copy)>] [26]
+)> <./bilder/cdfcombine.png (PNG copy)>]
 chapter 5.
-<bilder/TWSAall.png, id=529, 1178.15157pt x 395.97937pt>
+<bilder/TWSAall.png, id=542, 1178.15157pt x 395.97937pt>
 File: bilder/TWSAall.png Graphic file (type png)
 <use bilder/TWSAall.png>
 Package pdftex.def Info: bilder/TWSAall.png  used on input line 7.
 (pdftex.def)             Requested size: 386.9603pt x 130.0573pt.
-<bilder/EWH.png, id=530, 1215.03937pt x 400.49625pt>
+<bilder/EWH.png, id=543, 1215.03937pt x 400.49625pt>
 File: bilder/EWH.png Graphic file (type png)
 <use bilder/EWH.png>
 Package pdftex.def Info: bilder/EWH.png  used on input line 11.
 (pdftex.def)             Requested size: 386.9603pt x 127.54419pt.
-<bilder/dSdt.png, id=533, 1182.66844pt x 400.49625pt>
+<bilder/dSdt.png, id=546, 1182.66844pt x 400.49625pt>
 File: bilder/dSdt.png Graphic file (type png)
 <use bilder/dSdt.png>
 Package pdftex.def Info: bilder/dSdt.png  used on input line 20.
 (pdftex.def)             Requested size: 318.66951pt x 107.90932pt.
-<bilder/dSdtmovmean.png, id=534, 1192.455pt x 407.27156pt>
+<bilder/dSdtmovmean.png, id=547, 1192.455pt x 407.27156pt>
 File: bilder/dSdtmovmean.png Graphic file (type png)
 <use bilder/dSdtmovmean.png>
 Package pdftex.def Info: bilder/dSdtmovmean.png  used on input line 24.
 (pdftex.def)             Requested size: 318.66951pt x 108.83376pt.
-<bilder/dSdtwithnum.png, id=536, 1182.66844pt x 402.75468pt>
+<bilder/dSdtwithnum.png, id=549, 1182.66844pt x 402.75468pt>
 File: bilder/dSdtwithnum.png Graphic file (type png)
 <use bilder/dSdtwithnum.png>
 Package pdftex.def Info: bilder/dSdtwithnum.png  used on input line 32.
 (pdftex.def)             Requested size: 318.66951pt x 108.51782pt.
-<bilder/trend1.pdf, id=538, 342.27875pt x 298.11375pt>
+<bilder/trend1.pdf, id=551, 342.27875pt x 298.11375pt>
 File: bilder/trend1.pdf Graphic file (type pdf)
 <use bilder/trend1.pdf>
 Package pdftex.def Info: bilder/trend1.pdf  used on input line 40.
 (pdftex.def)             Requested size: 136.57463pt x 118.95226pt.
-<bilder/trend2.pdf, id=539, 342.27875pt x 298.11375pt>
+<bilder/trend2.pdf, id=552, 342.27875pt x 298.11375pt>
 File: bilder/trend2.pdf Graphic file (type pdf)
 <use bilder/trend2.pdf>
 Package pdftex.def Info: bilder/trend2.pdf  used on input line 44.
 (pdftex.def)             Requested size: 136.57463pt x 118.95226pt.
-<bilder/trend3.pdf, id=540, 342.27875pt x 298.11375pt>
+<bilder/trend3.pdf, id=553, 342.27875pt x 298.11375pt>
 File: bilder/trend3.pdf Graphic file (type pdf)
 <use bilder/trend3.pdf>
 Package pdftex.def Info: bilder/trend3.pdf  used on input line 48.
@@ -1671,18 +1686,18 @@ has been already used, duplicate ignored
 l.53 \section
              {Precipitation} <./bilder/TWSAall.png (PNG copy)> <./bilder/EWH.pn
 g (PNG copy)>]
-<bilder/precenter.png, id=547, 948.54375pt x 326.72063pt>
+<bilder/precenter.png, id=560, 948.54375pt x 326.72063pt>
 File: bilder/precenter.png Graphic file (type png)
 <use bilder/precenter.png>
 Package pdftex.def Info: bilder/precenter.png  used on input line 58.
 (pdftex.def)             Requested size: 368.74275pt x 127.01172pt.
-<bilder/precipitationwithnumber.png, id=548, 1190.19656pt x 407.27156pt>
+<bilder/precipitationwithnumber.png, id=561, 1190.19656pt x 407.27156pt>
 File: bilder/precipitationwithnumber.png Graphic file (type png)
 <use bilder/precipitationwithnumber.png>
 Package pdftex.def Info: bilder/precipitationwithnumber.png  used on input line
  62.
 (pdftex.def)             Requested size: 368.74275pt x 126.1783pt.
-<bilder/Pre_spatial_June2003.pdf, id=549, 344.28625pt x 297.11pt>
+<bilder/Pre_spatial_June2003.pdf, id=562, 344.28625pt x 297.11pt>
 File: bilder/Pre_spatial_June2003.pdf Graphic file (type pdf)
 <use bilder/Pre_spatial_June2003.pdf>
 Package pdftex.def Info: bilder/Pre_spatial_June2003.pdf  used on input line 69
@@ -1730,17 +1745,17 @@ l.76 \section
              {Evapotranspiration} <./bilder/trend1.pdf> <./bilder/trend2.pdf> <
 ./bilder/trend3.pdf> <./bilder/precenter.png (PNG copy)> <./bilder/precipitatio
 nwithnumber.png (PNG copy)>]
-<bilder/etcenter.png, id=724, 948.54375pt x 326.72063pt>
+<bilder/etcenter.png, id=734, 948.54375pt x 326.72063pt>
 File: bilder/etcenter.png Graphic file (type png)
 <use bilder/etcenter.png>
 Package pdftex.def Info: bilder/etcenter.png  used on input line 81.
 (pdftex.def)             Requested size: 368.74275pt x 127.01172pt.
-<bilder/etall.png, id=725, 1187.18532pt x 407.27156pt>
+<bilder/etall.png, id=735, 1187.18532pt x 407.27156pt>
 File: bilder/etall.png Graphic file (type png)
 <use bilder/etall.png>
 Package pdftex.def Info: bilder/etall.png  used on input line 85.
 (pdftex.def)             Requested size: 368.74275pt x 126.50145pt.
-<bilder/ET_spatial_June2003.pdf, id=727, 344.28625pt x 297.11pt>
+<bilder/ET_spatial_June2003.pdf, id=737, 344.28625pt x 297.11pt>
 File: bilder/ET_spatial_June2003.pdf Graphic file (type pdf)
 <use bilder/ET_spatial_June2003.pdf>
 Package pdftex.def Info: bilder/ET_spatial_June2003.pdf  used on input line 93.
@@ -1749,12 +1764,6 @@ Package pdftex.def Info: bilder/ET_spatial_June2003.pdf  used on input line 93.
 
 Underfull \hbox (badness 10000) in paragraph at lines 77--97
 
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 77--97
-\T1/ppl/m/n/10.95 The spa-ti-al in-for-ma-ti-on of eva-potran-spi-ra-ti-on is c
-on-clu-ded in []Ab-bil-dung 5.8[][]. Sa-me as
  []
 
 [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5.6
@@ -1778,12 +1787,12 @@ e{figure.5.8}) has been already used, duplicate ignored
 l.97 \clearpage
                 <./bilder/etcenter.png (PNG copy)> <./bilder/etall.png (PNG cop
 y)> <./bilder/ET_spatial_June2003.pdf>]
-<bilder/runoffcenter.png, id=775, 1192.455pt x 451.6875pt>
+<bilder/runoffcenter.png, id=782, 1192.455pt x 451.6875pt>
 File: bilder/runoffcenter.png Graphic file (type png)
 <use bilder/runoffcenter.png>
 Package pdftex.def Info: bilder/runoffcenter.png  used on input line 103.
 (pdftex.def)             Requested size: 409.71695pt x 155.19138pt.
-<bilder/rcdf.png, id=777, 646.66594pt x 658.71094pt>
+<bilder/rcdf.png, id=784, 646.66594pt x 658.71094pt>
 File: bilder/rcdf.png Graphic file (type png)
 <use bilder/rcdf.png>
 Package pdftex.def Info: bilder/rcdf.png  used on input line 129.
@@ -1793,32 +1802,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--133
 
  []
 
-<bilder/Envisat_Ob.pdf, id=785, 358.33875pt x 288.07625pt>
+<bilder/Envisat_Ob.pdf, id=792, 358.33875pt x 288.07625pt>
 File: bilder/Envisat_Ob.pdf Graphic file (type pdf)
 <use bilder/Envisat_Ob.pdf>
 Package pdftex.def Info: bilder/Envisat_Ob.pdf  used on input line 140.
 (pdftex.def)             Requested size: 254.93657pt x 204.95314pt.
-<bilder/Saral_Ob.pdf, id=786, 360.34625pt x 288.07625pt>
+<bilder/Saral_Ob.pdf, id=793, 360.34625pt x 288.07625pt>
 File: bilder/Saral_Ob.pdf Graphic file (type pdf)
 <use bilder/Saral_Ob.pdf>
 Package pdftex.def Info: bilder/Saral_Ob.pdf  used on input line 144.
 (pdftex.def)             Requested size: 254.93657pt x 203.80586pt.
-<bilder/Sentinels_Ob.pdf, id=787, 365.365pt x 288.07625pt>
+<bilder/Sentinels_Ob.pdf, id=794, 365.365pt x 288.07625pt>
 File: bilder/Sentinels_Ob.pdf Graphic file (type pdf)
 <use bilder/Sentinels_Ob.pdf>
 Package pdftex.def Info: bilder/Sentinels_Ob.pdf  used on input line 148.
 (pdftex.def)             Requested size: 254.93657pt x 201.01021pt.
-<bilder/Dis_Ob.pdf, id=788, 371.3875pt x 165.61874pt>
+<bilder/Dis_Ob.pdf, id=795, 371.3875pt x 165.61874pt>
 File: bilder/Dis_Ob.pdf Graphic file (type pdf)
 <use bilder/Dis_Ob.pdf>
 Package pdftex.def Info: bilder/Dis_Ob.pdf  used on input line 157.
 (pdftex.def)             Requested size: 409.71695pt x 182.71692pt.
-<bilder/runnumber.png, id=789, 949.29657pt x 362.10281pt>
+<bilder/runnumber.png, id=796, 949.29657pt x 362.10281pt>
 File: bilder/runnumber.png Graphic file (type png)
 <use bilder/runnumber.png>
 Package pdftex.def Info: bilder/runnumber.png  used on input line 161.
 (pdftex.def)             Requested size: 409.71695pt x 156.28131pt.
-<bilder/runoffnumber1.png, id=790, 1175.89313pt x 444.91219pt>
+<bilder/runoffnumber1.png, id=797, 1175.89313pt x 444.91219pt>
 File: bilder/runoffnumber1.png Graphic file (type png)
 <use bilder/runoffnumber1.png>
 Package pdftex.def Info: bilder/runoffnumber1.png  used on input line 168.
@@ -1896,9 +1905,9 @@ l.1 \chapter
             {Conclusion and outlook}]
 chapter 6.
 
-Underfull \hbox (badness 1281) in paragraph at lines 3--5
-\T1/ppl/m/n/10.95 and GRACE-FO missi-on de-ter-mi-ned, pre-ci-pi-ta-ti-on and e
-va-potran-spi-ra-ti-on are ob-tai-ned
+Underfull \hbox (badness 1168) in paragraph at lines 3--5
+\T1/ppl/m/n/10.95 and GRACE-FO mis-sion de-ter-mined, pre-cip-i-ta-tion and eva
+p-o-tran-spi-ra-tion are ob-tained
  []
 
 
@@ -1910,18 +1919,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
 
 ] (./arbeit.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-[]\T1/ppl/m/n/10.95 Overview - month-ly mass grids.  []$\T1/pcr/m/n/10.95 https
- : / / grace . jpl . nasa . gov / data /
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+[]\T1/ppl/m/n/10.95 Overview - monthly mass grids.  URL []$\T1/pcr/m/n/10.95 ht
+tps : / / grace . jpl . nasa . gov /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+\T1/pcr/m/n/10.95 data / monthly-[]mass-[]grids/$[]\T1/ppl/m/n/10.95 .  []$\T1/
+pcr/m/n/10.95 https : / / grace . jpl . nasa . gov / data /
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 67--74
+[]\T1/ppl/m/n/10.95 Peter H Gle-ick.  Wa-ter in cri-sis.  \T1/ppl/m/it/10.95 Pa
+-cific In-sti-tute for Stud-ies in Dev., En-vi-
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 67--74
+\T1/ppl/m/it/10.95 ron-ment & Se-cu-rity. Stock-holm Env. In-sti-tute, Ox-ford 
+Univ. Press. 473p\T1/ppl/m/n/10.95 , 9, 1993.
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 67--74
+\T1/ppl/m/n/10.95 doi:[]10.1890/1051-0761(1998)008[0571:wicpts]2.0.co;2[].  URL
+ []$\T1/pcr/m/n/10.95 https : / / doi . org / 10 .
  []
 
 [13
 
 
 ]
-Underfull \hbox (badness 6236) in paragraph at lines 87--90
-[]\T1/ppl/m/n/10.95 NASA.  Grace missi-on.  []$\T1/pcr/m/n/10.95 https : / / ww
+Underfull \hbox (badness 1072) in paragraph at lines 131--139
+[]\T1/ppl/m/n/10.95 Christof Lorenz, Har-ald Kun-st-mann, Bal-aji De-varaju, Mo
+-ham-mad J Tourian, Nico
+ []
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 141--144
+[]\T1/ppl/m/n/10.95 NASA.  Grace mis-sion.  []$\T1/pcr/m/n/10.95 https : / / ww
 w . nasa . gov / mission _ pages / Grace /
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 153--159
+[]\T1/ppl/m/n/10.95 M. C. Peel, B. L. Fin-layson, and T. A. McMa-hon.  Up-dated
+ world map of the
  []
 
 [14]) (./extras/anhang.tex [15] [16
@@ -1951,13 +1996,13 @@ Package rerunfilecheck Info: File `arbeit.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 14902 strings out of 492162
- 239590 string characters out of 6125271
- 467111 words of memory out of 5000000
- 18674 multiletter control sequences out of 15000+600000
+ 14911 strings out of 492162
+ 239943 string characters out of 6125271
+ 469111 words of memory out of 5000000
+ 18676 multiletter control sequences out of 15000+600000
  53705 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,18n,84p,10123b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,18n,84p,10123b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
 {f:/texlive/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<f:/texlive/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/te
 xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><f:/texlive/tex
@@ -1971,10 +2016,10 @@ type1/urw/palatino/uplb8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/u
 rw/palatino/uplbi8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/urw/pal
 atino/uplr8a.pfb><f:/texlive/texlive/2019/texmf-dist/fonts/type1/urw/palatino/u
 plri8a.pfb>
-Output written on arbeit.pdf (56 pages, 7634664 bytes).
+Output written on arbeit.pdf (56 pages, 7647425 bytes).
 PDF statistics:
- 1119 PDF objects out of 1200 (max. 8388607)
- 795 compressed objects within 8 object streams
- 214 named destinations out of 1000 (max. 500000)
+ 1198 PDF objects out of 1200 (max. 8388607)
+ 873 compressed objects within 9 object streams
+ 221 named destinations out of 1000 (max. 500000)
  536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
