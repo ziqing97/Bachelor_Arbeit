@@ -13,7 +13,7 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Asia Map of Koeppen-Geiger climate classification \cite {peel2007updated}}}{9}{figure.2.2}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The distribution of 40,962 geodesic grid tiles over the Earth used as a basis function for estimation of mass anomalies from GRACE for CSR mascon solutions. (top) Global view, (bottom left) South Pole view, and (bottom right) North Pole view \cite {save2016high}}}{13}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces various of data combinations are used to estimate the runoff, there are 3 metrics (PBIAS, correlation and NSE wrt. GRDC) to judge the quality of these combinations for Ob basin, the x-axis are the combinations of different datasets}}{18}{figure.3.2}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces various of data combinations are used to estimate the runoff, there are 3 metrics (PBIAS, correlation and NSE wrt. GRDC) to judge the quality of these combinations for Ob basin, the x-axis shows the combinations of different datasets}}{18}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Station Salekhard}}{18}{figure.3.3}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Available in-situ runoff for Ob river (top left), stimatEd water level from Envisat (top right), and quantile function of water level and runoff (middle). A smoothened rating curve is obtained from the corresponding probabilities (bottom)}}{26}{figure.4.1}%

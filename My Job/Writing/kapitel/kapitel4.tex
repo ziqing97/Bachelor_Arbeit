@@ -13,7 +13,7 @@ where
 		$dS / dt$ & total water storage change \\ 
 	\end{tabular}
 \end{table}\\
-For each, time series from different resources are processed using different methods\\\\
+For each timeseries from different resources are processed using different methods\\\\
  Jet Propulsion Laboratory (JPL), Center for Space Research (CSR), German Research Centre for Geosciences (GFZ) and Institute of Theoretical Geodesy and Satellite Geodesy (ITSG)  post process Level-1 data of GRACE and provide solutions in terms of spherical harmonics. It should be noted that there is a one-year gap between the GRACE and GRACE-FO and several monthly gaps. This one-year gap would be ignored since we are interested in the long term trend and these monthly gaps are dealt using interpolation. For the equivalent water height we use spline interpolation while for uncertainty we use linear interpolation.\\\\
 If two known points are given by the coordinates $(x_0,y0)$ and $(x_1,y_1)$, the linear interpolant is the straight line between these points. For a value $x$ in the interval $(x_0,x_1)$, the value $y$ along the straight line is given from the equation of slopes.
 \begin{equation}
@@ -93,7 +93,7 @@ After moving average time series we are interested in looking for the abrupt cha
 \begin{equation}
 	C(A_1) + C(A_2) + \cdots C(A_k) + k \tau < C(A)
 \end{equation}
-$\tau$ is the threshold value and $C$ is the cost function. In this work we define this function as:
+$\tau$ is the threshold value, $k$ is the number of the segments and $C$ is the cost function. In this work we define this function as:
 \begin{equation}
 	C(x) = N \cdot mean(\bm{x})
 \end{equation}
